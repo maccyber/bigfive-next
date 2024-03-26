@@ -1,4 +1,4 @@
-export default {
+const finnish = {
   language: {
     label: 'Finnish',
     locale: 'fi'
@@ -705,3 +705,5 @@ export default {
     `
   }
 }
+
+export default finnish

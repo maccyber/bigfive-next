@@ -1,4 +1,4 @@
-export default {
+const chinese = {
   language: {
     label: 'Simple Chinese',
     locale: 'zh'
@@ -705,3 +705,5 @@ export default {
     `
   }
 }
+
+export default chinese

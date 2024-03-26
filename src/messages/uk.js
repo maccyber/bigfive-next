@@ -1,4 +1,4 @@
-export default {
+const ukrainian = {
   language: {
     label: 'Ukrainian',
     locale: 'uk'
@@ -705,3 +705,5 @@ inventory is from <i> Johnson's (2014) 120-item IPIP NEO-PI-R </ i> .`,
     `
   }
 }
+
+export default ukrainian

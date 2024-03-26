@@ -1,4 +1,4 @@
-export default {
+const portuguese = {
   language: {
     label: 'Brazilian Portuguese',
     locale: 'pt'
@@ -707,3 +707,5 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     `
   }
 }
+
+export default portuguese;

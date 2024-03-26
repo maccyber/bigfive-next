@@ -1,4 +1,4 @@
-export default {
+const english = {
   language: {
     label: 'English',
     locale: 'en'
@@ -704,3 +704,5 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     `
   }
 }
+
+export default english

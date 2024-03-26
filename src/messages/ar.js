@@ -1,4 +1,4 @@
-export default {
+const arabic = {
   language: 'Arabic',
   language: {
     label: 'Arabic',
@@ -706,3 +706,5 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     `
   }
 }
+
+export default arabic;

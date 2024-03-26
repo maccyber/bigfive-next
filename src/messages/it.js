@@ -1,4 +1,4 @@
-export default {
+const italian = {
   language: {
     label: 'Italian',
     locale: 'it'
@@ -705,3 +705,5 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     `
   }
 }
+
+export default italian

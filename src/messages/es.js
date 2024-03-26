@@ -1,4 +1,4 @@
-export default {
+const spanish = {
   language: {
     label: 'Spanish',
     locale: 'es'
@@ -705,3 +705,5 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     `
   }
 }
+
+export default spanish

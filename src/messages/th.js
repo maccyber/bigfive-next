@@ -1,4 +1,4 @@
-export default {
+const thai = {
   language: {
     label: 'Thai',
     locale: 'th'
@@ -704,3 +704,5 @@ export default {
     `
   }
 }
+
+export default thai

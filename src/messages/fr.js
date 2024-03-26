@@ -1,4 +1,4 @@
-export default {
+const french = {
   language: {
     label: 'French',
     locale: 'fr'
@@ -705,3 +705,5 @@ export default {
     `
   }
 }
+
+export default french

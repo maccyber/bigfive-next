@@ -1,4 +1,4 @@
-export default {
+const indonesian = {
   language: {
     label: 'Bahasa Indonesia',
     locale: 'id'
@@ -705,3 +705,5 @@ export default {
     `
   }
 }
+
+export default indonesian

@@ -1,4 +1,4 @@
-export default {
+const hindi = {
   language: {
     label: 'Hindi',
     locale: 'hi'
@@ -705,3 +705,5 @@ export default {
     `
   }
 }
+
+export default hindi

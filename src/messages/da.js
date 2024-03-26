@@ -1,4 +1,4 @@
-export default {
+const dansk = {
   language: {
     label: 'Dansk',
     locale: 'da'
@@ -682,3 +682,5 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     `
   }
 }
+
+export default dansk

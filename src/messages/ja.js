@@ -1,4 +1,4 @@
-export default {
+const japanese = {
   language: {
     label: 'Japanese',
     locale: 'ja'
@@ -705,3 +705,5 @@ export default {
     `
   }
 }
+
+export default japanese
