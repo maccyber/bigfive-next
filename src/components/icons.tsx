@@ -1,6 +1,8 @@
 import * as React from "react";
 import { IconSvgProps } from "@/types";
 
+// https://icon-sets.iconify.design
+
 export const Logo = ({
   size = 36,
   width,
