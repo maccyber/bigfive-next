@@ -330,3 +330,35 @@ export const LanguageIcon = ({ size = 24, width, height, ...props }: IconSvgProp
     <path fill="none" d="M0 0h36v36H0z" />
   </svg>
 )
+
+export const ResultIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
+  <svg
+    width={size || width}
+    height={size || height}
+    viewBox="0 0 32 32"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M14 23h8v2h-8zm-4 0h2v2h-2zm4-5h8v2h-8zm-4 0h2v2h-2zm4-5h8v2h-8zm-4 0h2v2h-2z"
+    />
+    <path
+      fill="currentColor"
+      d="M25 5h-3V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v1H7a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2M12 4h8v4h-8Zm13 24H7V7h3v3h12V7h3Z"
+    />
+  </svg>
+)
+
+export const PersonIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
+  <svg
+    width={size || width}
+    height={size || height}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M12 12q-1.65 0-2.825-1.175T8 8q0-1.65 1.175-2.825T12 4q1.65 0 2.825 1.175T16 8q0 1.65-1.175 2.825T12 12m-8 8v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20z"
+    />
+  </svg>
+)

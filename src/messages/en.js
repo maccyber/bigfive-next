@@ -169,7 +169,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     needToAddPeople: 'You need to add people to compare them',
     addAnother: 'Add another person',
     addPerson: 'Add Person',
-    comparePeople: 'compare people',
+    comparePeople: 'Compare people',
     nameOfPerson: 'Name of this person',
     urlOrId: 'URL or ID for comparison',
     name: 'Name'
