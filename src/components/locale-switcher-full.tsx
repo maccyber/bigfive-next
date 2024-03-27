@@ -21,7 +21,7 @@ export default function LocaleSwitcher() {
   }
   const usedLocale = languages.find((lang) => lang.code === locale) || { name: 'English', code: 'en', countryCode: 'us' }
   const countryAvatar = (lang: Language) => lang.countryCode ?
-    <Avatar alt={lang.name} className="w-6 h-6" src={`https://flagcdn.com/${lang.countryCode}.svg`} />
+    <Avatar alt={lang.name} className="w-6 h-6" src={`/flags/${lang.countryCode}.svg`} />
     : <Avatar alt={lang.name} className="w-6 h-6" name={lang.code.toUpperCase()} />
   return (
     <div className='w-40'>
