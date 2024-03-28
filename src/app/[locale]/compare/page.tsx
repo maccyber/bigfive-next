@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { ResultIcon, PersonIcon } from "@/components/icons";
-import { PersonsTable } from "@/components/PersonsTable";
+import { PersonsTable } from "@/components/persons-table";
 
 export default function ComparePage() {
   const t = useTranslations('getCompare');
