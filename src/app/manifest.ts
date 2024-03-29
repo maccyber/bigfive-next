@@ -16,6 +16,11 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/x-icon',
       },
       {
+        src: '/favicon-16x16.ico',
+        sizes: '16x16',
+        type: 'image/x-icon',
+      },
+      {
         src: '/icon-192x192.png',
         sizes: '192x192',
         type: 'image/png',
