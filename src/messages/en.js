@@ -37,7 +37,7 @@ const english = {
       },
       translated: {
         title: 'Translated',
-        text: 'Translated to over 20 languages. Help out <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">here</a>!'
+        text: 'Translated to over 20 languages. Help out on <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">this translation page</a>!'
       }
     },
     description: {
