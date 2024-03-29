@@ -7,6 +7,7 @@ import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import Footer from "@/components/footer";
 import { ThemeProviderProps } from "next-themes/dist/types";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: {
@@ -54,6 +55,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-DKM3FF6CR0" />
     </html>
   );
 }
