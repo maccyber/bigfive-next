@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       <Link
-        href={siteConfig.links.github}
+        href="/test"
         className={buttonStyles({ color: "primary", radius: "full", variant: "shadow", size: "lg", fullWidth: true })}
       >
         {t('call_to_action')} <ArrowRightIcon />

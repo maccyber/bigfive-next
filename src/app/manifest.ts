@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Learn to know yourself better with a free, open-source personality test.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#000000',
+    background_color: '#FFFFFF',
     theme_color: '#ff1cf7',
     icons: [
       {
