@@ -77,8 +77,8 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent className="sm:basis-full" justify="end">
-      </NavbarContent>
+      {/* <NavbarContent className="sm:basis-full" justify="end"> */}
+      {/* </NavbarContent> */}
 
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"

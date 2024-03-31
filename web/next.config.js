@@ -6,4 +6,3 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {}
 
 module.exports = withNextIntl(nextConfig);
-
