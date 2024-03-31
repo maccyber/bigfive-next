@@ -31,10 +31,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-  params: {locale}
+  params: { locale }
 }: {
   children: React.ReactNode;
-  params: {locale: string};
+  params: { locale: string };
 }) {
   return (
     <html lang={locale} suppressHydrationWarning>

@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { FeaturesGrid } from "@/components/features-grid";
 import { ExperimentIcon, LanguageIcon, LogosOpensource, MoneyIcon } from '@/components/icons';
@@ -10,6 +9,8 @@ import { ArrowRightIcon } from '@/components/icons';
 
 export default function Home() {
   const t = useTranslations('frontpage');
+  const f = useTranslations('facets');
+  const c = useTranslations('common');
   const features = [
     { title: t('cards.open.title'), description: t('cards.open.text'), icon: LogosOpensource({}) },
     { title: t('cards.free.title'), description: t('cards.free.text'), icon: MoneyIcon({}) },
@@ -20,7 +21,7 @@ export default function Home() {
   const titleDescription = t.rich(
     'description.top',
     {
-      violet: (chunks) => <span className={title({ color: 'violet'})}>{chunks}</span>,
+      violet: (chunks) => <span className={title({ color: 'violet' })}>{chunks}</span>,
     }
   )
 
@@ -49,13 +50,25 @@ export default function Home() {
         {t('tests_taken')}
       </h1>
 
-
       <Image
         src="/compare_yourself.svg"
         width={500}
         height={500}
         alt="Hero image"
       />
-    </section>
+
+      <h1 className={title()}>
+        {t('compare.title')}
+      </h1>
+      <p>
+        {t('compare.text1')}
+      </p>
+      <p>
+        {t('compare.text2')}
+      </p>
+      <p>
+        {t('compare.text2')} {f('openness_to_experience.title')}, {f('conscientiousness.title')}, {f('extraversion.title')}, {f('agreeableness.title')} {c('and')} {f('neuroticism.title')}
+      </p>
+    </section >
   );
 }

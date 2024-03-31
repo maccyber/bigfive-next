@@ -50,8 +50,8 @@ export const Survey: React.FC<SurveyProps> = ({
   async function handleAnswer(event: React.ChangeEvent<HTMLInputElement>) {
     const { id, value } = event.target;
     const question = questions.find((question) => question.id === id);
-
     if (!question) return;
+
     upsertAnswer({
       id,
       score: Number(value),
@@ -89,6 +89,7 @@ export const Survey: React.FC<SurveyProps> = ({
         minValue={0}
         maxValue={100}
         size="lg"
+        color="secondary"
       />
       {currentQuestions.map((question) => (
         <div key={question.num}>
@@ -97,12 +98,15 @@ export const Survey: React.FC<SurveyProps> = ({
             <RadioGroup
               onChange={handleAnswer}
               value={answers.find((answer) => answer.id === question.id)?.score.toString()}
+              color="secondary"
+
             >
               {question.choices.map((choice, index) => (
                 <Radio
                   id={question.id}
                   key={index}
-                  value={choice.score.toString()}>
+                  value={choice.score.toString()}
+                >
                   {choice.text}
                 </Radio>
               ))}
@@ -122,7 +126,7 @@ export const Survey: React.FC<SurveyProps> = ({
         <Button
           color="primary"
           isDisabled={nextButtonDisabled}
-          // onClick={handleQuestionChecked}
+        // onClick={handleQuestionChecked}
         >
           {nextText.toUpperCase()}
         </Button>
