@@ -14,7 +14,7 @@ const polish = {
     title: 'Test Osobowości Wielkiej Piątki',
     call_to_action: 'Rozpocznij darmowy test',
     no_registration: '* Rejestracja nie jest wymagana',
-    tests_taken: 'Ponad 4.000.000 ludzi wzięło udział w teście',
+    tests_taken: 'Ponad <green>{n}</green> ludzi wzięło udział w teście',
     compare: {
       title: 'Porównaj się z innymi',
       text1: 'Porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.',

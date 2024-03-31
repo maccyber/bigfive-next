@@ -14,7 +14,7 @@ const finnish = {
     title: 'Viiden suuren persoonallisuustesti',
     call_to_action: 'Ota ilmainen testi nyt',
     no_registration: '* Ei rekisteröintivaatimusta',
-    tests_taken: 'Testin on suorittanut yli 4.000.000 ihmistä',
+    tests_taken: 'Testin on suorittanut yli <green>{n}</green> ihmistä',
     compare: {
       title: 'Vertaa itseäsi muihin',
       text1: 'Vertaa itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.',

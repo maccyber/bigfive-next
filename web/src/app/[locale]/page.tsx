@@ -27,8 +27,16 @@ export default function Home() {
     }
   )
 
+  const testsTaken = t.rich(
+    'tests_taken',
+    {
+      green: (chunks) => <span className={title({ color: 'green' })}>{chunks}</span>,
+      n: '4.000.000'
+    }
+  )
+
   return (
-    <>
+    <section className="overflow-hidden relative">
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10">
           <div className="text-center justify-center mt-10">
@@ -62,40 +70,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-20">
+      <div className="mt-20">
         <FeaturesGrid features={features} />
-        <h1 className={title()}>
-          {t('tests_taken')}
-        </h1>
+      </div>
 
+      <section className="border-t border-b border-divider px-8 mt-16 lg:mt-44 text-center">
+        <div className="my-8">
+          <h1 className={title()}>
+            {testsTaken}
+          </h1>
+        </div>
+      </section>
 
+      <div className="mt-20 text-center">
         <h1 className={title()}>
           {t('compare.title')}
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-6">
-            <Image
-              src="/compare_yourself.svg"
-              width={500}
-              height={500}
-              alt="Hero image"
-            />
+        <div className="mt-10">
+          <div className="text-lg lg:text-xl font-normal text-default-500">
+            {t('compare.text1')} {t('compare.text2')} {f('openness_to_experience.title')}, {f('conscientiousness.title')}, {f('extraversion.title')}, {f('agreeableness.title')} {c('and')} {f('neuroticism.title')}
           </div>
 
-          <div className="relative">
-            <p>
-              {t('compare.text1')}
-            </p>
-            <p>
-              {t('compare.text2')}
-            </p>
-            <p>
-              {t('compare.text2')} {f('openness_to_experience.title')}, {f('conscientiousness.title')}, {f('extraversion.title')}, {f('agreeableness.title')} {c('and')} {f('neuroticism.title')}
-            </p>
-          </div>
+          {/* <div className="relative"> */}
+          {/*   <Image */}
+          {/*     src="/compare_yourself.svg" */}
+          {/*     width={500} */}
+          {/*     height={500} */}
+          {/*     alt="Hero image" */}
+          {/*   /> */}
+          {/* </div> */}
         </div>
-      </section >
-    </>
+      </div>
+    </section>
   );
 }

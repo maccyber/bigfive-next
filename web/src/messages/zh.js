@@ -14,7 +14,7 @@ const chinese = {
     title: '五大人格测试',
     call_to_action: '现在参加免费测试',
     no_registration: '* 无需注册',
-    tests_taken: '超过4.000.000人参加了测试',
+    tests_taken: '超过<green>{n}</green>人参加了测试',
     compare: {
       title: '拿自己和别人比较',
       text1: '拿自己和伴侣、同事、朋友或家人进行比较',

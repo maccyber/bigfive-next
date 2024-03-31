@@ -14,7 +14,7 @@ const spanish = {
     title: 'Prueba de personalidad Big Five',
     call_to_action: 'Haz la prueba gratis ahora',
     no_registration: '*No es necesario registrarse',
-    tests_taken: 'Más de 4.000.000 personas han realizado la prueba',
+    tests_taken: 'Más de <green>{n}</green> personas han realizado la prueba',
     compare: {
       title: 'Compárese con los demás',
       text1: 'Compárese con su pareja, colegas, amigos o familiares.',

@@ -14,7 +14,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
 
-    <footer className="container mx-auto max-w-7xl pb-12 px-12">
+    <footer className="container mx-auto max-w-7xl py-12 px-12">
       <div className="container mx-auto flex justify-between">
         <div className="w-1/3">
           <span className="text-center">
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
 
-      <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">
+      <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center">
         © {year} — B5 Holding AS - all rights reserved.
       </p>
     </footer>

@@ -14,7 +14,7 @@ const french = {
     title: 'Test de personnalité Big Five',
     call_to_action: 'Faites le test gratuit maintenant',
     no_registration: '* Aucune inscription requise',
-    tests_taken: 'Plus de 4.000.000 personnes ont passé le test',
+    tests_taken: 'Plus de <green>{n}</green> personnes ont passé le test',
     compare: {
       title: 'Comparez-vous aux autres',
       text1: 'Comparez-vous avec votre partenaire, vos collègues, vos amis ou votre famille.',

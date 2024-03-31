@@ -14,7 +14,7 @@ const english = {
     title: 'Big Five Personality Test',
     call_to_action: 'Take the free test now',
     no_registration: '* No registration required',
-    tests_taken: 'Over 4.000.000 people have taken the test',
+    tests_taken: 'Over <green>{n}</green> people have taken the test',
     compare: {
       title: 'Compare yourself to others',
       text1: 'Compare yourself with your partner, colleagues, friends or family.',

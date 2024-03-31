@@ -14,7 +14,7 @@ const svenska = {
     title: 'Big Five personlighetstest',
     call_to_action: 'Starta testet',
     no_registration: '* Ingen registrering krävs',
-    tests_taken: 'Över 4.000.000 personer har tagit testet',
+    tests_taken: 'Över <green>{n}</green> personer har tagit testet',
     compare: {
       title: 'Jämför dig med andra',
       text1: 'Jämför dig själv med din partner, kollegor, vänner eller familj.',

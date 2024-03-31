@@ -14,7 +14,7 @@ const norsk = {
     title: 'Big Five personlighetstest',
     call_to_action: 'Start testen',
     no_registration: '* Ingen registrering påkrevd',
-    tests_taken: 'Over 4.000.000 personer har tatt testen',
+    tests_taken: 'Over <green>{n}</green> personer har tatt testen',
     compare: {
       title: 'Sammenlign deg med andre',
       text1: 'Sammenlign deg med partneren din, kollegaer, venner eller familie.',

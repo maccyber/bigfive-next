@@ -14,7 +14,7 @@ const dansk = {
     title: 'Big Five personlighedstest',
     call_to_action: 'Start testen',
     no_registration: '* Ingen registrering krævet',
-    tests_taken: 'Over 4.000.000 mennesker har taget testen',
+    tests_taken: 'Over <green>{n}</green> mennesker har taget testen',
     compare: {
       title: 'Sammenlign dig selv med andre',
       text1: 'Sammenlign dig selv med din partner, kolleger, venner eller familie.',

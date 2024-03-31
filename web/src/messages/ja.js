@@ -14,7 +14,7 @@ const japanese = {
     title: 'ビッグファイブパーソナリティテスト',
     call_to_action: '今すぐ無料テストを受ける',
     no_registration: '*登録は必要ありません',
-    tests_taken: '4.000.000人以上がテストを受けました',
+    tests_taken: '<green>{n}</green>人以上がテストを受けました',
     compare: {
       title: '自分を他の人と比較する',
       text1: 'あなたのパートナー、同僚、友人または家族とあなた自身を比較してください。',

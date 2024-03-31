@@ -14,7 +14,7 @@ const indonesian = {
     title: 'Tes Kepribadian Lima Besar',
     call_to_action: 'Ikuti tes gratis sekarang',
     no_registration: '* Tidak perlu registrasi',
-    tests_taken: 'Lebih dari 4.000.000 orang telah mengikuti tes',
+    tests_taken: 'Lebih dari <green>{n}</green> orang telah mengikuti tes',
     compare: {
       title: 'Bandingkan diri Anda dengan orang lain',
       text1: 'Bandingkan diri Anda dengan pasangan, kolega, teman, atau keluarga Anda.',
