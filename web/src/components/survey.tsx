@@ -1,15 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@nextui-org/button";
 import { RadioGroup, Radio } from "@nextui-org/radio";
+import { Spinner } from "@nextui-org/spinner";
+import { Progress } from "@nextui-org/progress";
+import confetti from "canvas-confetti";
+
+import { InfoIcon } from "./icons";
 import { type Question } from "@alheimsins/b5-johnson-120-ipip-neo-pi-r"
 import { sleep, formatTimer, isDev } from "@/lib/helpers";
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
-import { Progress } from "@nextui-org/progress";
-import confetti from "canvas-confetti";
-import { Spinner } from "@nextui-org/spinner";
+import { Code } from "@nextui-org/code";
 
 interface SurveyProps {
   questions: Question[];
@@ -36,56 +39,64 @@ export const Survey: React.FC<SurveyProps> = ({
   const [questionsPerPage, setQuestionsPerPage] = useState(1);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [loading, setLoading] = useState(false);
+  const [restored, setRestored] = useState(false);
   const { width } = useWindowDimensions();
   const seconds = useTimer();
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setQuestionsPerPage(3);
-      } else {
-        setQuestionsPerPage(1);
-      }
-    }
+      setQuestionsPerPage(window.innerWidth > 768 ? 3 : 1);
+    };
     handleResize()
   }, [width]);
 
-  const currentQuestions = questions.slice(currentQuestionIndex, currentQuestionIndex + questionsPerPage)
+  useEffect(() => {
+    const restoreData = () => {
+      if (dataInLocalStorage()) {
+        console.log("Restoring data from local storage");
+        restoreDataFromLocalStorage();
+      }
+    }
+    restoreData();
+  }, []);
+
+  const currentQuestions = useMemo(() => questions.slice(currentQuestionIndex, currentQuestionIndex + questionsPerPage), [currentQuestionIndex, questions, questionsPerPage]);
 
   const isTestDone = questions.length === answers.length
 
-  async function handleAnswer(event: React.ChangeEvent<HTMLInputElement>) {
-    const { id, value } = event.target;
+  async function handleAnswer(id: string, value: string) {
     const question = questions.find((question) => question.id === id);
     if (!question) return;
 
-    upsertAnswer({
+    const newAnswer: Answer = {
       id,
       score: Number(value),
       domain: question.domain,
-      facet: question.facet
-    });
+      facet: question.facet,
+    };
+
+    setAnswers((prevAnswers) => [...prevAnswers.filter((a) => a.id !== id), newAnswer]);
 
     // TODO: Avoids skipping question if user changes answer within 700 ms on
     if (questionsPerPage === 1) {
       await sleep(700);
-      setCurrentQuestionIndex(currentQuestionIndex + 1)
+      setCurrentQuestionIndex(prev => prev + 1);
       window.scrollTo(0, 0);
     }
-  }
-
-  function upsertAnswer(answer: Answer) {
-    setAnswers([...answers.filter((a) => a.id !== answer.id), answer]);
+    populateDataInLocalStorage();
   }
 
   function handlePreviousQuestions() {
-    setCurrentQuestionIndex(currentQuestionIndex - questionsPerPage);
+    setCurrentQuestionIndex((prev) => prev - questionsPerPage);
     window.scrollTo(0, 0);
   }
 
   function handleNextQuestions() {
-    setCurrentQuestionIndex(currentQuestionIndex + questionsPerPage)
+    setCurrentQuestionIndex((prev) => prev + questionsPerPage);
     window.scrollTo(0, 0);
+    if (restored) {
+      setRestored(false);
+    }
   }
 
   function skipToEnd() {
@@ -105,10 +116,34 @@ export const Survey: React.FC<SurveyProps> = ({
     confetti({})
   }
 
+  function dataInLocalStorage() {
+    return !!localStorage.getItem("inProgress");
+  }
+
+  function populateDataInLocalStorage() {
+    localStorage.setItem("inProgress", "true");
+    localStorage.setItem("b5data", JSON.stringify({ answers, currentQuestionIndex }));
+  }
+
+  function restoreDataFromLocalStorage() {
+    const data = localStorage.getItem("b5data")
+    if (data) {
+      const { answers, currentQuestionIndex } = JSON.parse(data);
+      setAnswers(answers);
+      setCurrentQuestionIndex(currentQuestionIndex);
+      setRestored(true);
+    }
+  }
+
+  function clearDataInLocalStorage() {
+    localStorage.clear();
+  }
+
   const progress = Math.round((answers.length / questions.length) * 100);
   const nextButtonDisabled = (currentQuestionIndex + questionsPerPage > answers.length)
-    || (isTestDone && currentQuestionIndex === questions.length - questionsPerPage);
-  const backButtonDisabled = currentQuestionIndex === 0;
+    || (isTestDone && currentQuestionIndex === questions.length - questionsPerPage)
+    || loading;
+  const backButtonDisabled = (currentQuestionIndex === 0) || loading;
 
   return (
     <>
@@ -123,20 +158,25 @@ export const Survey: React.FC<SurveyProps> = ({
         size="lg"
         color="secondary"
       />
+      {
+        restored && (
+          <Code color="warning" className="mt-5 flex items-center">
+            <InfoIcon className="mr-3" />Your answers has been restored. Click here to&nbsp;<a className="underline cursor-pointer" onClick={clearDataInLocalStorage}>start a new test</a>.
+          </Code>
+        )
+      }
       {currentQuestions.map((question) => (
-        <div key={question.num}>
+        <div key={"q" + question.num}>
           <h2 className="text-2xl my-4">{question.text}</h2>
           <div>
             <RadioGroup
-              onChange={handleAnswer}
+              onValueChange={(value) => handleAnswer(question.id, value)}
               value={answers.find((answer) => answer.id === question.id)?.score.toString()}
               color="secondary"
-
             >
               {question.choices.map((choice, index) => (
                 <Radio
-                  id={question.id}
-                  key={index}
+                  key={index + question.id}
                   value={choice.score.toString()}
                 >
                   {choice.text}
@@ -149,7 +189,7 @@ export const Survey: React.FC<SurveyProps> = ({
       <div className="my-12 space-x-4 inline-flex">
         <Button
           color="primary"
-          isDisabled={backButtonDisabled || loading}
+          isDisabled={backButtonDisabled}
           onClick={handlePreviousQuestions}
         >
           {prevText.toUpperCase()}
@@ -157,7 +197,7 @@ export const Survey: React.FC<SurveyProps> = ({
 
         <Button
           color="primary"
-          isDisabled={nextButtonDisabled || loading}
+          isDisabled={nextButtonDisabled}
           onClick={handleNextQuestions}
         >
           {nextText.toUpperCase()}
@@ -169,12 +209,9 @@ export const Survey: React.FC<SurveyProps> = ({
             color="secondary"
             onClick={submitTest}
             disabled={loading}
+            isLoading={loading}
           >
-            {
-              loading ?
-                <Spinner color="default" size="sm" />
-                : resultsText.toUpperCase()
-            }
+            {resultsText.toUpperCase()}
           </Button>
         )}
 
