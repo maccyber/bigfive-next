@@ -4,9 +4,13 @@ import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { ResultIcon, PersonIcon } from "@/components/icons";
 import { PersonsTable } from "@/components/persons-table";
+import { useSearchParams } from 'next/navigation'
 
 export default function ComparePage() {
   const t = useTranslations('getCompare');
+  // need use client
+  // const params = useSearchParams()
+  // const paramId = params.get('id')
   return (
     <div>
       <h1 className={title()}>{t('title')}</h1>

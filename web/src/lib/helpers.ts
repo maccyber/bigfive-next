@@ -23,3 +23,5 @@ export function formatTimer(seconds: number): string {
 
     return `${formattedMinutes}:${formattedSeconds}`;
 }
+
+export const isDev: boolean = process.env.NEXT_PUBLIC_ENV === 'development'

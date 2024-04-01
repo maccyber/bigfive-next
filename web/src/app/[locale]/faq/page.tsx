@@ -44,7 +44,7 @@ export default function FaqPage() {
   return (
     <div>
       <h1 className={title()}>Frequently asked questions.</h1>
-      <Accordion>
+      <Accordion className="mt-10">
         {faq.map((item, index) => (
           <AccordionItem key={index} textValue={item.question} title={
             <span className="text-foreground text-large font-medium">{item.question}</span>

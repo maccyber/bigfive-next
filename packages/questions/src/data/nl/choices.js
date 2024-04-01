@@ -1,54 +1,54 @@
 module.exports = {
   plus: [
     {
-      text: 'Zeer onnauwkeurig',
+      text: 'Zeer oneens',
       score: 1,
       color: 1
     },
     {
-      text: 'Matig onnauwkeurig',
+      text: 'Oneens',
       score: 2,
       color: 2
     },
     {
-      text: 'Noch nauwkeurig, noch onnauwkeurig',
+      text: 'Noch eens, noch oneens',
       score: 3,
       color: 3
     },
     {
-      text: 'Matig nauwkeurig',
+      text: 'Eens',
       score: 4,
       color: 4
     },
     {
-      text: 'Zeer accuraat',
+      text: 'Zeer eens',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Zeer onnauwkeurig',
+      text: 'Zeer oneens',
       score: 5,
       color: 1
     },
     {
-      text: 'Matig onnauwkeurig',
+      text: 'Oneens',
       score: 4,
       color: 2
     },
     {
-      text: 'Noch nauwkeurig, noch onnauwkeurig',
+      text: 'Noch eens, noch oneens',
       score: 3,
       color: 3
     },
     {
-      text: 'Matig nauwkeurig',
+      text: 'Eens',
       score: 2,
       color: 4
     },
     {
-      text: 'Zeer accuraat',
+      text: 'Zeer eens',
       score: 1,
       color: 5
     }

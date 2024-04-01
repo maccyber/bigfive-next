@@ -1,10 +1,10 @@
 "use client";
 
-import React, {ReactNode} from "react";
-import {tv} from "tailwind-variants";
-import {Card, CardHeader, CardBody, LinkProps, SlotsToClasses} from "@nextui-org/react";
-import {useRouter} from "next/navigation";
-import {LinkIcon} from "@nextui-org/shared-icons";
+import React, { ReactNode } from "react";
+import { tv } from "tailwind-variants";
+import { Card, CardHeader, CardBody, LinkProps, SlotsToClasses } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
+import { LinkIcon } from "@nextui-org/shared-icons";
 
 const styles = tv({
   slots: {
@@ -32,7 +32,7 @@ interface FeaturesGridProps {
   classNames?: SlotsToClasses<FeaturesGridSlots>;
 }
 
-export const FeaturesGrid: React.FC<FeaturesGridProps> = ({features, classNames, ...props}) => {
+export const FeaturesGrid: React.FC<FeaturesGridProps> = ({ features, classNames, ...props }) => {
   const router = useRouter();
 
   const slots = styles();
@@ -51,23 +51,23 @@ export const FeaturesGrid: React.FC<FeaturesGridProps> = ({features, classNames,
   };
 
   return (
-    <div className={slots.base({class: classNames?.base})} {...props}>
+    <div className={slots.base({ class: classNames?.base })} {...props}>
       {features.map((feat: Feature, index: number) => (
         <Card
           key={`${feat.title}_${index}`}
           isBlurred
-          className={slots.card({class: classNames?.card})}
+          className={slots.card({ class: classNames?.card })}
           isPressable={!!feat.href}
           onPress={() => handleClick(feat)}
         >
-          <CardHeader className={slots.header({class: classNames?.header})}>
-            <div className={slots.iconWrapper({class: classNames?.iconWrapper})}>{feat.icon}</div>
-            <p className={slots.title({class: classNames?.title})}>{feat.title}</p>
+          <CardHeader className={slots.header({ class: classNames?.header })}>
+            <div className={slots.iconWrapper({ class: classNames?.iconWrapper })}>{feat.icon}</div>
+            <p className={slots.title({ class: classNames?.title })}>{feat.title}</p>
             {feat.isExternal && <LinkIcon className="text-white" height={18} width={18} />}
           </CardHeader>
           {feat.description ? (
-            <CardBody className={slots.body({class: classNames?.body})}>
-              <p className={slots.description({class: classNames?.description})} dangerouslySetInnerHTML={{__html: feat.description }}>
+            <CardBody className={slots.body({ class: classNames?.body })}>
+              <p className={slots.description({ class: classNames?.description })} dangerouslySetInnerHTML={{ __html: feat.description }}>
               </p>
             </CardBody>
           ) : null}

@@ -36,6 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || "";
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head />
@@ -55,7 +57,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
-      <GoogleAnalytics gaId="G-DKM3FF6CR0" />
+      <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }

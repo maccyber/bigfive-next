@@ -11,6 +11,7 @@ export default function TestPage() {
         questions={questions}
         nextText={t('next')}
         prevText={t('back')}
+        resultsText={t('seeResults')}
       />
     </>
   );
