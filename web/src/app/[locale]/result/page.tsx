@@ -1,7 +1,6 @@
 import { title } from "@/components/primitives";
 import { useTranslations } from 'next-intl';
-import { Button } from "@nextui-org/button";
-import ResultId from "@/components/result-id";
+import { ViewPreviousButton } from './view-previous-button';
 
 export default function ResultPage() {
   const t = useTranslations('getResult');
@@ -9,15 +8,10 @@ export default function ResultPage() {
   return (
     <div>
       <h1 className={title()}>{t('result')}</h1>
-      <br />
-      <br />
-      <span>
+      <div className="mt-10">
         {t('explanation')}
-      </span>
-      <div className="w-full flex flex-col gap-4">
-        <ResultId />
-        <Button color="primary">{t('getResult')}</Button>
       </div>
+        <ViewPreviousButton viewPreviousText={t('viewPrevious')} getResultsText={t('getResult')} />
     </div>
   );
 }

@@ -1,7 +1,10 @@
+'use client'
+
 import { FC, ReactNode, useMemo } from "react";
 import { parseToRgba } from "color2k";
 import { clsx } from "@nextui-org/shared-utils";
 import { useIsSSR } from "@react-aria/ssr";
+
 export interface SonarPulseProps {
   children: ReactNode;
   icon?: ReactNode;
@@ -17,7 +20,6 @@ export const SonarPulse: FC<SonarPulseProps> = ({
   icon,
   size = 80,
   circlesCount = 4,
-  playState = "paused",
 }) => {
   const isSSR = useIsSSR();
 
@@ -33,7 +35,6 @@ export const SonarPulse: FC<SonarPulseProps> = ({
       const alphaFactor = alpha - i * factor;
       let rgbaColor = parseToRgba(color);
 
-      // replace the alpha value by the new one
       rgbaColor[3] = alphaFactor;
 
       return rgbaColor;
@@ -47,17 +48,13 @@ export const SonarPulse: FC<SonarPulseProps> = ({
       circles.push(
         <div
           key={i}
-          className={clsx("circle", `circle-${i}`, "absolute", {
-            "animate-expand-opacity": playState === "running",
-          })}
+          className={clsx("circle", `circle-${i}`, "absolute")}
           style={{
             width: `${size * (initialSizeFactor + i)}px`,
             height: `${size * (initialSizeFactor + i)}px`,
             borderRadius: "50%",
             top: `calc(${size * (initialSizeFactor + i)}px / 2 * -1)`,
             left: `calc(${size * (initialSizeFactor + i)}px / 2 * -1)`,
-            animationPlayState: playState,
-            animationDelay: `${i * 0.5}s`,
             border: `1px solid rgba(${rgbaColors[i - 1]})`,
             background: `linear-gradient(-180deg, rgba(${rgbaColors[i]}) 20%, hsl(var(--nextui-background)) 100%)`,
           }}
@@ -66,7 +63,7 @@ export const SonarPulse: FC<SonarPulseProps> = ({
     }
 
     return circles;
-  }, [rgbaColors, circlesCount, playState, size]);
+  }, [rgbaColors, circlesCount, size]);
 
   if (isSSR) {
     return null;
@@ -83,14 +80,12 @@ export const SonarPulse: FC<SonarPulseProps> = ({
       {children}
       <div className="absolute top-1/2 left-1/2 overflow-visible -z-10">
         <div
-          className="absolute animate-expand rounded-full"
+          className="absolute rounded-full"
           style={{
             width: `${circleSize}px`,
             height: `${circleSize}px`,
             top: `calc(${circleSize}px / 2 * -1)`,
             left: `calc(${circleSize}px / 2 * -1)`,
-            animationPlayState: playState,
-            animationDelay: "1s",
             border: `1.5px solid rgba(${rgbaColors[0]})`,
             background: `linear-gradient(-180deg, rgba(${rgbaColors[0]}) 40%, hsl(var(--nextui-background)) 100%)`,
           }}

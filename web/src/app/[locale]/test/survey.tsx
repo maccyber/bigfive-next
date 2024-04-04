@@ -3,43 +3,40 @@
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@nextui-org/button";
 import { RadioGroup, Radio } from "@nextui-org/radio";
-import { Spinner } from "@nextui-org/spinner";
 import { Progress } from "@nextui-org/progress";
+import { Code } from "@nextui-org/code";
 import confetti from "canvas-confetti";
+import { useRouter } from "@/navigation";
 
-import { InfoIcon } from "./icons";
+import { InfoIcon } from "@/components/icons";
 import { type Question } from "@alheimsins/b5-johnson-120-ipip-neo-pi-r"
 import { sleep, formatTimer, isDev } from "@/lib/helpers";
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
-import { Code } from "@nextui-org/code";
+import { type Answer } from "@/types";
 
 interface SurveyProps {
   questions: Question[];
   nextText: string;
   prevText: string;
   resultsText: string;
+  saveTest: Function;
 }
-
-type BaseAnswer = {
-  score: number;
-  domain: string;
-  facet: number;
-}
-
-type Answer = BaseAnswer & { id: string }
 
 export const Survey: React.FC<SurveyProps> = ({
   questions,
   nextText,
   prevText,
-  resultsText
+  resultsText,
+  saveTest
 }) => {
+  const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [questionsPerPage, setQuestionsPerPage] = useState(1);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [loading, setLoading] = useState(false);
   const [restored, setRestored] = useState(false);
+  const [inProgress, setInProgress] = useState(false);
   const { width } = useWindowDimensions();
   const seconds = useTimer();
 
@@ -77,11 +74,12 @@ export const Survey: React.FC<SurveyProps> = ({
 
     setAnswers((prevAnswers) => [...prevAnswers.filter((a) => a.id !== id), newAnswer]);
 
-    // TODO: Avoids skipping question if user changes answer within 700 ms on
-    if (questionsPerPage === 1) {
+    if (questionsPerPage === 1 && questions.length !== answers.length + 1) {
+      setInProgress(true);
       await sleep(700);
       setCurrentQuestionIndex(prev => prev + 1);
       window.scrollTo(0, 0);
+      setInProgress(false);
     }
     populateDataInLocalStorage();
   }
@@ -94,9 +92,7 @@ export const Survey: React.FC<SurveyProps> = ({
   function handleNextQuestions() {
     setCurrentQuestionIndex((prev) => prev + questionsPerPage);
     window.scrollTo(0, 0);
-    if (restored) {
-      setRestored(false);
-    }
+    if (restored) setRestored(false)
   }
 
   function skipToEnd() {
@@ -108,12 +104,24 @@ export const Survey: React.FC<SurveyProps> = ({
     })).slice(0, questions.length - 1);
 
     setAnswers([...randomAnswers]);
-    setCurrentQuestionIndex(questions.length - 1)
+    setCurrentQuestionIndex(questions.length - 1);
   }
 
-  function submitTest() {
+  async function submitTest() {
     setLoading(true);
-    confetti({})
+    confetti({});
+    localStorage.clear();
+    const result = await saveTest({
+      testId: "b5-120",
+      lang: 'en',
+      invalid: false,
+      timeElapsed: seconds,
+      dateStamp: new Date(),
+      answers
+    });
+    console.log(result)
+    localStorage.setItem("resultId", result.id);
+    router.push(`/result/${result.id}`)
   }
 
   function dataInLocalStorage() {
@@ -136,7 +144,9 @@ export const Survey: React.FC<SurveyProps> = ({
   }
 
   function clearDataInLocalStorage() {
+    console.log("Clearing data from local storage");
     localStorage.clear();
+    location.reload();
   }
 
   const progress = Math.round((answers.length / questions.length) * 100);
@@ -173,6 +183,7 @@ export const Survey: React.FC<SurveyProps> = ({
               onValueChange={(value) => handleAnswer(question.id, value)}
               value={answers.find((answer) => answer.id === question.id)?.score.toString()}
               color="secondary"
+              isDisabled={inProgress}
             >
               {question.choices.map((choice, index) => (
                 <Radio

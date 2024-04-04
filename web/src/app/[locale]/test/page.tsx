@@ -1,6 +1,7 @@
 import { getItems } from "@alheimsins/b5-johnson-120-ipip-neo-pi-r"
-import { Survey } from "@/components/survey";
+import { Survey } from "./survey";
 import { useTranslations } from "next-intl";
+import { saveTest } from "@/actions";
 
 export default function TestPage() {
   const questions = getItems()
@@ -12,6 +13,7 @@ export default function TestPage() {
         nextText={t('next')}
         prevText={t('back')}
         resultsText={t('seeResults')}
+        saveTest={saveTest}
       />
     </>
   );

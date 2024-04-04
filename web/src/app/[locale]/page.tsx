@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
@@ -8,11 +7,21 @@ import { FeaturesGrid } from "@/components/features-grid";
 import { ExperimentIcon, GithubIcon, LanguageIcon, LogosOpensource, MoneyIcon } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
 import { siteConfig } from '@/config/site';
+import { compareDesc } from 'date-fns'
+import { allPosts } from 'contentlayer/generated'
+import { PostCard } from '@/components/post-card';
+import { SonarPulse } from '@/components/sonar-pulse';
+import { Button } from '@nextui-org/button';
 
 export default function Home() {
   const t = useTranslations('frontpage');
   const f = useTranslations('facets');
-  const c = useTranslations('common');
+
+
+  const posts = allPosts
+    .slice(0, 3)
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+
   const features = [
     { title: t('cards.open.title'), description: t('cards.open.text'), icon: LogosOpensource({}) },
     { title: t('cards.free.title'), description: t('cards.free.text'), icon: MoneyIcon({}) },
@@ -89,19 +98,66 @@ export default function Home() {
 
         <div className="mt-10">
           <div className="text-lg lg:text-xl font-normal text-default-500">
-            {t('compare.text1')} {t('compare.text2')} {f('openness_to_experience.title')}, {f('conscientiousness.title')}, {f('extraversion.title')}, {f('agreeableness.title')} {c('and')} {f('neuroticism.title')}
+            {t('compare.text1')} {t('compare.text2')}
           </div>
+        </div>
+      </div>
 
-          {/* <div className="relative"> */}
-          {/*   <Image */}
-          {/*     src="/compare_yourself.svg" */}
-          {/*     width={500} */}
-          {/*     height={500} */}
-          {/*     alt="Hero image" */}
-          {/*   /> */}
-          {/* </div> */}
+      <div className="text-center h-96 mt-56">
+        <SonarPulse>
+          <div
+            className="absolute rounded-full bg-transparent"
+            style={{
+              width: "130px",
+              top: 130 / 6,
+              left: -120
+            }}
+          >
+            {
+              buildCircle([f('openness_to_experience.title'), f('conscientiousness.title'), f('extraversion.title'), t('compare.action'), f('agreeableness.title'), f('neuroticism.title')]).map((e, idx) => (
+                <Button
+                  key={idx}
+                  name={e.name}
+                  style={e.style}
+                  className='absolute'
+                  variant='bordered'
+                >
+                  {e.name}
+                </Button>
+              ))
+            }
+          </div>
+        </SonarPulse>
+      </div>
+
+      <div className="mt-20 text-center">
+        <h1 className={title()}>
+          Latest posts
+        </h1>
+        <div className="mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+          {posts.map((post, idx) => (
+            <PostCard key={idx} {...post} />
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
+const buildCircle = (list: string[]) => {
+  const num = list.length; // Number of Avatars
+  const radius = 190; // Distance from center
+  const start = -90; // Shift start from 0
+  const slice = 360 / num;
+
+  return list.map((name, idx) => {
+    const rotate = slice * idx + start;
+    return {
+      name,
+      style: {
+        transform: `rotate(${rotate}deg) translate(${radius}px) rotate(${-rotate}deg)`,
+        width: '195px'
+      }
+    };
+  });
+};
