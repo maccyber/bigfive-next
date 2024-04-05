@@ -8,6 +8,12 @@ import clsx from "clsx";
 import Footer from "@/components/footer";
 import { ThemeProviderProps } from "next-themes/dist/types";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { locales } from "@/config/site";
+import { unstable_setRequestLocale } from 'next-intl/server';
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +43,7 @@ export default function RootLayout({
   params: { locale: string };
 }) {
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || "";
+  unstable_setRequestLocale(locale);
 
   return (
     <html lang={locale} suppressHydrationWarning>
