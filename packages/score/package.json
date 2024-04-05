@@ -1,5 +1,5 @@
 {
-  "name": "b5-score",
+  "name": "@bigfive-org/score",
   "version": "1.0.0",
   "description": "Calculate score for big five tests",
   "files": ["build/src/"],

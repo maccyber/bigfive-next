@@ -1,6 +1,6 @@
 interface Answer {
   domain: string;
-  facet: string;
+  facet?: number;
   score: number;
 }
 
@@ -11,7 +11,7 @@ interface Result {
   facet: { [key: string]: { score: number; count: number; result: string } };
 }
 
-function processAnswers(answers: Answer[]): { [key: string]: Result } {
+export function processAnswers(answers: Answer[]): { [key: string]: Result } {
   const result: { [key: string]: Result } = {};
 
   answers.forEach(answer => {
@@ -21,6 +21,8 @@ function processAnswers(answers: Answer[]): { [key: string]: Result } {
     const domain = result[answer.domain];
     domain.score += answer.score;
     domain.count++;
+
+    if (!answer.facet) return
 
     if (!domain.facet[answer.facet]) {
       domain.facet[answer.facet] = { score: 0, count: 0, result: 'neutral' };
@@ -40,23 +42,12 @@ function processAnswers(answers: Answer[]): { [key: string]: Result } {
   return result;
 }
 
-function calculateResult(score: number, count: number): string {
+export function calculateResult(score: number, count: number): string {
   const avgScore = score / count;
-  if (avgScore < 3) {
+  if (avgScore > 3) {
     return 'high';
-  } else if (avgScore > 3) {
+  } else if (avgScore < 3) {
     return 'low';
   }
   return 'neutral';
 }
-
-// Test
-const answers: Answer[] = [
-  { domain: "A", facet: "1", score: 3 },
-  { domain: "A", facet: "1", score: 3 },
-  { domain: "E", facet: "1", score: 3 },
-  { domain: "E", facet: "2", score: 3 }
-];
-
-const output = processAnswers(answers);
-console.log(output);
