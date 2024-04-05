@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h3 {
+  @apply text-xl;
+}
+
+blockquote {
+  @apply text-xl italic font-semibold text-gray-900 dark:text-white
+}

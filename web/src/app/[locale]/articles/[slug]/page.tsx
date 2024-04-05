@@ -4,6 +4,7 @@ import { ChevronRightLinearIcon } from '@/components/icons'
 import NextLink from 'next/link'
 import { User } from '@nextui-org/user'
 import { Link } from '@nextui-org/react'
+import { Image } from '@nextui-org/image'
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
@@ -46,6 +47,10 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <h1 className="mb-2 font-bold text-4xl">
           {post.title}
         </h1>
+        {
+          post.image &&
+          <Image src={post.image} alt={post.title} width={1200} height={600} className="mb-4" />
+        }
         <div className="[&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.body.html }} />
       </div>
     </article>

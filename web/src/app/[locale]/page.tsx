@@ -145,13 +145,22 @@ export default function Home({ params: { locale } }: Props) {
             }}
           >
             {
-              buildCircle([f('openness_to_experience.title'), f('conscientiousness.title'), f('extraversion.title'), t('compare.action'), f('agreeableness.title'), f('neuroticism.title')]).map((e, idx) => (
+              buildCircle([
+                { name: f('openness_to_experience.title'), href: '/articles/openness_to_experience' },
+                { name: f('conscientiousness.title'), href: '/articles/conscientiousness' },
+                { name: f('extraversion.title'), href: '/articles/extraversion' },
+                { name: t('compare.action'), href: '/comapre' },
+                { name: f('agreeableness.title'), href: '/articles/agreeableness' },
+                { name: f('neuroticism.title'), href: '/articles/neuroticism' }
+              ]).map((e, idx) => (
                 <Button
                   key={idx}
                   name={e.name}
                   style={e.style}
                   className='absolute'
                   variant='bordered'
+                  as={Link}
+                  href={e.href}
                 >
                   {e.name}
                 </Button>
@@ -165,6 +174,9 @@ export default function Home({ params: { locale } }: Props) {
         <h1 className={title()}>
           Latest posts
         </h1>
+        <h3 className={subtitle({ class: "mt-4" })}>
+          All the latest and greatest news and articles on Personality
+        </h3>
         <div className="mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
           {posts.map((post, idx) => (
             <PostCard key={idx} {...post} />
@@ -174,17 +186,17 @@ export default function Home({ params: { locale } }: Props) {
     </section>
   );
 }
-
-const buildCircle = (list: string[]) => {
+const buildCircle = (list: { name: string; href: string }[]) => {
   const num = list.length; // Number of Avatars
   const radius = 190; // Distance from center
   const start = -90; // Shift start from 0
   const slice = 360 / num;
 
-  return list.map((name, idx) => {
+  return list.map((item, idx) => {
     const rotate = slice * idx + start;
     return {
-      name,
+      name: item.name,
+      href: item.href,
       style: {
         transform: `rotate(${rotate}deg) translate(${radius}px) rotate(${-rotate}deg)`,
         width: '195px'
