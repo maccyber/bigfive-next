@@ -1,8 +1,14 @@
 import { title } from "@/components/primitives";
 import { useTranslations } from 'next-intl';
 import { ViewPreviousButton } from './view-previous-button';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function ResultPage() {
+interface Props {
+  params: { locale: string };
+}
+
+export default function ResultPage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('getResult');
 
   return (

@@ -1,8 +1,14 @@
 import { compareDesc } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 import { PostCard } from '@/components/post-card'
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function ArticlesPage() {
+interface Props {
+  params: { locale: string };
+}
+
+export default function ArticlesPage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
   return (

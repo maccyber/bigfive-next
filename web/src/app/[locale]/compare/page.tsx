@@ -4,9 +4,14 @@ import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { ResultIcon, PersonIcon } from "@/components/icons";
 import { PersonsTable } from "@/components/persons-table";
-import { useSearchParams } from 'next/navigation'
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function ComparePage() {
+interface Props {
+  params: { locale: string };
+}
+
+export default function ComparePage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('getCompare');
   // need use client
   // const params = useSearchParams()

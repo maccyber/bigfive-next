@@ -12,11 +12,16 @@ import { allPosts } from 'contentlayer/generated'
 import { PostCard } from '@/components/post-card';
 import { SonarPulse } from '@/components/sonar-pulse';
 import { Button } from '@nextui-org/button';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function Home() {
+interface Props {
+  params: { locale: string };
+}
+
+export default function Home({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('frontpage');
   const f = useTranslations('facets');
-
 
   const posts = allPosts
     .slice(0, 3)
