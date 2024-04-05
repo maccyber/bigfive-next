@@ -48,7 +48,7 @@ export const SonarPulse: FC<SonarPulseProps> = ({
       circles.push(
         <div
           key={i}
-          className={clsx("circle", `circle-${i}`, "absolute")}
+          className={clsx("circle", `circle-${i}`, "absolute", { "animate-pulse": true })}
           style={{
             width: `${size * (initialSizeFactor + i)}px`,
             height: `${size * (initialSizeFactor + i)}px`,
@@ -57,6 +57,8 @@ export const SonarPulse: FC<SonarPulseProps> = ({
             left: `calc(${size * (initialSizeFactor + i)}px / 2 * -1)`,
             border: `1px solid rgba(${rgbaColors[i - 1]})`,
             background: `linear-gradient(-180deg, rgba(${rgbaColors[i]}) 20%, hsl(var(--nextui-background)) 100%)`,
+            animationPlayState: "running",
+            animationDelay: `${i * 0.5}s`,
           }}
         />,
       );
@@ -80,7 +82,7 @@ export const SonarPulse: FC<SonarPulseProps> = ({
       {children}
       <div className="absolute top-1/2 left-1/2 overflow-visible -z-10">
         <div
-          className="absolute rounded-full"
+          className="absolute rounded-full animate-pulse"
           style={{
             width: `${circleSize}px`,
             height: `${circleSize}px`,
@@ -88,6 +90,8 @@ export const SonarPulse: FC<SonarPulseProps> = ({
             left: `calc(${circleSize}px / 2 * -1)`,
             border: `1.5px solid rgba(${rgbaColors[0]})`,
             background: `linear-gradient(-180deg, rgba(${rgbaColors[0]}) 40%, hsl(var(--nextui-background)) 100%)`,
+            animationPlayState: "running",
+            animationDelay: "1s",
           }}
         />
         {renderCircles}

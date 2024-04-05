@@ -4,7 +4,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { title, subtitle } from "@/components/primitives";
 import clsx from 'clsx';
 import { FeaturesGrid } from "@/components/features-grid";
-import { ExperimentIcon, GithubIcon, LanguageIcon, LogosOpensource, MoneyIcon } from '@/components/icons';
+import { ExperimentIcon, GithubIcon, LanguageIcon, LogosOpensource, MoneyIcon, PlusLinearIcon } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
 import { siteConfig } from '@/config/site';
 import { compareDesc } from 'date-fns'
@@ -13,6 +13,7 @@ import { PostCard } from '@/components/post-card';
 import { SonarPulse } from '@/components/sonar-pulse';
 import { Button } from '@nextui-org/button';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { Tooltip } from '@nextui-org/react';
 
 interface Props {
   params: { locale: string };
@@ -109,7 +110,32 @@ export default function Home({ params: { locale } }: Props) {
       </div>
 
       <div className="text-center h-96 mt-56">
-        <SonarPulse>
+        <SonarPulse
+          color="#7928CA"
+          icon={
+            <Tooltip
+              showArrow
+              color="secondary"
+              content={t('call_to_action')}
+              offset={10}
+              radius="full"
+            >
+              <Button
+                isIconOnly
+                aria-label={t('call_to_action')}
+                className="z-50 w-auto h-auto bg-gradient-to-b from-[#FF1CF7] to-[#7928CA]"
+                radius="full"
+                as={Link}
+                href="/test"
+              >
+                <PlusLinearIcon
+                  className="flex items-center justify-center rounded-full text-white"
+                  size={54}
+                />
+              </Button>
+            </Tooltip>
+          }
+        >
           <div
             className="absolute rounded-full bg-transparent"
             style={{
