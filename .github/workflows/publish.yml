@@ -17,7 +17,8 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn build
+      - run: yarn
+      - run: yarn run --production build
       - run: yarn publish --tag beta build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
