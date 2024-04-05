@@ -2,11 +2,15 @@ name: Publish Package to npmjs
 on:
   push:
     paths:
-    - "packages/score"
+    - "packages/score/*"
+    - ".github/workflows/publish.yml"
 jobs:
   build:
     runs-on: ubuntu-latest
-    working-directory: packages/score
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./packages/score
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
