@@ -51,7 +51,7 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
 
   function addPerson() {
     const isDuplicate = rows.some((item) => item.id === id);
-    if (!isInvalidId && !isDuplicate) {
+    if (name && validId(id) && !isDuplicate) {
       setRows((prev) => {
         return [...prev, { id, name }];
       })
@@ -71,7 +71,6 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
           startContent={<PersonIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />}
           value={name}
           onValueChange={setName}
-        // errorMessage="Please enter a valid ID"
         />
         <Input
           type="text"
@@ -89,6 +88,7 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
             color="primary"
             className="flex-shrink-0"
             onClick={addPerson}
+            isDisabled={!name || !id || isInvalidId}
           >
             {addPersonText}
           </Button>
@@ -123,7 +123,13 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
             )}
           </TableBody>
         </Table>
-        <Button color="primary" className="mt-4" isDisabled>{comparePeopleText}</Button>
+        <Button
+          color="primary"
+          className="mt-4"
+          isDisabled={rows.length < 2}
+        >
+          {comparePeopleText}
+        </Button>
       </div>
     </div>
   );

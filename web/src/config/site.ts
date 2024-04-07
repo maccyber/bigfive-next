@@ -8,11 +8,6 @@ export type Language = {
   countryCode?: string;
 };
 
-interface LinkLanguageAlternate {
-  hrefLang: string;
-  href: string;
-}
-
 export const languages: Language[] = [
   { code: 'en', name: 'English', countryCode: 'us' },
   { code: 'ar', name: 'Arabic' },

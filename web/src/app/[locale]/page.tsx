@@ -150,7 +150,7 @@ export default function Home({ params: { locale } }: Props) {
                 { name: f('openness_to_experience.title'), href: '/articles/openness_to_experience' },
                 { name: f('conscientiousness.title'), href: '/articles/conscientiousness' },
                 { name: f('extraversion.title'), href: '/articles/extraversion' },
-                { name: t('compare.action'), href: '/comapre' },
+                { name: t('compare.action'), href: '/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ' },
                 { name: f('agreeableness.title'), href: '/articles/agreeableness' },
                 { name: f('neuroticism.title'), href: '/articles/neuroticism' }
               ]).map((e, idx) => (
