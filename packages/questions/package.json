@@ -1,5 +1,5 @@
 {
-  "name": "b5-questions",
+  "name": "@bigfive-org/questions",
   "version": "1.0.0",
   "description": "Module for returning Big Five Johnson 120 IPIP-NEO-PI-R items",
   "files": [
@@ -27,16 +27,15 @@
   "devDependencies": {
     "@types/jest": "29.5.12",
     "@typescript-eslint/eslint-plugin": "7.4.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.3",
     "eslint": "8.57.0",
     "eslint-config-love": "43.1.0",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-json-files": "4.1.0",
     "eslint-plugin-n": "16.6.2",
     "eslint-plugin-promise": "6.1.1",
     "jest": "29.7.0",
-    "ts-jest": "29.1.2",
-    "ts-node": "10.9.2",
-    "typescript": "5.4.3"
+    "ts-jest": "29.1.2"
   },
   "dependencies": {}
 }

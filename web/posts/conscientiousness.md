@@ -2,7 +2,7 @@
 title: Conscientiousness
 date: 2021-12-24
 description: An article on the personality trait Conscientiousness.
-image: "/blog/openness.svg"
+image: "/blog/traits/conscientiousness_2.webp"
 author:
   name: "Jonas Enge"
   username: "maccyber"

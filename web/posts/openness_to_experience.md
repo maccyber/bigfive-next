@@ -2,7 +2,7 @@
 title: Openness to experience
 date: 2021-12-24
 description: An article on the personality trait openness to experience.
-image: "/blog/openness.svg"
+image: "/blog/traits/openness_2.webp"
 author:
   name: "Jonas Enge"
   username: "maccyber"

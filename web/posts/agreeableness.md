@@ -2,7 +2,7 @@
 title: Agreeableness
 date: 2021-12-24
 description: An article on the personality trait agreeableness.
-image: "/blog/agreeableness.svg"
+image: "/blog/traits/agreeableness_2.webp"
 author:
   name: "Jonas Enge"
   username: "@maccyber"

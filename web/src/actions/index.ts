@@ -1,4 +1,4 @@
-"use server"
+'use server'
 
 import { connectToDatabase } from "@/db";
 import { ObjectId } from "mongodb";

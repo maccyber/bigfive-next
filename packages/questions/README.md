@@ -5,21 +5,19 @@ Module for returning Big Five [Johnson 120 IPIP-NEO-PI-R](https://ipip.ori.org/3
 ## Installation
 
 ```
-$ npm i @alheimsins/b5-johnson-120-ipip-neo-pi-r
+$ npm i @bigfive-org/questions
 ```
 
 ## Usage
 
 ```JavaScript
-const { getItems, getInfo, getChoices, getQuestions } = require('@alheimsins/b5-johnson-120-ipip-neo-pi-r')
+import { getItems, getInfo, getChoices, getQuestions } from '@alheimsins/b5-johnson-120-ipip-neo-pi-r'
 
 console.log(getInfo()) // returns test info
 
 console.log(getChoices()) // returns choices in English
 
 console.log(getQuestions()) // returns questions in English
-
-console.log(getItems()) // returns English
 
 console.log(getItems('no')) // returns Norwegian
 
@@ -98,6 +96,7 @@ returns an [array with questions and choices](examples/items-en.json)
 | pl   | Polish    | Maryla Królikowska |
 | ko   | Korean    | [TimeTREE](https://github.com/TimeTREE98) |
 | ro   | Romanian  | [Cătălin Topală](https://github.com/catalintopala)
+| ca   | Catalan   | Èric Arnau Soler Professor de filosofia Institut el Joncar Barcelona |
 
 
 ## Help wanted

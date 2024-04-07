@@ -2,7 +2,7 @@
 title: Neuroticism
 date: 2021-12-24
 description: An article on the personality trait Neuroticism.
-image: "/blog/neuroticism.svg"
+image: "/blog/traits/neuroticism_2.webp"
 author:
   name: "Jonas Enge"
   username: "maccyber"

@@ -1,12 +1,18 @@
-import languages from './data/languages.json';
+import languages, { Language, LanguageCode } from './data/languages';
 
-export async function getItems(lang: string = 'en'): Promise<Question[]> {
+export async function getItems(languageCode: LanguageCode = 'en'): Promise<Question[]> {
   try {
-    const questions: Question[] = await import(`./data/${lang}/questions.json`);
-    const choices: ChoiceKeyed[] = await import(`./data/${lang}/choices.json`);
+    const questions: Question[] = (await import(`./data/${languageCode}/questions.json`)).default;
+    const choices: ChoiceKeyed[] = await import(`./data/${languageCode}/choices`);
 
-    return questions.map((question, i) => ({ ...question, num: ++i, choices: choices[question.keyed] }))
+    return questions.map((question, i) => ({
+      ...question,
+      num: ++i,
+      // @ts-ignore
+      choices: choices[question.keyed]
+    }))
   } catch (error) {
+    console.log(error)
     throw new Error('Inventory not found. Try another language input.')
   }
 }
@@ -21,11 +27,6 @@ export function getInfo(): Info {
     languages
   }
 }
-
-export type Language = {
-  id: string;
-  text: string;
-};
 
 export type Question = {
   domain: string;
@@ -54,5 +55,5 @@ export type Info = {
   shortId: string;
   time: number;
   questions: number;
-  languages: Language[];
+  languages: Language[]
 };
