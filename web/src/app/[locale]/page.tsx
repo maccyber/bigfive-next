@@ -159,7 +159,7 @@ export default function Home({ params: { locale } }: Props) {
                     key={idx}
                     name={e.name}
                     style={e.style}
-                    className='absolute hidden md:inline-flex hover:bg-primary'
+                    className='absolute hidden md:inline-flex hover:bg-secondary'
                     variant='bordered'
                     as={Link}
                     href={e.href}
@@ -171,7 +171,7 @@ export default function Home({ params: { locale } }: Props) {
                     size="sm"
                     color="secondary"
                     aria-label={e.name}
-                    className="absolute md:hidden left-24 rounded-full"
+                    className="absolute md:hidden rounded-full left-24"
                     style={e.smallStyle}
                     as={Link}
                     href={e.href}
@@ -215,7 +215,7 @@ export default function Home({ params: { locale } }: Props) {
 }
 const buildCircle = (list: { name: string; href: string }[]) => {
   const num = list.length; // Number of Avatars
-  const radius = 190; // Distance from center
+  const radius = 180; // Distance from center
   const start = -90; // Shift start from 0
   const slice = 360 / num;
 
@@ -225,7 +225,7 @@ const buildCircle = (list: { name: string; href: string }[]) => {
       name: item.name,
       href: item.href,
       style: {
-        transform: `rotate(${rotate}deg) translate(${radius}px) rotate(${-rotate}deg)`,
+        transform: `rotate(${rotate}deg) translate(${radius-20}px) rotate(${-rotate}deg)`,
         width: '195px'
       },
       smallStyle: {
