@@ -1,10 +1,17 @@
 export type SiteConfig = typeof siteConfig;
 
+const basePath = "https://bigfive-test.com"
+
 export type Language = {
   code: string;
   name: string;
   countryCode?: string;
 };
+
+interface LinkLanguageAlternate {
+  hrefLang: string;
+  href: string;
+}
 
 export const languages: Language[] = [
   { code: 'en', name: 'English', countryCode: 'us' },
