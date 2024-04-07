@@ -19,7 +19,7 @@ export const SonarPulse: FC<SonarPulseProps> = ({
   color = "#FF4ECD",
   icon,
   size = 80,
-  circlesCount = 4,
+  circlesCount = 5,
 }) => {
   const isSSR = useIsSSR();
 

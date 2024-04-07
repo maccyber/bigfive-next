@@ -4,7 +4,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { title, subtitle } from "@/components/primitives";
 import clsx from 'clsx';
 import { FeaturesGrid } from "@/components/features-grid";
-import { ExperimentIcon, GithubIcon, LanguageIcon, LogosOpensource, MoneyIcon, PlusLinearIcon } from '@/components/icons';
+import { ExperimentIcon, GithubIcon, LanguageIcon, Logo, LogosOpensource, MoneyIcon, PlusLinearIcon } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
 import { siteConfig } from '@/config/site';
 import { compareDesc } from 'date-fns'
@@ -13,7 +13,8 @@ import { PostCard } from '@/components/post-card';
 import { SonarPulse } from '@/components/sonar-pulse';
 import { Button } from '@nextui-org/button';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { Tooltip } from '@nextui-org/react';
+import { Chip, Tooltip } from '@nextui-org/react';
+import NextLink from 'next/link'
 
 interface Props {
   params: { locale: string };
@@ -85,7 +86,7 @@ export default function Home({ params: { locale } }: Props) {
         </div>
       </section>
 
-      <div className="mt-20">
+      <div className="mt-20 mx-2">
         <FeaturesGrid features={features} />
       </div>
 
@@ -153,34 +154,60 @@ export default function Home({ params: { locale } }: Props) {
                 { name: f('agreeableness.title'), href: '/articles/agreeableness' },
                 { name: f('neuroticism.title'), href: '/articles/neuroticism' }
               ]).map((e, idx) => (
-                <Button
-                  key={idx}
-                  name={e.name}
-                  style={e.style}
-                  className='absolute'
-                  variant='bordered'
-                  as={Link}
-                  href={e.href}
-                >
-                  {e.name}
-                </Button>
-              ))
+                <div key={idx}>
+                  <Button
+                    key={idx}
+                    name={e.name}
+                    style={e.style}
+                    className='absolute hidden md:inline-flex hover:bg-primary'
+                    variant='bordered'
+                    as={Link}
+                    href={e.href}
+                    aria-label={e.name}
+                  >
+                    {e.name}
+                  </Button>
+                  <Chip
+                    size="sm"
+                    color="secondary"
+                    aria-label={e.name}
+                    className="absolute md:hidden left-24 rounded-full"
+                    style={e.smallStyle}
+                    as={Link}
+                    href={e.href}
+                  >{e.name}</Chip>
+                  </div>
+                  ))
             }
-          </div>
+                </div >
         </SonarPulse>
       </div>
 
-      <div className="mt-20 text-center">
-        <h1 className={title()}>
-          Latest posts
-        </h1>
+      <div className="text-center mx-2">
+        <Link href="/articles" color="foreground">
+          <h1 className={title()}>
+            Latest posts
+          </h1>
+        </Link>
         <h3 className={subtitle({ class: "mt-4" })}>
-          All the latest and greatest news and articles on Personality
+          All the latest and greatest news and articles on #personality
         </h3>
         <div className="mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
           {posts.map((post, idx) => (
             <PostCard key={idx} {...post} />
           ))}
+        </div>
+        <div className="mt-10">
+          <Link
+            isBlock
+            as={NextLink}
+            className="mb-8 -ml-3 text-default-500 hover:text-default-900 text-lg"
+            color="foreground"
+            href="/articles"
+            size="md"
+          >
+            Show all articles ...
+          </Link>
         </div>
       </div>
     </section>
@@ -200,6 +227,9 @@ const buildCircle = (list: { name: string; href: string }[]) => {
       style: {
         transform: `rotate(${rotate}deg) translate(${radius}px) rotate(${-rotate}deg)`,
         width: '195px'
+      },
+      smallStyle: {
+        transform: `rotate(${rotate}deg) translate(${radius-60}px) rotate(${-rotate}deg)`,
       }
     };
   });
