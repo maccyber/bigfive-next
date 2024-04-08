@@ -22,7 +22,7 @@ export const Chart: React.FC<ChartProps> = ({ max }) => {
       max
     },
     xaxis: {
-      categories: ['Neuroticism', 'Extroversion', 'Opennes To Experience', 'Agreeableness', 'Conscientiousness'],
+      categories: ['Neuroticism', 'Extraversion', 'Opennes To Experience', 'Agreeableness', 'Conscientiousness'],
       labels: {
         style: {
           fontFamily: 'Inter, sans-serif',

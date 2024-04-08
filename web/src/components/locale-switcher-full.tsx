@@ -26,6 +26,7 @@ export default function LocaleSwitcher() {
   return (
     <div className='w-40'>
       <Select
+        name="localeSelect"
         selectedKeys={[locale]}
         onChange={onSelectChange}
         aria-label="Select language"

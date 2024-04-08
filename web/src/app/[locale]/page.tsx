@@ -4,7 +4,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { title, subtitle } from "@/components/primitives";
 import clsx from 'clsx';
 import { FeaturesGrid } from "@/components/features-grid";
-import { ExperimentIcon, GithubIcon, LanguageIcon, Logo, LogosOpensource, MoneyIcon, PlusLinearIcon } from '@/components/icons';
+import { ExperimentIcon, GithubIcon, LanguageIcon, LogosOpensource, MoneyIcon, PlusLinearIcon } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
 import { siteConfig } from '@/config/site';
 import { compareDesc } from 'date-fns'

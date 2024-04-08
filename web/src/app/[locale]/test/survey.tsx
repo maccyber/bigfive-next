@@ -110,7 +110,6 @@ export const Survey: React.FC<SurveyProps> = ({
   async function submitTest() {
     setLoading(true);
     confetti({});
-    localStorage.clear();
     const result = await saveTest({
       testId: "b5-120",
       lang: 'en',
@@ -119,6 +118,8 @@ export const Survey: React.FC<SurveyProps> = ({
       dateStamp: new Date(),
       answers
     });
+    localStorage.removeItem("inProgress");
+    localStorage.removeItem("b5data");
     console.log(result)
     localStorage.setItem("resultId", result.id);
     router.push(`/result/${result.id}`)
@@ -145,7 +146,8 @@ export const Survey: React.FC<SurveyProps> = ({
 
   function clearDataInLocalStorage() {
     console.log("Clearing data from local storage");
-    localStorage.clear();
+    localStorage.removeItem("inProgress");
+    localStorage.removeItem("b5data");
     location.reload();
   }
 

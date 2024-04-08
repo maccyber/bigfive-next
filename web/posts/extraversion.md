@@ -1,7 +1,7 @@
 ---
 title: Extraversion
 date: 2021-12-24
-description: An article on the personality trait extroversion.
+description: An article on the personality trait extraversion.
 image: "/blog/traits/extraversion_3.webp"
 author:
   name: "Jonas Enge"

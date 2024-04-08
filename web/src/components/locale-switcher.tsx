@@ -24,6 +24,7 @@ export default function LocaleSwitcher() {
         selectedKeys={[locale]}
         onChange={onSelectChange}
         aria-label="Select language"
+        name="localeSelectSmall"
       >
         {languages.map((lang) => (
           <SelectItem
