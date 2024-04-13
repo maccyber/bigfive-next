@@ -8,8 +8,7 @@
   "keywords": [
     "bigfive",
     "personality",
-    "calculate score",
-    "alheimsins"
+    "calculate score"
   ],
   "scripts": {
     "start": "ts-node src/index.ts",

@@ -1,9 +1,10 @@
 import languages, { Language, LanguageCode } from './data/languages';
+import path from 'path';
 
 export async function getItems(languageCode: LanguageCode = 'en'): Promise<Question[]> {
   try {
-    const questions: Question[] = (await import(`./data/${languageCode}/questions.json`)).default;
-    const choices: ChoiceKeyed[] = await import(`./data/${languageCode}/choices`);
+    const questions: Question[] = (await import(path.join(__dirname, 'data', languageCode, 'questions'))).default;
+    const choices: ChoiceKeyed[] = (await import(path.join(__dirname, 'data', languageCode, 'choices'))).default;
 
     return questions.map((question, i) => ({
       ...question,
@@ -13,7 +14,7 @@ export async function getItems(languageCode: LanguageCode = 'en'): Promise<Quest
     }))
   } catch (error) {
     console.log(error)
-    throw new Error('Inventory not found. Try another language input.')
+    throw new Error(`Inventory ./data/${languageCode}/questions not found. Try another language input.`)
   }
 }
 

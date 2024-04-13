@@ -9,7 +9,7 @@ import confetti from "canvas-confetti";
 import { useRouter } from "@/navigation";
 
 import { InfoIcon } from "@/components/icons";
-import { type Question } from "@alheimsins/b5-johnson-120-ipip-neo-pi-r"
+import { type Question } from "@alheimsins/questions"
 import { sleep, formatTimer, isDev } from "@/lib/helpers";
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
