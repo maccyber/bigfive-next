@@ -1,4 +1,4 @@
-module.exports = {
+const choices = {
   plus: [
     {
       text: 'まったく当てはまらない',
@@ -54,3 +54,5 @@ module.exports = {
     }
   ]
 }
+
+export default choices

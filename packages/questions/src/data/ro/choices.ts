@@ -1,56 +1,58 @@
-module.exports = {
+const choices = {
   plus: [
     {
-      text: 'Svært lite treffende',
+      text: 'Dezacord total',
       score: 1,
       color: 1
     },
     {
-      text: 'Lite treffende',
+      text: 'Dezacord',
       score: 2,
       color: 2
     },
     {
-      text: 'Treffer verken bra eller dårlig',
+      text: 'Nici acord, nici dezacord',
       score: 3,
       color: 3
     },
     {
-      text: 'Ganske treffende',
+      text: 'Acord',
       score: 4,
       color: 4
     },
     {
-      text: 'Veldig treffende',
+      text: 'Acord total',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Svært lite treffende',
+      text: 'Dezacord total',
       score: 5,
       color: 1
     },
     {
-      text: 'Lite treffende',
+      text: 'Dezacord',
       score: 4,
       color: 2
     },
     {
-      text: 'Treffer verken bra eller dårlig',
+      text: 'Nici acord, nici dezacord',
       score: 3,
       color: 3
     },
     {
-      text: 'Ganske treffende',
+      text: 'Acord',
       score: 2,
       color: 4
     },
     {
-      text: 'Veldig treffende',
+      text: 'Acord total',
       score: 1,
       color: 5
     }
   ]
 }
+
+export default choices

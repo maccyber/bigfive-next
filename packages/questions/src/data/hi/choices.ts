@@ -1,4 +1,4 @@
-module.exports = {
+const choices = {
   plus: [
     {
       text: 'अत्यंत अयथार्थ',
@@ -54,3 +54,5 @@ module.exports = {
     }
   ]
 }
+
+export default choices

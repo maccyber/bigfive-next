@@ -1,4 +1,4 @@
-module.exports = {
+const choices = {
   plus: [{
     text: 'Sangat Tidak Akurat',
     score: 1,
@@ -52,3 +52,5 @@ module.exports = {
   }
   ]
 }
+
+export default choices

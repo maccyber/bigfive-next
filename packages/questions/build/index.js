@@ -30,15 +30,17 @@ exports.getInfo = exports.getItems = void 0;
 const languages_1 = __importDefault(require("./data/languages"));
 async function getItems(languageCode = 'en') {
     try {
-        const questions = await Promise.resolve(`${`./data/${languageCode}/questions.json`}`).then(s => __importStar(require(s)));
-        const choices = await Promise.resolve(`${`./data/${languageCode}/choices.json`}`).then(s => __importStar(require(s)));
+        const questions = (await Promise.resolve(`${`./data/${languageCode}/questions.json`}`).then(s => __importStar(require(s)))).default;
+        const choices = await Promise.resolve(`${`./data/${languageCode}/choices`}`).then(s => __importStar(require(s)));
         return questions.map((question, i) => ({
             ...question,
             num: ++i,
-            choices: choices[question.keyed],
+            // @ts-ignore
+            choices: choices[question.keyed]
         }));
     }
     catch (error) {
+        console.log(error);
         throw new Error('Inventory not found. Try another language input.');
     }
 }

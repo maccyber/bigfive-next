@@ -1,32 +1,32 @@
-module.exports = {
+const choices = {
   plus: [
     {
       // text: 'Very Inaccurate',
-      text: 'کاملا مخالفم',
+      text: 'Fortement en désaccord',
       score: 1,
       color: 1
     },
     {
       // text: 'Moderately Inaccurate',
-      text: 'مخالفم',
+      text: 'Plutot en désaccord',
       score: 2,
       color: 2
     },
     {
       // text: 'Neither Accurate Nor Inaccurate',
-      text: 'مطمئن نیستم',
+      text: 'Ni en accord ni en désaccord',
       score: 3,
       color: 3
     },
     {
       // text: 'Moderately Accurate',
-      text: 'موافقم',
+      text: 'Plutot en accord',
       score: 4,
       color: 4
     },
     {
       // text: 'Very Accurate',
-      text: 'کاملا موافقم',
+      text: 'Fortement en accord',
       score: 5,
       color: 5
     }
@@ -34,33 +34,35 @@ module.exports = {
   minus: [
     {
       // text: 'Very Inaccurate',
-      text: 'کاملا مخالفم',
+      text: 'Fortement en désaccord',
       score: 5,
       color: 1
     },
     {
       // text: 'Moderately Inaccurate',
-      text: 'مخالفم',
+      text: 'Plutot en désaccord',
       score: 4,
       color: 2
     },
     {
       // text: 'Neither Accurate Nor Inaccurate',
-      text: 'مطمئن نیستم',
+      text: 'Ni en accord ni en désaccord',
       score: 3,
       color: 3
     },
     {
       // text: 'Moderately Accurate',
-      text: 'موافقم',
+      text: 'Plutot en accord',
       score: 2,
       color: 4
     },
     {
       // text: 'Very Accurate',
-      text: 'کاملا موافقم',
+      text: 'Fortement en accord',
       score: 1,
       color: 5
     }
   ]
 }
+
+export default choices

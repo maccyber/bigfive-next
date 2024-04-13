@@ -1,56 +1,58 @@
-module.exports = {
+const choices = {
   plus: [
     {
-      text: 'Zeer oneens',
+      text: 'Nagyon pontatlan',
       score: 1,
       color: 1
     },
     {
-      text: 'Oneens',
+      text: 'Mérsékelten pontatlan',
       score: 2,
       color: 2
     },
     {
-      text: 'Noch eens, noch oneens',
+      text: 'Se nem pontos, se nem pontatlan',
       score: 3,
       color: 3
     },
     {
-      text: 'Eens',
+      text: 'Mérsékelten pontos',
       score: 4,
       color: 4
     },
     {
-      text: 'Zeer eens',
+      text: 'Nagyon pontos',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Zeer oneens',
+      text: 'Nagyon pontatlan',
       score: 5,
       color: 1
     },
     {
-      text: 'Oneens',
+      text: 'Mérsékelten pontatlan',
       score: 4,
       color: 2
     },
     {
-      text: 'Noch eens, noch oneens',
+      text: 'Se nem pontos, se nem pontatlan',
       score: 3,
       color: 3
     },
     {
-      text: 'Eens',
+      text: 'Mérsékelten pontos',
       score: 2,
       color: 4
     },
     {
-      text: 'Zeer eens',
+      text: 'Nagyon pontos',
       score: 1,
       color: 5
     }
   ]
 }
+
+export default choices

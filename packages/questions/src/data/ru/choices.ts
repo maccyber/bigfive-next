@@ -1,4 +1,4 @@
-module.exports = {
+const choices = {
   plus: [
     {
       text: 'Очень Неточно',
@@ -54,3 +54,5 @@ module.exports = {
     }
   ]
 }
+
+export default choices

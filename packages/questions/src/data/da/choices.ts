@@ -1,56 +1,58 @@
-module.exports = {
+const choices = {
   plus: [
     {
-      text: 'Very Inaccurate',
+      text: 'Meget upræcist',
       score: 1,
       color: 1
     },
     {
-      text: 'Moderately Inaccurate',
+      text: 'Rimelig upræcist',
       score: 2,
       color: 2
     },
     {
-      text: 'Neither Accurate Nor Inaccurate',
+      text: 'Hverken præcist eller upræcist',
       score: 3,
       color: 3
     },
     {
-      text: 'Moderately Accurate',
+      text: 'Rimelig præcist',
       score: 4,
       color: 4
     },
     {
-      text: 'Very Accurate',
+      text: 'Meget præcist',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Very Inaccurate',
+      text: 'Meget upræcist',
       score: 5,
       color: 1
     },
     {
-      text: 'Moderately Inaccurate',
+      text: 'Rimelig upræcist',
       score: 4,
       color: 2
     },
     {
-      text: 'Neither Accurate Nor Inaccurate',
+      text: 'Hverken præcist eller upræcist',
       score: 3,
       color: 3
     },
     {
-      text: 'Moderately Accurate',
+      text: 'Rimelig præcist',
       score: 2,
       color: 4
     },
     {
-      text: 'Very Accurate',
+      text: 'Meget præcist',
       score: 1,
       color: 5
     }
   ]
 }
+
+export default choices

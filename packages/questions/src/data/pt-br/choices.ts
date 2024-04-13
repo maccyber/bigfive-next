@@ -1,56 +1,58 @@
-module.exports = {
+const choices = {
   plus: [
     {
-      text: 'Stämmer absolut inte',
+      text: 'Discordo totalmente',
       score: 1,
       color: 1
     },
     {
-      text: 'Stämmer ganska dåligt',
+      text: 'Discordo parcialmente',
       score: 2,
       color: 2
     },
     {
-      text: 'Stämmer varken bra eller dåligt',
+      text: 'Nem discordo, nem concordo',
       score: 3,
       color: 3
     },
     {
-      text: 'Stämmer ganska bra',
+      text: 'Concordo parcialmente',
       score: 4,
       color: 4
     },
     {
-      text: 'Stämmer absolut',
+      text: 'Concordo totalmente',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Stämmer absolut inte',
+      text: 'Discordo totalmente',
       score: 5,
       color: 1
     },
     {
-      text: 'Stämmer ganska dåligt',
+      text: 'Discordo parcialmente',
       score: 4,
       color: 2
     },
     {
-      text: 'Stämmer varken bra eller dåligt',
+      text: 'Nem discordo, nem concordo',
       score: 3,
       color: 3
     },
     {
-      text: 'Stämmer ganska bra',
+      text: 'Concordo parcialmente',
       score: 2,
       color: 4
     },
     {
-      text: 'Stämmer absolut',
+      text: 'Concordo totalmente',
       score: 1,
       color: 5
     }
   ]
 }
+
+export default choices

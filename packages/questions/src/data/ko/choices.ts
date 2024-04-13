@@ -1,56 +1,58 @@
-module.exports = {
+const choices = {
   plus: [
     {
-      text: 'Molto in disaccordo',
+      text: '매우 그렇지 않다',
       score: 1,
       color: 1
     },
     {
-      text: 'In disaccordo',
+      text: '그렇지 않다',
       score: 2,
       color: 2
     },
     {
-      text: 'Nè in accordo nè in disaccordo',
+      text: '보통이다',
       score: 3,
       color: 3
     },
     {
-      text: 'D\'accordo',
+      text: '그렇다',
       score: 4,
       color: 4
     },
     {
-      text: 'Molto d\'accordo',
+      text: '매우 그렇다',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Molto in disaccordo',
+      text: '매우 그렇지 않다',
       score: 5,
       color: 1
     },
     {
-      text: 'In disaccordo',
+      text: '그렇지 않다',
       score: 4,
       color: 2
     },
     {
-      text: 'Nè in accordo nè in disaccordo',
+      text: '보통이다',
       score: 3,
       color: 3
     },
     {
-      text: 'D\'accordo',
+      text: '그렇다',
       score: 2,
       color: 4
     },
     {
-      text: 'Molto d\'accordo',
+      text: '매우 그렇다',
       score: 1,
       color: 5
     }
   ]
 }
+
+export default choices
