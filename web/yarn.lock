@@ -24,10 +24,10 @@
   resolved "https://registry.yarnpkg.com/@bigfive-org/questions/-/questions-1.2.0.tgz#1bb5c793b4e493e56972ed2ee323966dc75f17a3"
   integrity sha512-YzKAqNA3Rv74Jhs2QbQmUcGWjbLAx7kcG6PV+AlBGTG3aPCeygSDiZaAiM8E2lM09pbtvVGYOlRCO0A6wp9Oww==
 
-"@bigfive-org/results@1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@bigfive-org/results/-/results-1.2.1.tgz#d9c3842d75946b682efccdf94fbbb24a55bc92f7"
-  integrity sha512-6rO/s+7zK9WhYkuyjdc5TUoQErB6dBZt/XwXj5/Vl/OliQdEbZn9H52j15LQGvwAZQp6gKuBNRy+eITqIpbUuw==
+"@bigfive-org/results@1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/results/-/results-1.2.3.tgz#b2bf707207326814552494716993b766175399f4"
+  integrity sha512-3qS6hlk5Jyd3quhlKvUsJzAg/l+C2J/guelqsQu5OIF46MF2Op/f6pmXuyVdzvDthpdoYbmHMBpxcMBZmmBroQ==
 
 "@bigfive-org/score@1.2.1":
   version "1.2.1"

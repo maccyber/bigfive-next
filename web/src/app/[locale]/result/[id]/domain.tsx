@@ -1,11 +1,12 @@
 'use client'
 
-import { title, subtitle, heading } from "@/components/primitives";
+import { subtitle, heading } from "@/components/primitives";
 import Link from "next/link";
 import { Chart } from "./chart";
+import { FacetReport, TestReport } from "@bigfive-org/results";
 
 interface DomainProps {
-  domain: any;
+  domain: TestReport;
 }
 
 export const Domain: React.FC<DomainProps> = ({ domain }) => {
@@ -23,7 +24,7 @@ export const Domain: React.FC<DomainProps> = ({ domain }) => {
         <Chart max={20} results={domain.facets} />
         <div>
           {
-            domain.facets.map((facet: any, index: number) => (
+            domain.facets.map((facet: FacetReport, index: number) => (
               <div key={index} className="mt-5">
                 <Link href={`#${facet.title}`}>
                   <h3
@@ -34,7 +35,7 @@ export const Domain: React.FC<DomainProps> = ({ domain }) => {
                   </h3>
                 </Link>
                 <div>
-                  Score: {facet.score} - {facet.scoreText}
+                  Score: {facet.score} - {facet.scoreText} 
                 </div>
                 <p>{facet.text}</p>
               </div>

@@ -4,6 +4,7 @@ import { Chart } from './chart'
 import { useTranslations } from 'next-intl'
 import { title } from "@/components/primitives";
 import { Domain } from './domain';
+import { TestReport } from '@bigfive-org/results';
 
 export default async function ResultPage({ params }: { params: { id: string } }) {
   const testResults = await getTestResult(params.id)
@@ -37,7 +38,7 @@ const Results: React.FC<ResultsProps> = ({ testResults }) => {
       </div>
       <Chart max={120} results={testResults.results} />
       {
-        testResults.results.map((result: any, index: number) => (
+        testResults.results.map((result: TestReport, index: number) => (
             <Domain domain={result} key={index} />
         ))
       }
