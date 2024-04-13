@@ -5,7 +5,7 @@ import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { Button } from "@nextui-org/button";
 import { useRouter } from "@/navigation";
-import { formatAndValidateId } from "@/lib/helpers"
+import { formatAndValidateId, formatId } from "@/lib/helpers"
 import { useEffect, useMemo, useState } from "react";
 import { Input } from "@nextui-org/input";
 import { ResultIcon } from "@/components/icons";
@@ -36,7 +36,7 @@ export const ViewPreviousButton: React.FC<ViewPreviousButtonProps> = ({ viewPrev
 
   const handleGetResults = () => {
     if (!formatAndValidateId(id)) return;
-    router.push(`/result/${id}`);
+    router.push(`/result/${formatId(id)}`);
   }
 
   return (

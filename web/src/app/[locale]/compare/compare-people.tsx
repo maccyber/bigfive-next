@@ -1,10 +1,11 @@
 'use client'
+
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/table";
 import { DeleteIcon, EditIcon, PersonIcon, ResultIcon } from "@/components/icons";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import React, { useState } from "react";
-import { validId } from "@/lib/helpers";
+import { formatId, validId } from "@/lib/helpers";
 import { useSearchParams } from "next/navigation";
 
 interface CompareProps {
@@ -15,7 +16,6 @@ interface CompareProps {
 export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePeopleText }) => {
   const params = useSearchParams()
   const paramId = params.get('id') ?? ''
-  console.log(paramId)
   const columns = [
     {
       key: "name",
@@ -42,9 +42,10 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
   const isInvalidId = React.useMemo(() => {
     if (id === "") return false;
 
-    if (rows.some((item) => item.id === id)) return true;
+    const newId = formatId(id);
+    if (rows.some((item) => item.id === newId)) return true;
 
-    return !validId(id);
+    return !validId(newId);
   }, [id, rows]);
 
   function deleteItem(id: string) {
@@ -54,10 +55,10 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
   }
 
   function addPerson() {
-    const isDuplicate = rows.some((item) => item.id === id);
-    if (name && validId(id) && !isDuplicate) {
+    const newId = formatId(id);
+    if (name && id && !isInvalidId) {
       setRows((prev) => {
-        return [...prev, { id, name }];
+        return [...prev, { id: newId, name }];
       })
       setName('');
       setId('');
