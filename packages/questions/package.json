@@ -1,6 +1,6 @@
 {
   "name": "@bigfive-org/questions",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Module for returning Big Five Johnson 120 IPIP-NEO-PI-R items",
   "main": "build/index.js",
   "files": [
@@ -13,7 +13,6 @@
     "items",
     "johnson-120-ipip-neo-pi-r"
   ],
-  "type": "module",
   "scripts": {
     "start": "ts-node src/index.ts",
     "eslint-fix": "eslint --fix src/**/**/** test/**/**",
