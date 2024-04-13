@@ -7,13 +7,6 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@alheimsins/b5-johnson-120-ipip-neo-pi-r@6.0.13":
-  version "6.0.13"
-  resolved "https://registry.yarnpkg.com/@alheimsins/b5-johnson-120-ipip-neo-pi-r/-/b5-johnson-120-ipip-neo-pi-r-6.0.13.tgz#70bbe4b9ab40022215f038bb0bd5f5b8496f152b"
-  integrity sha512-57H/p/nLhVPhGPuUrWMJOH+ZfkGq6ZoEP7FBE3jqAXkaMsDREsVsSWz3EcWb5jiC0bq5xzZJ/7uFbYWiYMfq7A==
-  dependencies:
-    knuth-shuffle "1.0.8"
-
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
@@ -25,6 +18,21 @@
   integrity sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==
   dependencies:
     regenerator-runtime "^0.14.0"
+
+"@bigfive-org/questions@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/questions/-/questions-1.1.0.tgz#776e3231d9d81cbc77c81afe84c2da1c6e3b6dcb"
+  integrity sha512-Faa/Qm+dERlH909qZAEc3O3Os4yOaerVfGJGFoc7oqZ/qflSOIeVHHJYVF+p+GN9yiT1aPH8vO3RxUGELQyhbg==
+
+"@bigfive-org/results@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/results/-/results-1.1.0.tgz#7aa04c735a157b7b6d0eb3207e26d62bc1273636"
+  integrity sha512-3YRtVvW2IbL2yjA+Pmaj/yskpCIW0G6j2iXUwhIKPr/hf/EQJd6Pzc7lrLfN9HItb6C+13siDuKTMwxID+Q1Lg==
+
+"@bigfive-org/score@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/score/-/score-1.1.0.tgz#0798c0f36601ae975d4409df52a8539c725a2aa1"
+  integrity sha512-AjhYipecrp6eUscYhceUsYwJoS7zgFlMp8JOAadthkJUr4OvhgreLrTWbxLqjcqMEPnD2W2uIeuSg5zCI076Jw==
 
 "@contentlayer/cli@0.3.4":
   version "0.3.4"
@@ -4666,11 +4674,6 @@ kleur@^4.0.3:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
-
-knuth-shuffle@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/knuth-shuffle/-/knuth-shuffle-1.0.8.tgz#929a467b0efd8d297bdcf318ca988a9f1037f80d"
-  integrity sha512-IdC4Hpp+mx53zTt6VAGsAtbGM0g4BV9fP8tTcviCosSwocHcRDw9uG5Rnv6wLWckF4r72qeXFoK9NkvV1gUJCQ==
 
 language-subtag-registry@^0.3.20:
   version "0.3.22"

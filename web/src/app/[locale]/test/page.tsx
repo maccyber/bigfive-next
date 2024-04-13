@@ -1,4 +1,4 @@
-import { getItems } from "@alheimsins/b5-johnson-120-ipip-neo-pi-r"
+import { getItems } from "@bigfive-org/questions"
 import { Survey } from "./survey";
 import { useTranslations } from "next-intl";
 import { saveTest } from "@/actions";

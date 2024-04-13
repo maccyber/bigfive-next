@@ -1,7 +1,7 @@
 {
   "name": "@bigfive-org/results",
   "description": "Text for big five results score",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "MIT",
   "types": "index.d.ts",
   "publishConfig": {

@@ -3,6 +3,7 @@
 import { connectToDatabase } from "@/db";
 import { ObjectId } from "mongodb";
 import { DbResult, Feedback } from "@/types";
+import calculateScore from "@bigfive-org/score"
 
 const collectionName = process.env.DB_COLLECTION || 'results';
 
@@ -11,7 +12,11 @@ export async function getData(id: string) {
   const query = { _id: new ObjectId(id) }
   const db = await connectToDatabase();
   const collection = db.collection(collectionName);
-  return collection.findOne(query);
+  const testResult = await collection.findOne(query);
+  const score = calculateScore(testResult?.testResult);
+  console.log(score)
+  return score
+
 }
 
 export async function saveTest(testResult: DbResult) {
