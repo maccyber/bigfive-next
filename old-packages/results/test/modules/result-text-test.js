@@ -23,7 +23,7 @@ test('throws if not input.scores', t => {
 
 test('returns expected result', t => {
   const scores = require('../data/scores.json')
-  const result = generateResult({ scores: scores })
+  const result = generateResult({ scores })
 
   t.truthy(result, 'result ok')
 })

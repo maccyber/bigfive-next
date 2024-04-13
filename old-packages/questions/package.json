@@ -18,12 +18,8 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && npm audit && ava",
-    "test-offline": "standard && ava",
-    "coverage": "nyc ava",
-    "standard-fix": "standard --fix",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm install",
-    "prepare": "husky install"
+    "test": "standard && ava",
+    "standard-fix": "standard --fix"
   },
   "keywords": [
     "bigfive",
@@ -41,7 +37,6 @@
   "homepage": "https://github.com/Alheimsins/b5-johnson-120-ipip-neo-pi-r#readme",
   "devDependencies": {
     "ava": "6.1.2",
-    "husky": "7.0.1",
     "nyc": "15.1.0",
     "standard": "16.0.3"
   }
