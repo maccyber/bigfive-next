@@ -33,8 +33,14 @@ export interface Language {
   text: string;
 }
 
+export interface ResultsOptions {
+  lang: string;
+  scores: any;
+}
+
 export function getTemplate(lang: string): any;
 export function generateResult(answers: Answers, template: Domain[]): Domain[];
 export function getDomain(options: Options): Domain;
 export function getFacet(options: Options): Facet;
 export function getInfo(): Language[];
+export default function getResults(options: ResultsOptions): any;

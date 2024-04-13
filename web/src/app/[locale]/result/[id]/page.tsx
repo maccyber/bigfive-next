@@ -1,20 +1,23 @@
-import { getData } from '@/actions'
+import { TestResult, getTestResult } from '@/actions'
 import { Snippet } from '@nextui-org/snippet'
 import { Chart } from './chart'
 import { useTranslations } from 'next-intl'
 import { title } from "@/components/primitives";
+import { Domain } from './domain';
 
 export default async function ResultPage({ params }: { params: { id: string } }) {
-  const resultData = await getData(params.id)
+  const testResults = await getTestResult(params.id)
+  if (!testResults) return <div>404</div>
+  console.log(testResults.results)
 
-  return <Results resultData={resultData} />
+  return <Results testResults={testResults} />
 }
 
 interface ResultsProps {
-  resultData: any;
+  testResults: TestResult
 }
 
-const Results: React.FC<ResultsProps> = ({ resultData }) => {
+const Results: React.FC<ResultsProps> = ({ testResults }) => {
   const t = useTranslations('results')
   return (
     <>
@@ -23,15 +26,21 @@ const Results: React.FC<ResultsProps> = ({ resultData }) => {
           hideSymbol
           color="danger"
           className="w-full justify-center"
-        >{resultData?._id.toString()}
+        >{testResults.id}
         </Snippet>
       </div>
+      <div>{new Date(testResults.timestamp).toLocaleString()}</div>
       <div className="flex mt-10">
         <h1 className={title()}>
           {t('theBigFive')}
         </h1>
       </div>
-      <Chart max={120} />
+      <Chart max={120} results={testResults.results} />
+      {
+        testResults.results.map((result: any, index: number) => (
+            <Domain domain={result} key={index} />
+        ))
+      }
     </>
   )
 }

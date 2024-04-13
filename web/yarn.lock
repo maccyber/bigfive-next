@@ -19,20 +19,20 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@bigfive-org/questions@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@bigfive-org/questions/-/questions-1.1.0.tgz#776e3231d9d81cbc77c81afe84c2da1c6e3b6dcb"
-  integrity sha512-Faa/Qm+dERlH909qZAEc3O3Os4yOaerVfGJGFoc7oqZ/qflSOIeVHHJYVF+p+GN9yiT1aPH8vO3RxUGELQyhbg==
+"@bigfive-org/questions@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/questions/-/questions-1.2.0.tgz#1bb5c793b4e493e56972ed2ee323966dc75f17a3"
+  integrity sha512-YzKAqNA3Rv74Jhs2QbQmUcGWjbLAx7kcG6PV+AlBGTG3aPCeygSDiZaAiM8E2lM09pbtvVGYOlRCO0A6wp9Oww==
 
-"@bigfive-org/results@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@bigfive-org/results/-/results-1.1.0.tgz#7aa04c735a157b7b6d0eb3207e26d62bc1273636"
-  integrity sha512-3YRtVvW2IbL2yjA+Pmaj/yskpCIW0G6j2iXUwhIKPr/hf/EQJd6Pzc7lrLfN9HItb6C+13siDuKTMwxID+Q1Lg==
+"@bigfive-org/results@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/results/-/results-1.2.1.tgz#d9c3842d75946b682efccdf94fbbb24a55bc92f7"
+  integrity sha512-6rO/s+7zK9WhYkuyjdc5TUoQErB6dBZt/XwXj5/Vl/OliQdEbZn9H52j15LQGvwAZQp6gKuBNRy+eITqIpbUuw==
 
-"@bigfive-org/score@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@bigfive-org/score/-/score-1.1.0.tgz#0798c0f36601ae975d4409df52a8539c725a2aa1"
-  integrity sha512-AjhYipecrp6eUscYhceUsYwJoS7zgFlMp8JOAadthkJUr4OvhgreLrTWbxLqjcqMEPnD2W2uIeuSg5zCI076Jw==
+"@bigfive-org/score@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/score/-/score-1.2.1.tgz#f6a684463c5cadc6ac6d3b7e3081387e064b161b"
+  integrity sha512-hhJv6Jkxg0bRnl8EpunNiewSKZaPaZXEUIXLLDWB0qGlmtwApin0t3rcKoLw4i8g8DmXhAMSRP+8mKSERhJbKw==
 
 "@contentlayer/cli@0.3.4":
   version "0.3.4"

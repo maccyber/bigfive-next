@@ -4,19 +4,36 @@ import { connectToDatabase } from "@/db";
 import { ObjectId } from "mongodb";
 import { DbResult, Feedback } from "@/types";
 import calculateScore from "@bigfive-org/score"
+import generateResult, { getInfo, Language } from "@bigfive-org/results";
 
 const collectionName = process.env.DB_COLLECTION || 'results';
 
-export async function getData(id: string) {
+export type TestResult = {
+  id: string;
+  timestamp: number;
+  availableLanguages: Language[];
+  language: string;
+  results: any;
+}
+
+export async function getTestResult(id: string): Promise<TestResult | undefined> {
   'use server'
   const query = { _id: new ObjectId(id) }
   const db = await connectToDatabase();
   const collection = db.collection(collectionName);
   const testResult = await collection.findOne(query);
-  const score = calculateScore(testResult?.testResult);
-  console.log(score)
-  return score
-
+  if (!testResult) {
+    return
+  }
+  const scores = calculateScore(testResult?.testResult);
+  const results = generateResult({ lang: testResult.lang, scores });
+  return {
+    id: testResult._id.toString(),
+    timestamp: testResult.testResult.dateStamp,
+    availableLanguages: getInfo(),
+    language: testResult.lang,
+    results
+  }
 }
 
 export async function saveTest(testResult: DbResult) {

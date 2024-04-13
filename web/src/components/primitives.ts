@@ -51,3 +51,16 @@ export const subtitle = tv({
     fullWidth: true
   }
 });
+
+
+export const heading = tv({
+	base: "w-full md:w-1/2 my-2 text-xl lg:text-2xl font-normal block max-w-full",
+	variants: {
+		fullWidth: {
+			true: "!w-full",
+		},
+	},
+  defaultVariants:{
+    fullWidth: true
+  }
+});

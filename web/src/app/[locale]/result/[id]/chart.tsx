@@ -5,9 +5,10 @@ const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 interface ChartProps {
   max: number;
+  results: any;
 }
 
-export const Chart: React.FC<ChartProps> = ({ max }) => {
+export const Chart: React.FC<ChartProps> = ({ max, results }) => {
   const options = {
     legend: {
       show: false
@@ -22,7 +23,7 @@ export const Chart: React.FC<ChartProps> = ({ max }) => {
       max
     },
     xaxis: {
-      categories: ['Neuroticism', 'Extraversion', 'Opennes To Experience', 'Agreeableness', 'Conscientiousness'],
+      categories: results.map((result: any) => result.title),
       labels: {
         style: {
           fontFamily: 'Inter, sans-serif',
@@ -41,7 +42,7 @@ export const Chart: React.FC<ChartProps> = ({ max }) => {
 
   const series = [{
     name: 'You',
-    data: [30, 40, 35, 50, 49]
+    data: results.map((result: any) => result.score)
   }]
 
   return (
