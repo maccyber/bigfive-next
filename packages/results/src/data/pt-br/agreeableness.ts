@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Afabilidade',
   shortDescription: 'Pessoas agradáveis aos outros, simpáticos. Se preocupam com a cooperação e a harmonia social e facilmente se dão bem com outras pessoas.',
@@ -94,4 +94,4 @@ Estão mais preocupados com a verdade e justiça imparcial do que com a miseric�
   ]
 }
 
-export default agreeableness;
+export default agreeableness

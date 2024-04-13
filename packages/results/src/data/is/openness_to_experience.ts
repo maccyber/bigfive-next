@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: 'Víðsýni',
   shortDescription: 'Víðsýni lýsir meðal annars hugsunarstíl sem einkennist af mikilli sköpunargleði, forvitni og hugmyndaauðgi.',

@@ -1,4 +1,4 @@
-const choices ={
+const choices = {
   plus: [
     {
       text: 'Very Inaccurate',

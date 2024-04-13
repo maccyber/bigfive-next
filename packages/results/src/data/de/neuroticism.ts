@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const neuroticism: Domain = {
+const neuroticism: TemplateDomain = {
   domain: 'N',
   title: 'Neurotizismus',
   shortDescription: 'Neurotizismus beschreibt die Tendenz zu negativen Gefühlen.',

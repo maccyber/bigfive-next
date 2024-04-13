@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: 'Abertura à Experiência',
   shortDescription: 'Pessoas criativas, apreciadores da arte e da beleza e que gostam do novo.',

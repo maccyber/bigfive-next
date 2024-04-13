@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Samvinnuþýði',
   shortDescription: 'Þátturinn Samvinnuþýði er skilgreindur út frá samskiptum við aðra og endurspeglar mun einstaklinga þegar kemur að þörfinni fyrir því að vera í sátt og samlyndi við annað fólk og hvort einstaklingarnir sýna öðrum samkennd og kurteisi í samskiptum.',

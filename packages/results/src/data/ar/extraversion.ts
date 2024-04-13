@@ -1,7 +1,6 @@
-import { Domain } from "../../types"
-import extraversion from "../en/extraversion"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const extraversion: TemplateDomain = {
   domain: 'E',
   title: 'الانبساطية',
   shortDescription: 'سمة الانبساطية تصف التفاعل البائن مع العالم الخارجي.',

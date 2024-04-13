@@ -27,7 +27,7 @@ module.exports = {
   },
   "rules": {
   },
-  plugins: [
+  "plugins": [
     "json-files"
   ]
 }

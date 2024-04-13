@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { Button } from "@nextui-org/button";
 import { useRouter } from "@/navigation";
 import { formatAndValidateId } from "@/lib/helpers"
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Input } from "@nextui-org/input";
 import { ResultIcon } from "@/components/icons";
 
@@ -17,9 +17,8 @@ interface ViewPreviousButtonProps {
 
 export const ViewPreviousButton: React.FC<ViewPreviousButtonProps> = ({ viewPreviousText, getResultsText }) => {
   const router = useRouter();
-  const previousResult = global?.localStorage?.getItem("resultId");
 
-
+  const [previousResultId, setPreviousResultId] = useState<string | null>(null)
   const [id, setId] = useState("");
 
   const isInvalidId = useMemo(() => {
@@ -27,6 +26,13 @@ export const ViewPreviousButton: React.FC<ViewPreviousButtonProps> = ({ viewPrev
 
     return !formatAndValidateId(id);
   }, [id]);
+
+  useEffect(() => {
+    const resultId = localStorage.getItem('resultId');
+    if (resultId) {
+      setPreviousResultId(resultId);
+    }
+  }, []);
 
   const handleGetResults = () => {
     if (!formatAndValidateId(id)) return;
@@ -51,10 +57,10 @@ export const ViewPreviousButton: React.FC<ViewPreviousButtonProps> = ({ viewPrev
       </div>
       <div className="flex justify-end gap-3">
         {
-          previousResult && (
+          previousResultId && (
             <Link
               className={clsx(buttonStyles({ color: 'danger', size: 'lg' }), "w-full md:w-auto")}
-              href={`/result/${previousResult}`}
+              href={`/result/${previousResultId}`}
             >
               {viewPreviousText}
             </Link>
@@ -64,7 +70,9 @@ export const ViewPreviousButton: React.FC<ViewPreviousButtonProps> = ({ viewPrev
           color="primary"
           size="lg"
           className="w-full md:w-auto"
-          onClick={handleGetResults}>
+          onClick={handleGetResults}
+          isDisabled={id === "" || isInvalidId}
+        >
           {getResultsText}
         </Button>
       </div>

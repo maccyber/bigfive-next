@@ -2,7 +2,7 @@
 
 import { connectToDatabase } from "@/db";
 import { ObjectId } from "mongodb";
-import { DbResult } from "@/types";
+import { DbResult, Feedback } from "@/types";
 
 const collectionName = process.env.DB_COLLECTION || 'results';
 
@@ -21,3 +21,32 @@ export async function saveTest(testResult: DbResult) {
   const result = await collection.insertOne({ testResult });
   return { "id": result.insertedId.toString() };
 };
+
+
+export type FeebackState = {
+  message: string,
+  type: "error" | "success"
+}
+
+export async function saveFeedback(prevState: FeebackState, formData: FormData): Promise<FeebackState> {
+  'use server'
+  const feedback: Feedback = {
+    name: String(formData.get('name')),
+    email: String(formData.get('email')),
+    message: String(formData.get('message')),
+  };
+  try {
+    const db = await connectToDatabase();
+    const collection = db.collection('feedback');
+    await collection.insertOne({ feedback });
+    return {
+      message: "Sent successfully!",
+      type: "success"
+    }
+  } catch (error) {
+    return {
+      message: "Error sending feedback!",
+      type: "error"
+    }
+  }
+}

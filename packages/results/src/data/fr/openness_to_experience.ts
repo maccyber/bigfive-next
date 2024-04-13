@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: "Ouverture d'esprit",
   shortDescription: "L'ouverture d'esprit représente les capacités d'imagination, de créativité et de curiosité de la personnalité.",

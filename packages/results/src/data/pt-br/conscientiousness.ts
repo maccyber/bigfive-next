@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const conscientiousness: Domain = {
+const conscientiousness: TemplateDomain = {
   domain: 'C',
   title: 'Consciência',
   shortDescription: 'Diz respeito à forma como controlamos, conduzimos e direcionamos nossos impulsos.',

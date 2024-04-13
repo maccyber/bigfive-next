@@ -25,5 +25,6 @@ module.exports = {
     "project": "./tsconfig.json"
   },
   "rules": {
-  }
+  },
+  "plugins": ["json-files"]
 }

@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: 'Openheid voor Ervaring',
   shortDescription: 'Openheid voor Ervaring beschrijft een dimensie van cognitieve stijl die creatieve, creatieve mensen onderscheidt van nuchtere, conventionele mensen.',

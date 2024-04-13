@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const extraversion: Domain = {
+const extraversion: TemplateDomain = {
   domain: 'E',
   title: 'Extroversão',
   shortDescription: 'A extroversão é marcada pela sociabilidade, engajamento com o mundo externo.',

@@ -9,7 +9,18 @@ module.exports = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        heartbeat: {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.2)" },
+          "100%": { transform: "scale(1)" },
+        },
+      },
+      animation: {
+        heartbeat: "heartbeat 1s ease-in-out infinite",
+      }
+    }
   },
   darkMode: "class",
   plugins: [nextui()],

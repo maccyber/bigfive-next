@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const conscientiousness: Domain = {
+const conscientiousness: TemplateDomain = {
   domain: 'C',
   title: 'Meticulosidad',
   shortDescription: 'La meticulosidad hace referencia a la forma en que controlamos y dirigimos nuestros impulsos.',

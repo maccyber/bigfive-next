@@ -172,7 +172,7 @@ export const Survey: React.FC<SurveyProps> = ({
       />
       {
         restored && (
-          <Code color="warning" className="mt-5 flex items-center">
+          <Code color="warning" className="mt-5 flex items-center flex-wrap">
             <InfoIcon className="mr-3" />Your answers has been restored. Click here to&nbsp;<a className="underline cursor-pointer" onClick={clearDataInLocalStorage}>start a new test</a>.
           </Code>
         )

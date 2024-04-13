@@ -20,29 +20,32 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   return (
     <article className="w-full flex flex-col justify-start items-center prose prose-neutral">
       <div className="w-full max-w-4xl">
-        <Link
-          isBlock
-          as={NextLink}
-          className="mb-8 -ml-3 text-default-500 hover:text-default-900"
-          color="foreground"
-          href="/articles"
-          size="md"
-        >
-          <ChevronRightLinearIcon className="rotate-180 inline-block mr-1" size={15} />
-          Back to articles
-        </Link>
-        <time className="flex justify-end text-small mb-2 text-default-500" dateTime={post.date}>
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
-        <div className="mb-3 flex w-full flex-col items-end">
-          <User
-            // href={post.author?.link}
-            name={post.author?.name}
-            description={post.author?.username}
-            avatarProps={{
-              src: post.author?.avatar
-            }}
-          />
+        <div className="flex">
+          <div className="flex grow">
+            <Link
+              isBlock
+              as={NextLink}
+              className="text-default-500 hover:text-default-900 justify-start mb-2"
+              color="foreground"
+              href="/articles"
+              size="md"
+            >
+              <ChevronRightLinearIcon className="rotate-180 inline-block mr-1" size={15} />
+              Back to articles
+            </Link>
+          </div>
+          <div>
+            <div className="mb-3 flex w-full flex-col items-end">
+              <User
+                // href={post.author?.link}
+                name={post.author?.name}
+                description={post.author?.username}
+                avatarProps={{
+                  src: post.author?.avatar
+                }}
+              />
+            </div>
+          </div>
         </div>
         {
           post.image &&
@@ -55,12 +58,15 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
               className="mb-4 w-full object-cover"
             />
             <div className="absolute inset-0 flex mt-8 mx-2 md:mx-4">
-                <div className="bg-foreground px-4 py-2 z-10 h-fit rounded">
-              <h1 className="lg:text-5xl text-4xl font-bold z-20 text-background">{post.title}</h1>
+              <div className="bg-foreground px-4 py-2 z-10 h-fit rounded">
+                <h1 className="lg:text-5xl text-4xl font-bold z-20 text-background">{post.title}</h1>
               </div>
             </div>
           </div>
         }
+        <time className="flex justify-end text-small mb-2 text-default-500" dateTime={post.date}>
+          {format(parseISO(post.date), "LLLL d, yyyy")}
+        </time>
         <div className="[&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.body.html }} />
       </div>
     </article>

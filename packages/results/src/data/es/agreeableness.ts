@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Simpatía',
   shortDescription: 'La simpatía refleja la capacidad de una persona para mantener la armonía y cooperar con otros.',

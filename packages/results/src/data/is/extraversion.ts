@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const extraversion: Domain = {
+const extraversion: TemplateDomain = {
   domain: 'E',
   title: 'Úthverfa',
   shortDescription: 'Úthverfa er þáttur sem endurspeglar þörf einstaklinga til þess að sækja í félagsleg samskipti við umheiminn af fyrra bragði.',

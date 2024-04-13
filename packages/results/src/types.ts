@@ -1,3 +1,5 @@
+import { type LanguageCode } from "./data/languages";
+
 type Score = 'low' | 'neutral' | 'high';
 type DomainShort = 'O' | 'C' | 'E' | 'A' | 'N';
 
@@ -12,7 +14,7 @@ export interface Facet {
   text: string;
 }
 
-export interface Domain {
+export interface TemplateDomain {
   domain: DomainShort;
   title: string;
   shortDescription: string;
@@ -36,4 +38,23 @@ export interface DomainInput {
 
 export type Scores = Record<string, DomainInput>;
 
-export type Template = Record<string, Domain>;
+// export type Template = Record<string, Domain>;
+
+
+export interface ResultOptions {
+  language: LanguageCode;
+  scores: Scores;
+}
+
+
+export interface FacetOptions {
+  language: LanguageCode
+  domain: string
+  facet: string
+}
+
+
+export interface DomainOptions {
+  language: LanguageCode
+  domain: string
+}

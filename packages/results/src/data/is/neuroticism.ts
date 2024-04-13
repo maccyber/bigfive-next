@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const neuroticism: Domain = {
+const neuroticism: TemplateDomain = {
   domain: 'N',
   title: 'Tilfinninganæmi',
   shortDescription: 'Tilfinninganæmi er þáttur sem lýsir tilhneigingu einstaklinga til þess að skynja aðstæður sem ógnandi og lýsir því að hve miklu leyti þeir eru líklegri til að upplifa neikvæðar tilfinningar á borð við kvíða og skömm.',

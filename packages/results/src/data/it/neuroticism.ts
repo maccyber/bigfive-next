@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const neuroticism: Domain = {
+const neuroticism: TemplateDomain = {
   domain: 'N',
   title: 'Nevroticismo',
   shortDescription: 'Il termine nevroticismo si riferisce alla tendenza costante di provare sentimenti negativi.',
@@ -103,4 +103,4 @@ composti, sicuri e riescono a pensare a mente lucida quando sotto stress.`
   ]
 }
 
-export default neuroticism;
+export default neuroticism

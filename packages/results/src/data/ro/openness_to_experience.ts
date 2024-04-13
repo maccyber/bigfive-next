@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: 'Deschidere către experiență',
   shortDescription: 'Deschiderea către experiență descrie o dimensiune a stilului cognitiv care distinge oamenii imaginativi și creativi de oamenii convenționali, cu picioarele pe pământ.',

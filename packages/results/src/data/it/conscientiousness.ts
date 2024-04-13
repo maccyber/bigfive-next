@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const conscientiousness: Domain = {
+const conscientiousness: TemplateDomain = {
   domain: 'C',
   title: 'Coscienziosità',
   shortDescription: 'La coscienziosità riguarda il modo in cui controlliamo, regoliamo, e gestiamo i nostri impulsi.',

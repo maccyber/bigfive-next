@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: 'Åbenhed for nyt',
   shortDescription: 'Åbenhed for nyt beskriver en kognitiv dimension, som adskiller opfindsomme og kreative mennesker fra mennesker, der er mere traditionsbundne og nede-på-jorden.',

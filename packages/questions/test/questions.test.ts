@@ -12,18 +12,24 @@ describe('questions module tests', () => {
     expect(items.length).toBe(info.questions)
   })
 
-  it('it should get test items for all languages', async () => {
+  it('should fetch items for all languages', async () => {
     const { languages } = getInfo()
-    languages.map(async ({ code }) => expect(await getItems(code)))
+    const fetchPromises = languages.map(async ({ code }) => {
+      const items = await getItems(code)
+      expect(items).toBeDefined()
+    })
+
+    await Promise.all(fetchPromises)
   })
+
   it('validation of question ids across languages', async () => {
-    const languages = getInfo().languages.map(({ code }) => code);
-    const questions = await Promise.all(languages.map(async languageId => await getItems(languageId)));
-    const ids: string[][] = questions.map((question) => question.map(q => q.id));
+    const languages = getInfo().languages.map(({ code }) => code)
+    const questions = await Promise.all(languages.map(async languageId => await getItems(languageId)))
+    const ids: string[][] = questions.map((question) => question.map(q => q.id))
 
     ids.reduce((previous: string[], current: string[]) => {
-      expect(previous).toEqual(current);
-      return current;
-    });
+      expect(previous).toEqual(current)
+      return current
+    })
   })
-});
+})

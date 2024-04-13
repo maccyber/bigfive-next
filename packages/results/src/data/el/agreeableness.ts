@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Agreeableness',
   shortDescription: 'Η συμβατότητα αντικατοπτρίζει μεμονωμένες διαφορές όσον αφορά τη συνεργασία και την κοινωνική αρμονία. Συμφωνήσιμα άτομα αξία να πάρει μαζί με άλλους.',

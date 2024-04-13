@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Convivialité',
   shortDescription: "La convivialité évalue l'esprit d'équipe, les interactions sociales et la capacité à bien s'entendre avec les autres",

@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: 'Åpenhet for erfaringer',
   shortDescription: 'Åpenhet for erfaringer beskriver en dimensjon av en kognitiv stil der fantasi skiller kreative mennesker fra jordnære, konvensjonelle mennesker.',
@@ -115,4 +115,4 @@ konservatisme er ikke det samme som politisk tilhørighet, men er absolutt med �
   ]
 }
 
-export default openness;
+export default openness

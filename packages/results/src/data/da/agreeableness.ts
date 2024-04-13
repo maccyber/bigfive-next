@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Imødekommenhed',
   shortDescription: 'Imødekommenhed afspejler individuelle forskelle i interessen for samarbejde og social harmoni. Imødekommende individer sætter pris på at komme godt ud af det med andre mennesker.',

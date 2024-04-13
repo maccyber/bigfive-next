@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Medmenneskelighet',
   shortDescription: 'Medmenneskelighet henspeiler på individuelle forskjeller når det gjelder samarbeid og sosial harmoni. Medmenneskelige individer setter det å komme overens med andre høyt.',
@@ -95,4 +95,4 @@ De er mer opptatt av sannhet og upartisk rettferdighet enn barmhjertighet.`
   ]
 }
 
-export default agreeableness;
+export default agreeableness

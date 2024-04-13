@@ -1,14 +1,9 @@
 import { LanguageCode } from "./data/languages";
 import languages from "./data/languages";
-import { Domain, Scores, Template } from "./types";
+import { TemplateDomain, Scores, FacetOptions, ResultOptions, DomainOptions } from "./types";
 
-interface ResultOptions {
-  language: LanguageCode;
-  scores: Scores;
-}
-
-export default function(options: ResultOptions) {
-  const template: Domain = getTemplate(options.language)
+export default async function(options: ResultOptions) {
+  const template = await getTemplate(options.language)
   return generateResult(options.scores, template)
 }
 
@@ -16,62 +11,55 @@ export function getInfo() {
   return { languages }
 }
 
-interface FacetOptions {
-  language: LanguageCode
-  domain: string
-  facet: string
-}
-
-export function getFacet(options: FacetOptions) {
-  const domain = getDomain(options)
+export async function getFacet(options: FacetOptions) {
+  const domain = await getDomain(options)
   if (!domain) {
     throw new Error('Domain not found')
   }
   const facetId = options.facet.toString()
-  const filtered = domain.facets.find(item => item.facet.toString() === facetId)
+  const filtered = domain.facets.find((item) => item.facet.toString() === facetId)
   return filtered
 }
 
-interface DomainOptions {
-  language: LanguageCode
-  domain: string
-}
-
-export function getDomain(options: DomainOptions) {
-  const template = getTemplate(options.language)
+export async function getDomain(options: DomainOptions) {
+  const template = await getTemplate(options.language)
   if (!template) {
     throw new Error('Template not found')
   }
   const domainId = options.domain.toLowerCase()
-  const filtered = template.find(item => item.domain.toLowerCase() === domainId)
-  return filtered
+  return template.find((item) => item.domain.toLowerCase() === domainId)
 }
 
-export function getTemplate(language: string) {
+export async function getTemplate(language: string): Promise<TemplateDomain[]> {
   try {
-    const template = require(`./data/${language}`)
+    const template = (await import(`./data/${language}`)).default;
     return template
   } catch (error) {
-    const template = require('./data/en')
+    const template = (await import(`./data/en`)).default;
     return template
   }
 }
 
-export function generateResult(scores: Scores, template: Template) {
-  return Object.keys(scores).map(key => {
+export function generateResult(scores: Scores, template: TemplateDomain[]) {
+  return Object.keys(scores).map((key: string) => {
     const { result, count, score } = scores[key];
-    const domain = template[key];
-    const resultText = domain.results.find(res => res.score === result)?.text;
-    const mappedFacets = domain.facets.map(({ facet, title, text }) => {
+    const domainTemplate = template.find(template => template.domain === key);
+
+    if (!domainTemplate) {
+      throw new Error('Domain template not found for key: ' + key);
+    }
+    const resultText = domainTemplate.results.find(res => res.score === result)?.text;
+    const mappedFacets = domainTemplate.facets.map(({ facet, title, text }) => {
+      // @ts-ignore
       const { score, count, result } = facet[key] || {};
       return { facet, title, text, score, count, scoreText: result };
     }).filter(({ score }) => score);
 
     return {
-      domain: domain.domain,
-      title: domain.title,
-      shortDescription: domain.shortDescription,
-      description: domain.description,
+      domain: domainTemplate.domain,
+      title: domainTemplate.title,
+      shortDescription: domainTemplate.shortDescription,
+      description: domainTemplate.description,
       scoreText: resultText,
       count,
       score,

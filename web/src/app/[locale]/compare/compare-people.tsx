@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import React, { useState } from "react";
 import { validId } from "@/lib/helpers";
+import { useSearchParams } from "next/navigation";
 
 interface CompareProps {
   addPersonText: string;
@@ -12,6 +13,9 @@ interface CompareProps {
 }
 
 export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePeopleText }) => {
+  const params = useSearchParams()
+  const paramId = params.get('id') ?? ''
+  console.log(paramId)
   const columns = [
     {
       key: "name",
@@ -33,7 +37,7 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
   }
   const [rows, setRows] = useState([] as Row[])
   const [name, setName] = useState('' as string);
-  const [id, setId] = useState('' as string);
+  const [id, setId] = useState(paramId as string);
 
   const isInvalidId = React.useMemo(() => {
     if (id === "") return false;
@@ -41,7 +45,7 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
     if (rows.some((item) => item.id === id)) return true;
 
     return !validId(id);
-  }, [id]);
+  }, [id, rows]);
 
   function deleteItem(id: string) {
     setRows((prev) => {
@@ -61,7 +65,7 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
   }
 
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-4 mt-4">
       <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4 items-start">
         <Input
           type="text"

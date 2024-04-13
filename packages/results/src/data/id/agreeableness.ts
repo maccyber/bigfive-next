@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Kepersetujuan',
   shortDescription: 'Kepersetujuan mencerminkan perbedaan individu dalam hal kerjasama dan harmoni sosial. Individu yang bersetuju menghargai bergaul dengan orang lain.',

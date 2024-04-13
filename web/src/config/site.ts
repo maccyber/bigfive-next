@@ -1,6 +1,6 @@
 export type SiteConfig = typeof siteConfig;
 
-const basePath = "https://bigfive-test.com"
+export const basePath = "https://bigfive-test.com"
 
 export type Language = {
   code: string;

@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const extraversion: Domain = {
+const extraversion: TemplateDomain = {
   domain: 'E',
   title: 'estroversione',
   shortDescription: 'L\'estroversione è caratterizzata da una pronunciata propensione ad interagire con il mondo esterno.  ',
@@ -82,4 +82,4 @@ a volte scambiata per scortesia o arroganza. In realtà, l'introverso che ottien
   ]
 }
 
-export default extraversion;
+export default extraversion

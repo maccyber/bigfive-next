@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const openness: Domain = {
+const openness: TemplateDomain = {
   domain: 'O',
   title: 'الانفتاح',
   shortDescription: 'الانفتاح أو الانفتاح على التجارب هو السمة التي تميّز أصحاب الخيال والإبداع عن غير الخياليين والتقليديين.',

@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'المسايرة',
   shortDescription: 'درجات المسايرة المختلفة تبيّن اختلاف الأفراد من نواحي التعاون والوئام الاجتماعي. الأفراد المسايرون يهمهم أن يكونوا علو وفاق مع الآخرين.',

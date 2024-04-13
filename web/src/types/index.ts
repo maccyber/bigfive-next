@@ -20,3 +20,9 @@ export type DbResult = {
   dateStamp: string,
   answers: Answer[]
 }
+
+export type Feedback = {
+  name: string,
+  email: string,
+  message: string
+}

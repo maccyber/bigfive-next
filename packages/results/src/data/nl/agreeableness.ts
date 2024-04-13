@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Aangenaamheid',
   shortDescription: 'Aangenaamheid weerspiegelt individuele verschillen in relatie tot samenwerking en sociale vaardigheden. Aangename individuen vinden waarde in het omgaan met anderen.',
@@ -88,4 +88,4 @@ Onaangename individuen plaatsen eigenbelang voor dat van anderen. Ze zijn over h
   ]
 }
 
-export default agreeableness;
+export default agreeableness

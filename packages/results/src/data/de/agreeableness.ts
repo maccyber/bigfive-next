@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Verträglichkeit ',
   shortDescription: 'Verträglichkeit zeigt die individuellen Unterschiede für die Bereitschaft zur Kooperation für die soziale Harmonie. Menschen mit stark ausgeprägter Verträglichkeit ist es wichtig sich mit anderen zu verstehen.',

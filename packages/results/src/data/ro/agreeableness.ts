@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const agreeableness: Domain = {
+const agreeableness: TemplateDomain = {
   domain: 'A',
   title: 'Amabilitatea',
   shortDescription: 'Amabilitatea reflectă diferențele individuale în ceea ce privește cooperarea și armonia socială. Persoanele agreabile apreciază înțelegerea cu ceilalți.',

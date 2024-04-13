@@ -1,6 +1,6 @@
-import { Domain } from "../../types";
+import { type TemplateDomain } from '../../types'
 
-const conscientiousness: Domain = {
+const conscientiousness: TemplateDomain = {
   domain: 'C',
   title: 'Planmessighet',
   shortDescription: 'Planmessighet omhandler måten vi kontrollerer, regulerer og styrer våre impulser.',
@@ -128,4 +128,4 @@ De som skårer lavt gjør ofte det første og beste de tenker på uten å tenke 
   ]
 }
 
-export default conscientiousness;
+export default conscientiousness

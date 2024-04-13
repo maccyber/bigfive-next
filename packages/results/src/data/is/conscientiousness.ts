@@ -1,6 +1,6 @@
-import { Domain } from "../../types"
+import { type TemplateDomain } from '../../types'
 
-const conscientiousness: Domain = {
+const conscientiousness: TemplateDomain = {
   domain: 'C',
   title: 'Samviskusemi',
   shortDescription: 'Þátturinn Samviskusemi snýr að því hvernig einstaklingar takast á við verkefni, þrautseigju þeirra í hegðun og sjálfsstjórnun þegar kemur að eigin hvötum og gefur þó nokkuð góða vísbendingu um það hversu skipulagðir, vinnusamir og áreiðanlegir einstaklingar eru.',

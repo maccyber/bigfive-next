@@ -1,71 +1,71 @@
 export interface Language {
-  code: string;
-  name: string;
+  code: string
+  name: string
 }
 
-export type LanguageCode = "de" | "da" | "el" | "en" | "es" | "fr" | "he" | "is" | "it" | "nl" | "no" | "ar" | "pt-br" | "id" | "ro";
+export type LanguageCode = 'de' | 'da' | 'el' | 'en' | 'es' | 'fr' | 'he' | 'is' | 'it' | 'nl' | 'no' | 'ar' | 'pt-br' | 'id' | 'ro'
 
 const languages: Language[] = [
   {
-    code: "de",
-    name: "Deutsch"
+    code: 'de',
+    name: 'Deutsch'
   },
   {
-    code: "da",
-    name: "Danish"
+    code: 'da',
+    name: 'Danish'
   },
   {
-    code: "el",
-    name: "Greek"
+    code: 'el',
+    name: 'Greek'
   },
   {
-    code: "en",
-    name: "English"
+    code: 'en',
+    name: 'English'
   },
   {
-    code: "es",
-    name: "Spanish"
+    code: 'es',
+    name: 'Spanish'
   },
   {
-    code: "fr",
-    name: "French"
+    code: 'fr',
+    name: 'French'
   },
   {
-    code: "he",
-    name: "Hebrew"
+    code: 'he',
+    name: 'Hebrew'
   },
   {
-    code: "is",
-    name: "Icelandic"
+    code: 'is',
+    name: 'Icelandic'
   },
   {
-    code: "it",
-    name: "Italian"
+    code: 'it',
+    name: 'Italian'
   },
   {
-    code: "nl",
-    name: "Dutch"
+    code: 'nl',
+    name: 'Dutch'
   },
   {
-    code: "no",
-    name: "Norwegian"
+    code: 'no',
+    name: 'Norwegian'
   },
   {
-    code: "ar",
-    name: "Arabic"
+    code: 'ar',
+    name: 'Arabic'
   },
   {
-    code: "pt-br",
-    name: "Portuguese Brazilian"
+    code: 'pt-br',
+    name: 'Portuguese Brazilian'
   },
   {
-    code: "id",
-    name: "Indonesian"
+    code: 'id',
+    name: 'Indonesian'
   },
   {
-    code: "ro",
-    name: "Romanian"
+    code: 'ro',
+    name: 'Romanian'
   }
-];
+]
 
-export default languages;
+export default languages
