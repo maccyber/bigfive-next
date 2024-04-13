@@ -1,0 +1,58 @@
+{
+  "name": "@bigfive-org/results",
+  "description": "Text for big five results score",
+  "version": "1.1.0",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib/",
+    "index.js",
+    "index.d.ts"
+  ],
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "contributors": [
+    {
+      "name": "Jonas Enge",
+      "email": "jonas.enge@gmail.com",
+      "url": "https://github.com/maccyber"
+    }
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && npm audit && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix",
+    "prepare": "husky install",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
+  },
+  "keywords": [
+    "bigfive",
+    "personality",
+    "result"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alheimsins/b5-result-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alheimsins/b5-result-text/issues"
+  },
+  "homepage": "https://github.com/alheimsins/b5-result-text#readme",
+  "devDependencies": {
+    "ava": "4.2.0",
+    "coveralls": "3.1.1",
+    "husky": "8.0.1",
+    "nyc": "15.1.0",
+    "standard": "17.0.0",
+    "typescript": "5.4.5"
+  }
+}
