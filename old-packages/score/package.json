@@ -1,9 +1,8 @@
 {
   "name": "@bigfive-org/score",
   "description": "Calculate score for big five tests",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
-  "types": "index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -45,7 +44,6 @@
   "homepage": "https://github.com/alheimsins/bigfive-calculate-score#readme",
   "devDependencies": {
     "ava": "4.3.3",
-    "coveralls": "3.1.1",
     "nyc": "15.1.0",
     "standard": "16.0.4"
   }
