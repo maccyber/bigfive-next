@@ -1,6 +1,6 @@
 {
   "name": "@bigfive-org/questions",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Module for returning Big Five Johnson 120 IPIP-NEO-PI-R items",
   "main": "build/index.js",
   "files": [
