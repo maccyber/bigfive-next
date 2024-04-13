@@ -8,7 +8,7 @@ import { Domain } from './domain';
 export default async function ResultPage({ params }: { params: { id: string } }) {
   const testResults = await getTestResult(params.id)
   if (!testResults) return <div>404</div>
-  console.log(testResults.results)
+  console.log(testResults.results[0])
 
   return <Results testResults={testResults} />
 }
