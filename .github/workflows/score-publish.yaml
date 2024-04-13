@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./packages/score
+        working-directory: ./old-packages/score
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./packages/questions
+        working-directory: ./old-packages/questions
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
