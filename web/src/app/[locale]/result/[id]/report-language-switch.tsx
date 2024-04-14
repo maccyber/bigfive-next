@@ -7,6 +7,7 @@ import { useRouter } from '@/navigation';
 
 export const ReportLanguageSwitch = ({ language, availableLanguages }: { language: string, availableLanguages: Language[] }) => {
   const router = useRouter();
+
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const selectedLanguage = event.target.value;
     router.push(`?lang=${selectedLanguage}`);
@@ -15,8 +16,9 @@ export const ReportLanguageSwitch = ({ language, availableLanguages }: { languag
 
   return (
     <div className='w-30'>
+      {language}
       <Select
-        selectedKeys={[language]}
+        defaultSelectedKeys={[language]}
         onChange={onSelectChange}
         aria-label="Select language"
         name="localeSelectSmall"
