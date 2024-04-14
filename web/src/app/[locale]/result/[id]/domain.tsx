@@ -2,14 +2,15 @@
 
 import { subtitle, heading } from "@/components/primitives";
 import Link from "next/link";
-import { Chart } from "./chart";
 import { Facet, Domain } from "@bigfive-org/results";
+import { BarChart } from "@/components/bar-chart";
 
 interface DomainProps {
   domain: Domain;
+  scoreText: string;
 }
 
-export const DomainPage: React.FC<DomainProps> = ({ domain }) => {
+export const DomainPage: React.FC<DomainProps> = ({ domain, scoreText }) => {
   return (
     <>
       <div className="mt-5">
@@ -21,7 +22,7 @@ export const DomainPage: React.FC<DomainProps> = ({ domain }) => {
             {domain.title}
           </h2>
         </Link>
-        <Chart max={20} results={domain.facets} />
+        <BarChart max={20} results={domain.facets} />
         <div>
           {
             domain.facets.map((facet: Facet, index: number) => (
@@ -34,10 +35,10 @@ export const DomainPage: React.FC<DomainProps> = ({ domain }) => {
                     {facet.title}
                   </h3>
                 </Link>
-                <div>
-                  Score: {facet.score} - {facet.scoreText}
+                <div className="font-semibold text-gray-500">
+                  {scoreText}: {facet.score} ({facet.scoreText})
                 </div>
-                <p>{facet.text}</p>
+                <p className="mt-3">{facet.text}</p>
               </div>
             ))
           }

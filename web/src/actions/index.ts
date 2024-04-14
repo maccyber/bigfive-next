@@ -8,7 +8,7 @@ import generateResult, { getInfo, Language, Domain } from "@bigfive-org/results"
 
 const collectionName = process.env.DB_COLLECTION || 'results';
 
-export type TestResult = {
+export type Report = {
   id: string;
   timestamp: number;
   availableLanguages: Language[];
@@ -16,7 +16,7 @@ export type TestResult = {
   results: Domain[];
 }
 
-export async function getTestResult(id: string): Promise<TestResult | undefined> {
+export async function getTestResult(id: string, language?: string): Promise<Report | undefined> {
   'use server'
   try {
     const query = { _id: new ObjectId(id) }
@@ -26,13 +26,14 @@ export async function getTestResult(id: string): Promise<TestResult | undefined>
     if (!report) {
       return
     }
+    const selectedLanguage = language || report.lang;
     const scores = calculateScore({ answers: report.answers });
-    const results = generateResult({ lang: report.lang, scores });
+    const results = generateResult({ lang: selectedLanguage, scores });
     return {
       id: report._id.toString(),
       timestamp: report.dateStamp,
-      availableLanguages: getInfo(),
-      language: report.lang,
+      availableLanguages: getInfo().languages,
+      language: selectedLanguage,
       results
     }
   } catch (error) {

@@ -5,15 +5,15 @@ import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-interface ChartProps {
+interface BarChartProps {
   max: number;
   results: any;
 }
 
-export const Chart: React.FC<ChartProps> = ({ max, results }) => {
+export const BarChart: React.FC<BarChartProps> = ({ max, results }) => {
   const { theme } = useTheme();
   const apexChartTheme = theme === 'dark' ? 'dark' : 'light'
-  const options = {
+  const options: ApexOptions = {
     theme: {
       mode: apexChartTheme
     },
@@ -44,9 +44,9 @@ export const Chart: React.FC<ChartProps> = ({ max, results }) => {
       }
     },
     fill: {
-      colors: ['#9353d3', '#006FEE', '#f31260', '#f5a524', '#17c964']
+      colors: ['#9353d3', '#006FEE', '#f31260', '#f5a524', '#17c964', '#E2711D']
     }
-  } as ApexOptions
+  }
 
   const series = [{
     name: 'You',

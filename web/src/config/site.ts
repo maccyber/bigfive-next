@@ -2,6 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const basePath = "https://bigfive-test.com"
 
+export const supportEmail = "bigfive-test@rubynor.com"
+
 export type Language = {
   code: string;
   name: string;

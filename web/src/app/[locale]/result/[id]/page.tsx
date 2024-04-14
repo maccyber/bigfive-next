@@ -1,12 +1,15 @@
-import { TestResult, getTestResult } from '@/actions'
+import { Report, getTestResult } from '@/actions'
 import { Snippet } from '@nextui-org/snippet'
-import { Chart } from './chart'
 import { useTranslations } from 'next-intl'
 import { title } from "@/components/primitives";
 import { DomainPage } from './domain';
 import { Domain } from '@bigfive-org/results';
 import { getTranslations } from 'next-intl/server';
-
+import { BarChart } from '@/components/bar-chart';
+import { Link } from '@/navigation';
+import { ReportLanguageSwitch } from './report-language-switch';
+import { Alert } from '@/components/alert';
+import { supportEmail } from '@/config/site';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'results' });
@@ -16,39 +19,66 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default async function ResultPage({ params }: { params: { id: string } }) {
-  const testResults = await getTestResult(params.id)
-  if (!testResults) return <div>404</div>
+export default async function ResultPage({ params, searchParams }: { params: { id: string }, searchParams: { lang: string } }) {
+  const report = await getTestResult(params.id, searchParams.lang)
+  if (!report) return <Alert title="Could not retrive report">
+    <>
+      <p>We could not retrive the following id {params.id}.</p>
+      <p>Please check that it is correct or contact us at {supportEmail}</p>
+    </>
+  </Alert>
 
-  return <Results testResults={testResults} />
+  return <Results report={report} />
 }
 
 interface ResultsProps {
-  testResults: TestResult
+  report: Report
 }
 
-const Results: React.FC<ResultsProps> = ({ testResults }) => {
+const Results: React.FC<ResultsProps> = ({ report }) => {
   const t = useTranslations('results')
   return (
     <>
       <div className="flex">
+        <div className="flex-grow">
+          <ReportLanguageSwitch language={report.language} availableLanguages={report.availableLanguages} />
+        </div>
+        <div className="text-gray-500 dark:text-gray-400">
+          {new Date(report.timestamp).toLocaleString()}
+        </div>
+      </div>
+      <div className="text-center mt-4">
+        <span className="font-bold">
+          {t('important')}
+        </span> &nbsp;
+        {t('saveResults')} &nbsp;
+        <Link href={`/compare/?id=${report.id}`} className='underline'>
+          {t('compare')}
+        </Link> &nbsp;
+        {t('toOthers')}
+      </div>
+      <div className="flex mt-4">
         <Snippet
           hideSymbol
           color="danger"
           className="w-full justify-center"
-        >{testResults.id}
+          size="lg"
+        >{report.id}
         </Snippet>
       </div>
-      <div>{new Date(testResults.timestamp).toLocaleString()}</div>
       <div className="flex mt-10">
         <h1 className={title()}>
           {t('theBigFive')}
         </h1>
       </div>
-      <Chart max={120} results={testResults.results} />
+      <BarChart max={120} results={report.results} />
       {
-        testResults.results.map((result: Domain, index: number) => (
-            <DomainPage domain={result} key={index} />
+        report.results.map((result: Domain, index: number) => (
+          <DomainPage
+            key={index}
+            domain={result}
+            scoreText={t('score')}
+          />
         ))
       }
     </>

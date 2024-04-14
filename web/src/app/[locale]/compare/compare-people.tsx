@@ -6,16 +6,14 @@ import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import React, { useState } from "react";
 import { formatId, validId } from "@/lib/helpers";
-import { useSearchParams } from "next/navigation";
 
 interface CompareProps {
   addPersonText: string;
   comparePeopleText: string;
+  paramId?: string;
 }
 
-export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePeopleText }) => {
-  const params = useSearchParams()
-  const paramId = params.get('id') ?? ''
+export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePeopleText, paramId }) => {
   const columns = [
     {
       key: "name",
@@ -37,7 +35,7 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
   }
   const [rows, setRows] = useState([] as Row[])
   const [name, setName] = useState('' as string);
-  const [id, setId] = useState(paramId as string);
+  const [id, setId] = useState(paramId ?? '');
 
   const isInvalidId = React.useMemo(() => {
     if (id === "") return false;

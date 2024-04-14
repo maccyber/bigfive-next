@@ -6,9 +6,10 @@ import { Suspense } from 'react';
 
 interface Props {
   params: { locale: string };
+  searchParams: { id: string };
 }
 
-export default function ComparePage({ params: { locale } }: Props) {
+export default function ComparePage({ params: { locale }, searchParams: { id } }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('getCompare');
   return (
@@ -21,6 +22,7 @@ export default function ComparePage({ params: { locale } }: Props) {
         <ComparePeople
           addPersonText={t('addPerson')}
           comparePeopleText={t('comparePeople')}
+          paramId={id}
         />
       </Suspense>
     </div>
