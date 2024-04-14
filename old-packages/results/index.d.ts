@@ -32,13 +32,6 @@ interface TemplateFacet {
     text: string;
 }
 
-export interface Facet {
-  facet: string;
-  scoreText: string;
-  score: number;
-  count: number;
-}
-
 export interface Options {
   language?: string;
   domain?: string;
@@ -55,7 +48,7 @@ export interface ResultsOptions {
   scores: any;
 }
 
-export interface TestReport {
+export interface Domain {
     domain: string;
     title: string;
     shortDescription: string;
@@ -67,7 +60,7 @@ export interface TestReport {
     text: string;
 }
 
-export interface FacetReport {
+export interface Facet {
     facet: number;
     title: string;
     text: string;
@@ -77,8 +70,8 @@ export interface FacetReport {
 }
 
 export function getTemplate(lang: string): any;
-export function generateResult(answers: Answers, template: TemplateDomain[]): TestReport[];
-export function getDomain(options: Options): TemplateDomain;
+export function generateResult(answers: Answers, template: TemplateDomain[]): Domain[];
+export function getDomain(options: Options): Domain;
 export function getFacet(options: Options): Facet;
 export function getInfo(): Language[];
-export default function getResults(options: ResultsOptions): TestReport[];
+export default function getResults(options: ResultsOptions): Domain[];
