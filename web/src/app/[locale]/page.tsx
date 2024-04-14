@@ -75,7 +75,7 @@ export default function Home({ params: { locale } }: Props) {
 
   return (
     <section className='overflow-hidden relative'>
-      <div className='lg:h-[calc(100vh-74px)]'>
+      <div>
         <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
           <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
             <div className='text-center justify-center mt-10'>
@@ -236,9 +236,9 @@ export default function Home({ params: { locale } }: Props) {
         <Link href='/articles' color='foreground'>
           <h1 className={title()}>Latest posts</h1>
         </Link>
-        <h3 className={subtitle({ class: 'mt-4' })}>
+        <h2 className={subtitle({ class: 'mt-4' })}>
           All the latest and greatest news and articles on #personality
-        </h3>
+        </h2>
         <div className='mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
           {posts.map((post, idx) => (
             <PostCard key={idx} {...post} />

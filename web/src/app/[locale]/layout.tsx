@@ -41,25 +41,12 @@ export async function generateMetadata({
       canonical: '/',
       languages: alternatesLang
     },
-    robots: {
-      index: false,
-      follow: true,
-      nocache: true,
-      googleBot: {
-        index: true,
-        follow: false,
-        noimageindex: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
   };
 }
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
   userScalable: false,
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
