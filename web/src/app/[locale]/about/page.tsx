@@ -1,11 +1,19 @@
 import { HeartBoldIcon } from "@/components/icons";
 import { title } from "@/components/primitives";
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Feedback from "./feedback";
 import { Link } from "@/navigation"
 
 interface Props {
   params: { locale: string };
+}
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'about' });
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+  };
 }
 
 export default function AboutPage({ params: { locale } }: Props) {

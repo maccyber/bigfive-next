@@ -5,6 +5,16 @@ import { useTranslations } from 'next-intl'
 import { title } from "@/components/primitives";
 import { Domain } from './domain';
 import { TestReport } from '@bigfive-org/results';
+import { getTranslations } from 'next-intl/server';
+
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'results' });
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+  };
+}
 
 export default async function ResultPage({ params }: { params: { id: string } }) {
   const testResults = await getTestResult(params.id)

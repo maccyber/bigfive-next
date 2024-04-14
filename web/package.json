@@ -11,7 +11,7 @@
   "dependencies": {
     "@bigfive-org/questions": "1.2.0",
     "@bigfive-org/score": "1.2.1",
-    "@bigfive-org/results": "1.2.3",
+    "@bigfive-org/results": "1.2.4",
     "@emotion/is-prop-valid": "1.2.2",
     "@next/third-parties": "14.2.0",
     "@nextui-org/accordion": "2.0.28",
