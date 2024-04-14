@@ -22,18 +22,17 @@ export async function getTestResult(id: string): Promise<TestResult | undefined>
     const query = { _id: new ObjectId(id) }
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
-    const testResult = await collection.findOne(query);
-    console.log(testResult)
-    if (!testResult) {
+    const report = await collection.findOne(query);
+    if (!report) {
       return
     }
-    const scores = calculateScore(testResult?.testResult);
-    const results = generateResult({ lang: testResult.lang, scores });
+    const scores = calculateScore({ answers: report.answers });
+    const results = generateResult({ lang: report.lang, scores });
     return {
-      id: testResult._id.toString(),
-      timestamp: testResult.testResult.dateStamp,
+      id: report._id.toString(),
+      timestamp: report.dateStamp,
       availableLanguages: getInfo(),
-      language: testResult.lang,
+      language: report.lang,
       results
     }
   } catch (error) {
@@ -46,7 +45,7 @@ export async function saveTest(testResult: DbResult) {
   'use server'
   const db = await connectToDatabase();
   const collection = db.collection(collectionName);
-  const result = await collection.insertOne({ testResult });
+  const result = await collection.insertOne(testResult);
   return { "id": result.insertedId.toString() };
 };
 
