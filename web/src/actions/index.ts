@@ -27,7 +27,7 @@ export async function getTestResult(id: string, language?: string): Promise<Repo
     if (!report) {
       return
     }
-    const selectedLanguage = language || (!!resultLanguages.find(l => l.id == report.lang) ? report.lang : resultLanguages[0].id);
+    const selectedLanguage = language || (!!resultLanguages.find(l => l.id == report.lang) ? report.lang : 'en');
     const scores = calculateScore({ answers: report.answers });
     const results = generateResult({ lang: selectedLanguage, scores });
     return {

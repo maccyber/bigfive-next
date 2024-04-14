@@ -16,7 +16,6 @@ export const ReportLanguageSwitch = ({ language, availableLanguages }: { languag
 
   return (
     <div className='w-30'>
-      {language}
       <Select
         defaultSelectedKeys={[language]}
         onChange={onSelectChange}
