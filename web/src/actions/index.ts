@@ -18,21 +18,26 @@ export type TestResult = {
 
 export async function getTestResult(id: string): Promise<TestResult | undefined> {
   'use server'
-  const query = { _id: new ObjectId(id) }
-  const db = await connectToDatabase();
-  const collection = db.collection(collectionName);
-  const testResult = await collection.findOne(query);
-  if (!testResult) {
+  try {
+    const query = { _id: new ObjectId(id) }
+    const db = await connectToDatabase();
+    const collection = db.collection(collectionName);
+    const testResult = await collection.findOne(query);
+    if (!testResult) {
+      return
+    }
+    const scores = calculateScore(testResult?.testResult);
+    const results = generateResult({ lang: testResult.lang, scores });
+    return {
+      id: testResult._id.toString(),
+      timestamp: testResult.testResult.dateStamp,
+      availableLanguages: getInfo(),
+      language: testResult.lang,
+      results
+    }
+  } catch (error) {
+    console.error(error);
     return
-  }
-  const scores = calculateScore(testResult?.testResult);
-  const results = generateResult({ lang: testResult.lang, scores });
-  return {
-    id: testResult._id.toString(),
-    timestamp: testResult.testResult.dateStamp,
-    availableLanguages: getInfo(),
-    language: testResult.lang,
-    results
   }
 }
 
