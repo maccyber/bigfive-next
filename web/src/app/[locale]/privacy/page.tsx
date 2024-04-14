@@ -38,10 +38,10 @@ export default function PrivacyPage() {
         <br />
         <ul>
           <li>
-            "_ga" is used to distingusih users. The cookie is set the first time a user access the website and has a lifetime of 2 until years
+            &quot;_ga&quot; is used to distingusih users. The cookie is set the first time a user access the website and has a lifetime of 2 until years
           </li>
           <li>
-            "_gat" is used to limit the traffic from Google Analytics, this cookie has a lifetime of 10 minutes.
+            &quot;_gat&quot; is used to limit the traffic from Google Analytics, this cookie has a lifetime of 10 minutes.
           </li>
         </ul>
         <br />
