@@ -7,6 +7,7 @@ import calculateScore from "@bigfive-org/score"
 import generateResult, { getInfo, Language, Domain } from "@bigfive-org/results";
 
 const collectionName = process.env.DB_COLLECTION || 'results';
+const languages = getInfo().languages;
 
 export type Report = {
   id: string;
@@ -26,7 +27,7 @@ export async function getTestResult(id: string, language?: string): Promise<Repo
     if (!report) {
       return
     }
-    const selectedLanguage = language || report.lang;
+    const selectedLanguage = language || languages.find(l => l.id == report.lang) ? report.lang : 'en';
     const scores = calculateScore({ answers: report.answers });
     const results = generateResult({ lang: selectedLanguage, scores });
     return {
