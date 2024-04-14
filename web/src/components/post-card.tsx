@@ -18,6 +18,8 @@ export function PostCard(post: Post) {
             className='mb-4 object-cover'
             src={post.image}
             alt={post.description}
+            height={400}
+            width={400}
           />
           <div className='absolute inset-0'></div>
           <h3 className='z-10 mt-3 text-3xl font-bold'>{post.title}</h3>
