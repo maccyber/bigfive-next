@@ -4,7 +4,7 @@ import { connectToDatabase } from "@/db";
 import { ObjectId } from "mongodb";
 import { DbResult, Feedback } from "@/types";
 import calculateScore from "@bigfive-org/score"
-import generateResult, { getInfo, Language, TestReport } from "@bigfive-org/results";
+import generateResult, { getInfo, Language, Domain } from "@bigfive-org/results";
 
 const collectionName = process.env.DB_COLLECTION || 'results';
 
@@ -13,7 +13,7 @@ export type TestResult = {
   timestamp: number;
   availableLanguages: Language[];
   language: string;
-  results: TestReport[];
+  results: Domain[];
 }
 
 export async function getTestResult(id: string): Promise<TestResult | undefined> {

@@ -97,18 +97,18 @@ export const Navbar = () => {
         <NavbarItem>
           <LocaleSwitcherFull />
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.github}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Sponsor
-          </Button>
-        </NavbarItem>
+        {/* <NavbarItem className="hidden lg:flex"> */}
+        {/*   <Button */}
+        {/*     isExternal */}
+        {/*     as={Link} */}
+        {/*     className="text-sm font-normal text-default-600 bg-default-100" */}
+        {/*     href={siteConfig.links.github} */}
+        {/*     startContent={<HeartFilledIcon className="text-danger" />} */}
+        {/*     variant="flat" */}
+        {/*   > */}
+        {/*     Sponsor */}
+        {/*   </Button> */}
+        {/* </NavbarItem> */}
       </NavbarContent>
 
       <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
