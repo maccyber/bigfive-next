@@ -2,7 +2,9 @@ import mongodb, { MongoClient } from 'mongodb';
 
 const url = process.env.DB_URL;
 if (!url) {
-  throw new Error('Please define the DB_URL environment variable inside .env.local');
+  throw new Error(
+    'Please define the DB_URL environment variable inside .env.local'
+  );
 }
 
 const dbName = process.env.DB_NAME || 'results';

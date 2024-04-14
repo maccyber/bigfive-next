@@ -1,22 +1,28 @@
-"use client";
+'use client';
 
-import React, { ReactNode } from "react";
-import { tv } from "tailwind-variants";
-import { Card, CardHeader, CardBody, LinkProps, SlotsToClasses } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
-import { LinkIcon } from "@nextui-org/shared-icons";
+import React, { ReactNode } from 'react';
+import { tv } from 'tailwind-variants';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  LinkProps,
+  SlotsToClasses
+} from '@nextui-org/react';
+import { useRouter } from 'next/navigation';
+import { LinkIcon } from '@nextui-org/shared-icons';
 
 const styles = tv({
   slots: {
-    base: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4",
-    card: "border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]",
-    header: "gap-2 pb-0",
-    body: "",
+    base: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4',
+    card: 'border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]',
+    header: 'gap-2 pb-0',
+    body: '',
     iconWrapper:
-      "flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500",
-    title: "text-base font-semibold",
-    description: "font-normal text-base text-default-500",
-  },
+      'flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500',
+    title: 'text-base font-semibold',
+    description: 'font-normal text-base text-default-500'
+  }
 });
 
 export type FeaturesGridSlots = keyof ReturnType<typeof styles>;
@@ -32,7 +38,11 @@ interface FeaturesGridProps {
   classNames?: SlotsToClasses<FeaturesGridSlots>;
 }
 
-export const FeaturesGrid = ({ features, classNames, ...props }: FeaturesGridProps) => {
+export const FeaturesGrid = ({
+  features,
+  classNames,
+  ...props
+}: FeaturesGridProps) => {
   const router = useRouter();
 
   const slots = styles();
@@ -43,7 +53,7 @@ export const FeaturesGrid = ({ features, classNames, ...props }: FeaturesGridPro
     }
 
     if (feat.isExternal) {
-      window.open(feat.href, "_blank");
+      window.open(feat.href, '_blank');
 
       return;
     }
@@ -61,14 +71,26 @@ export const FeaturesGrid = ({ features, classNames, ...props }: FeaturesGridPro
           onPress={() => handleClick(feat)}
         >
           <CardHeader className={slots.header({ class: classNames?.header })}>
-            <div className={slots.iconWrapper({ class: classNames?.iconWrapper })}>{feat.icon}</div>
-            <p className={slots.title({ class: classNames?.title })}>{feat.title}</p>
-            {feat.isExternal && <LinkIcon className="text-white" height={18} width={18} />}
+            <div
+              className={slots.iconWrapper({ class: classNames?.iconWrapper })}
+            >
+              {feat.icon}
+            </div>
+            <p className={slots.title({ class: classNames?.title })}>
+              {feat.title}
+            </p>
+            {feat.isExternal && (
+              <LinkIcon className='text-white' height={18} width={18} />
+            )}
           </CardHeader>
           {feat.description ? (
             <CardBody className={slots.body({ class: classNames?.body })}>
-              <p className={slots.description({ class: classNames?.description })} dangerouslySetInnerHTML={{ __html: feat.description }}>
-              </p>
+              <p
+                className={slots.description({
+                  class: classNames?.description
+                })}
+                dangerouslySetInnerHTML={{ __html: feat.description }}
+              ></p>
             </CardBody>
           ) : null}
         </Card>

@@ -4,12 +4,14 @@ const japanese = {
     locale: 'ja'
   },
   seo: {
-    keywords: 'ビッグファイブパーソナリティテスト、ビッグ5パーソナリティテスト、b5テスト、ビッグファイブテスト、パーソナリティ特性、ビッグファイブ、比較、無料、ジョーダンピーターソン'
+    keywords:
+      'ビッグファイブパーソナリティテスト、ビッグ5パーソナリティテスト、b5テスト、ビッグファイブテスト、パーソナリティ特性、ビッグファイブ、比較、無料、ジョーダンピーターソン'
   },
   frontpage: {
     seo: {
       title: '無料のオープンソースBigFive性格特性テスト',
-      description: '無料のオープンソースのビッグファイブパーソナリティテストを受けてください。あなたの性格特性を知り、あなた自身をあなたのパートナー、同僚、友人または家族と比較することを学びましょう。'
+      description:
+        '無料のオープンソースのビッグファイブパーソナリティテストを受けてください。あなたの性格特性を知り、あなた自身をあなたのパートナー、同僚、友人または家族と比較することを学びましょう。'
     },
     title: 'ビッグファイブパーソナリティテスト',
     call_to_action: '今すぐ無料テストを受ける',
@@ -17,7 +19,8 @@ const japanese = {
     tests_taken: '<green>{n}</green>人以上がテストを受けました',
     compare: {
       title: '自分を他の人と比較する',
-      text1: 'あなたのパートナー、同僚、友人または家族とあなた自身を比較してください。',
+      text1:
+        'あなたのパートナー、同僚、友人または家族とあなた自身を比較してください。',
       text2: '5つのドメインで他の人とどのように違うかを学びましょう。',
       action: '実際に動作するのを見る'
     },
@@ -43,19 +46,22 @@ const japanese = {
     description: {
       top: '無料のオープンソースの性格検査で自分自身をよりよく知ることを学びましょう。',
       subtop: 'ザ・',
-      subtop2: ' は、人格を測定するための最も科学的に検証された信頼できる心理モデルです。',
+      subtop2:
+        ' は、人格を測定するための最も科学的に検証された信頼できる心理モデルです。',
       reference: `Tests and evaluation for this site is gathered from
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: '次のテストには120の質問が含まれており、完了するまでに約10分かかると推定されています。',
-      result: 'テストが完了すると、次のドメインで詳細なパーソナリティレポートが届きます。',
+      result:
+        'テストが完了すると、次のドメインで詳細なパーソナリティレポートが届きます。',
       tests_taken: 'これまでに行われたテスト'
     }
   },
   about: {
     seo: {
       title: 'アバウトとビッグファイブチーム',
-      description: 'BigFiveには非常に活発で熱心なチームがあり、BigFiveを前進させるために絶えず努力しています。'
+      description:
+        'BigFiveには非常に活発で熱心なチームがあり、BigFiveを前進させるために絶えず努力しています。'
     }
   },
   toolbar: {
@@ -92,7 +98,8 @@ const japanese = {
   },
   form: {
     information: '情報',
-    informationText: '私たちはあなたにサービスを提供するためにあなたが提供した情報を使用します',
+    informationText:
+      '私たちはあなたにサービスを提供するためにあなたが提供した情報を使用します',
     mostAccurate: '可能な限り最も正確な結果',
     readMoreAbout: 'についてもっと読む',
     privacy: 'プライバシー',
@@ -166,7 +173,8 @@ const japanese = {
     description1: 'ビッグファイブの性格検査の結果を複数の人と比較します。',
     description2: 'テスト結果から取得したIDを入力します。',
     description3: 'ID入力フィールド',
-    needToAddPeople: 'あなたはそれらを比較するために人々を追加する必要があります',
+    needToAddPeople:
+      'あなたはそれらを比較するために人々を追加する必要があります',
     addAnother: '別の人を追加する',
     addPerson: '人を追加',
     comparePeople: '人を比較する',
@@ -183,12 +191,14 @@ const japanese = {
     toOthers: '他人に自分自身',
     seo: {
       title: 'BigFive性格検査の結果',
-      description: '私の性格を見て、次の5つのドメインで自分自身を比較してください：神経症的性格、経験への開放性、誠実性、外向性、協調性'
+      description:
+        '私の性格を見て、次の5つのドメインで自分自身を比較してください：神経症的性格、経験への開放性、誠実性、外向性、協調性'
     }
   },
   getResult: {
     result: '結果',
-    explanation: 'テストを受けてIDを保存した場合は、取得したIDを入力すると、ここに結果が表示されます。',
+    explanation:
+      'テストを受けてIDを保存した場合は、取得したIDを入力すると、ここに結果が表示されます。',
     idInput: 'ID入力フィールド',
     urlOrId: '結果のURLまたはID',
     getResult: '結果を得る',
@@ -201,6 +211,6 @@ const japanese = {
     copiedLink: 'コピーされたリンク',
     shareResults: '結果を共有してください！'
   }
-}
+};
 
-export default japanese
+export default japanese;

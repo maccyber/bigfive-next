@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import { ApexOptions } from "apexcharts";
-import { useTheme } from "next-themes";
-import dynamic from "next/dynamic";
-const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import { ApexOptions } from 'apexcharts';
+import { useTheme } from 'next-themes';
+import dynamic from 'next/dynamic';
+const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 interface BarChartCompareProps {
   max: number;
@@ -14,11 +14,15 @@ interface BarChartCompareProps {
 type Scores = {
   name: string;
   data: number[];
-}
+};
 
-export const BarChartCompare = ({ max, series, categories }: BarChartCompareProps) => {
+export const BarChartCompare = ({
+  max,
+  series,
+  categories
+}: BarChartCompareProps) => {
   const { theme } = useTheme();
-  const apexChartTheme = theme === 'dark' ? 'dark' : 'light'
+  const apexChartTheme = theme === 'dark' ? 'dark' : 'light';
   const options: ApexOptions = {
     theme: {
       mode: apexChartTheme
@@ -31,7 +35,7 @@ export const BarChartCompare = ({ max, series, categories }: BarChartCompareProp
         show: false
       },
       fontFamily: 'Inter, sans-serif',
-      background: 'transparent',
+      background: 'transparent'
     },
     yaxis: {
       max
@@ -40,7 +44,7 @@ export const BarChartCompare = ({ max, series, categories }: BarChartCompareProp
       categories,
       labels: {
         style: {
-          fontFamily: 'Inter, sans-serif',
+          fontFamily: 'Inter, sans-serif'
         }
       }
     },
@@ -48,18 +52,18 @@ export const BarChartCompare = ({ max, series, categories }: BarChartCompareProp
       bar: {
         distributed: false
       }
-    },
-  }
+    }
+  };
 
   return (
     <>
       <ApexChart
-        type="bar"
+        type='bar'
         options={options}
         series={series}
         height={350}
-        width="100%"
+        width='100%'
       />
     </>
-  )
-}
+  );
+};

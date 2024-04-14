@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
-export const basePath = "https://bigfive-test.com"
+export const basePath = 'https://bigfive-test.com';
 
-export const supportEmail = "bigfive-test@rubynor.com"
+export const supportEmail = 'bigfive-test@rubynor.com';
 
 export type Language = {
   code: string;
@@ -28,90 +28,91 @@ export const languages: Language[] = [
   { code: 'is', name: 'Icelandic', countryCode: 'is' },
   { code: 'ja', name: 'Japanese', countryCode: 'jp' },
   { code: 'pl', name: 'Polish', countryCode: 'pl' },
-  { code: 'ru', name: 'Russian',countryCode: 'ru' },
+  { code: 'ru', name: 'Russian', countryCode: 'ru' },
   { code: 'th', name: 'Thai', countryCode: 'th' },
   { code: 'zh', name: 'Chinese', countryCode: 'cn' }
-]
+];
 
 export const locales = languages.map((lang) => lang.code) as string[];
 
 export const siteConfig = {
-	name: "Big Five Personality Test",
-	description: "Learn to know yourself better with a free, open-source personality test.",
-	navItems: [
-		{
-			label: "Home",
-			href: "/",
-		},
+  name: 'Big Five Personality Test',
+  description:
+    'Learn to know yourself better with a free, open-source personality test.',
+  navItems: [
     {
-      label: "Result",
-      href: "/result",
+      label: 'Home',
+      href: '/'
     },
     {
-      label: "Compare",
-      href: "/compare",
+      label: 'Result',
+      href: '/result'
     },
     {
-      label: "Articles",
-      href: "/articles",
+      label: 'Compare',
+      href: '/compare'
     },
     {
-      label: "About",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
-    {
-      label: "See your result",
-      href: "/result",
+      label: 'Articles',
+      href: '/articles'
     },
     {
-      label: "Compare with others",
-      href: "/compare",
-    },
-    {
-      label: "Articles",
-      href: "/articles",
-    },
-    {
-      label: "Privacy",
-      href: "/privacy",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
-    {
-      label: "FAQ",
-      href: "/faq",
-    }
-	],
-  footerLinks: [
-		{
-			label: "Home",
-			href: "/",
-		},
-    {
-      label: "Articles",
-      href: "/articles",
-    },
-    {
-      label: "Privacy",
-      href: "/privacy",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
-    {
-      label: "FAQ",
-      href: "/faq",
+      label: 'About',
+      href: '/about'
     }
   ],
-	links: {
-		github: "https://github.com/rubynor/bigfive-web",
-		twitter: "https://twitter.com/rubynor",
-    linkedIn: "https://www.linkedin.com/company/rubynor-as/",
-    facebook: "https://www.facebook.com/rubynorno",
-	},
+  navMenuItems: [
+    {
+      label: 'See your result',
+      href: '/result'
+    },
+    {
+      label: 'Compare with others',
+      href: '/compare'
+    },
+    {
+      label: 'Articles',
+      href: '/articles'
+    },
+    {
+      label: 'Privacy',
+      href: '/privacy'
+    },
+    {
+      label: 'About',
+      href: '/about'
+    },
+    {
+      label: 'FAQ',
+      href: '/faq'
+    }
+  ],
+  footerLinks: [
+    {
+      label: 'Home',
+      href: '/'
+    },
+    {
+      label: 'Articles',
+      href: '/articles'
+    },
+    {
+      label: 'Privacy',
+      href: '/privacy'
+    },
+    {
+      label: 'About',
+      href: '/about'
+    },
+    {
+      label: 'FAQ',
+      href: '/faq'
+    }
+  ],
+  links: {
+    github: 'https://github.com/rubynor/bigfive-web',
+    twitter: 'https://twitter.com/rubynor',
+    linkedIn: 'https://www.linkedin.com/company/rubynor-as/',
+    facebook: 'https://www.facebook.com/rubynorno'
+  }
 };

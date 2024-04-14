@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Select, SelectItem } from '@nextui-org/select';
 import { ChangeEvent } from 'react';
@@ -10,13 +10,16 @@ interface TestLanguageSwitchProps {
   language: string;
 }
 
-export const TestLanguageSwitch = ({ availableLanguages, language }: TestLanguageSwitchProps) => {
+export const TestLanguageSwitch = ({
+  availableLanguages,
+  language
+}: TestLanguageSwitchProps) => {
   const router = useRouter();
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const selectedLanguage = event.target.value;
     router.push(`?lang=${selectedLanguage}`);
-    router.refresh()
+    router.refresh();
   }
 
   return (
@@ -24,14 +27,18 @@ export const TestLanguageSwitch = ({ availableLanguages, language }: TestLanguag
       <Select
         defaultSelectedKeys={[language]}
         onChange={onSelectChange}
-        aria-label="Select language"
-        name="localeSelectSmall"
+        aria-label='Select language'
+        name='localeSelectSmall'
         className='w-48'
-        label="Select language"
+        label='Select language'
         items={availableLanguages}
       >
-      {(language) => <SelectItem key={language.id} value={language.id}>{language.text}</SelectItem>}
+        {(language) => (
+          <SelectItem key={language.id} value={language.id}>
+            {language.text}
+          </SelectItem>
+        )}
       </Select>
     </div>
-  )
-}
+  );
+};

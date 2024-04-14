@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState } from "react";
-import { Button } from "@nextui-org/button";
-import { RadioGroup, Radio } from "@nextui-org/radio";
-import { Progress } from "@nextui-org/progress";
-import { Code } from "@nextui-org/code";
-import confetti from "canvas-confetti";
-import { useRouter } from "@/navigation";
+import { useEffect, useMemo, useState } from 'react';
+import { Button } from '@nextui-org/button';
+import { RadioGroup, Radio } from '@nextui-org/radio';
+import { Progress } from '@nextui-org/progress';
+import { Code } from '@nextui-org/code';
+import confetti from 'canvas-confetti';
+import { useRouter } from '@/navigation';
 
-import { InfoIcon } from "@/components/icons";
-import { type Question } from "@bigfive-org/questions"
-import { sleep, formatTimer, isDev } from "@/lib/helpers";
+import { InfoIcon } from '@/components/icons';
+import { type Question } from '@bigfive-org/questions';
+import { sleep, formatTimer, isDev } from '@/lib/helpers';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
-import { type Answer } from "@/types";
+import { type Answer } from '@/types';
 
 interface SurveyProps {
   questions: Question[];
@@ -46,22 +46,29 @@ export const Survey = ({
     const handleResize = () => {
       setQuestionsPerPage(window.innerWidth > 768 ? 3 : 1);
     };
-    handleResize()
+    handleResize();
   }, [width]);
 
   useEffect(() => {
     const restoreData = () => {
       if (dataInLocalStorage()) {
-        console.log("Restoring data from local storage");
+        console.log('Restoring data from local storage');
         restoreDataFromLocalStorage();
       }
-    }
+    };
     restoreData();
   }, []);
 
-  const currentQuestions = useMemo(() => questions.slice(currentQuestionIndex, currentQuestionIndex + questionsPerPage), [currentQuestionIndex, questions, questionsPerPage]);
+  const currentQuestions = useMemo(
+    () =>
+      questions.slice(
+        currentQuestionIndex,
+        currentQuestionIndex + questionsPerPage
+      ),
+    [currentQuestionIndex, questions, questionsPerPage]
+  );
 
-  const isTestDone = questions.length === answers.length
+  const isTestDone = questions.length === answers.length;
 
   async function handleAnswer(id: string, value: string) {
     const question = questions.find((question) => question.id === id);
@@ -71,15 +78,18 @@ export const Survey = ({
       id,
       score: Number(value),
       domain: question.domain,
-      facet: question.facet,
+      facet: question.facet
     };
 
-    setAnswers((prevAnswers) => [...prevAnswers.filter((a) => a.id !== id), newAnswer]);
+    setAnswers((prevAnswers) => [
+      ...prevAnswers.filter((a) => a.id !== id),
+      newAnswer
+    ]);
 
     if (questionsPerPage === 1 && questions.length !== answers.length + 1) {
       setInProgress(true);
       await sleep(700);
-      setCurrentQuestionIndex(prev => prev + 1);
+      setCurrentQuestionIndex((prev) => prev + 1);
       window.scrollTo(0, 0);
       setInProgress(false);
     }
@@ -94,16 +104,18 @@ export const Survey = ({
   function handleNextQuestions() {
     setCurrentQuestionIndex((prev) => prev + questionsPerPage);
     window.scrollTo(0, 0);
-    if (restored) setRestored(false)
+    if (restored) setRestored(false);
   }
 
   function skipToEnd() {
-    const randomAnswers = questions.map((question) => ({
-      id: question.id,
-      score: Math.floor(Math.random() * 5) + 1,
-      domain: question.domain,
-      facet: question.facet
-    })).slice(0, questions.length - 1);
+    const randomAnswers = questions
+      .map((question) => ({
+        id: question.id,
+        score: Math.floor(Math.random() * 5) + 1,
+        domain: question.domain,
+        facet: question.facet
+      }))
+      .slice(0, questions.length - 1);
 
     setAnswers([...randomAnswers]);
     setCurrentQuestionIndex(questions.length - 1);
@@ -113,31 +125,34 @@ export const Survey = ({
     setLoading(true);
     confetti({});
     const result = await saveTest({
-      testId: "b5-120",
+      testId: 'b5-120',
       lang: language,
       invalid: false,
       timeElapsed: seconds,
       dateStamp: new Date(),
       answers
     });
-    localStorage.removeItem("inProgress");
-    localStorage.removeItem("b5data");
-    console.log(result)
-    localStorage.setItem("resultId", result.id);
-    router.push(`/result/${result.id}`)
+    localStorage.removeItem('inProgress');
+    localStorage.removeItem('b5data');
+    console.log(result);
+    localStorage.setItem('resultId', result.id);
+    router.push(`/result/${result.id}`);
   }
 
   function dataInLocalStorage() {
-    return !!localStorage.getItem("inProgress");
+    return !!localStorage.getItem('inProgress');
   }
 
   function populateDataInLocalStorage() {
-    localStorage.setItem("inProgress", "true");
-    localStorage.setItem("b5data", JSON.stringify({ answers, currentQuestionIndex }));
+    localStorage.setItem('inProgress', 'true');
+    localStorage.setItem(
+      'b5data',
+      JSON.stringify({ answers, currentQuestionIndex })
+    );
   }
 
   function restoreDataFromLocalStorage() {
-    const data = localStorage.getItem("b5data")
+    const data = localStorage.getItem('b5data');
     if (data) {
       const { answers, currentQuestionIndex } = JSON.parse(data);
       setAnswers(answers);
@@ -147,46 +162,59 @@ export const Survey = ({
   }
 
   function clearDataInLocalStorage() {
-    console.log("Clearing data from local storage");
-    localStorage.removeItem("inProgress");
-    localStorage.removeItem("b5data");
+    console.log('Clearing data from local storage');
+    localStorage.removeItem('inProgress');
+    localStorage.removeItem('b5data');
     location.reload();
   }
 
   const progress = Math.round((answers.length / questions.length) * 100);
-  const nextButtonDisabled = (currentQuestionIndex + questionsPerPage > answers.length)
-    || (isTestDone && currentQuestionIndex === questions.length - questionsPerPage)
-    || loading;
-  const backButtonDisabled = (currentQuestionIndex === 0) || loading;
+  const nextButtonDisabled =
+    currentQuestionIndex + questionsPerPage > answers.length ||
+    (isTestDone &&
+      currentQuestionIndex === questions.length - questionsPerPage) ||
+    loading;
+  const backButtonDisabled = currentQuestionIndex === 0 || loading;
 
   return (
-    <div className="mt-2">
+    <div className='mt-2'>
       <Progress
-        aria-label="Progress bar"
+        aria-label='Progress bar'
         value={progress}
-        className="max-w"
+        className='max-w'
         showValueLabel={true}
         label={formatTimer(seconds)}
         minValue={0}
         maxValue={100}
-        size="lg"
-        color="secondary"
+        size='lg'
+        color='secondary'
       />
-      {
-        restored && (
-          <Code color="warning" className="mt-5 flex items-center flex-wrap text-wrap">
-            <InfoIcon className="mr-3" />Your answers has been restored. Click here to&nbsp;<a className="underline cursor-pointer" onClick={clearDataInLocalStorage}>start a new test</a>.
-          </Code>
-        )
-      }
+      {restored && (
+        <Code
+          color='warning'
+          className='mt-5 flex items-center flex-wrap text-wrap'
+        >
+          <InfoIcon className='mr-3' />
+          Your answers has been restored. Click here to&nbsp;
+          <a
+            className='underline cursor-pointer'
+            onClick={clearDataInLocalStorage}
+          >
+            start a new test
+          </a>
+          .
+        </Code>
+      )}
       {currentQuestions.map((question) => (
-        <div key={"q" + question.num}>
-          <h2 className="text-2xl my-4">{question.text}</h2>
+        <div key={'q' + question.num}>
+          <h2 className='text-2xl my-4'>{question.text}</h2>
           <div>
             <RadioGroup
               onValueChange={(value) => handleAnswer(question.id, value)}
-              value={answers.find((answer) => answer.id === question.id)?.score.toString()}
-              color="secondary"
+              value={answers
+                .find((answer) => answer.id === question.id)
+                ?.score.toString()}
+              color='secondary'
               isDisabled={inProgress}
             >
               {question.choices.map((choice, index) => (
@@ -201,9 +229,9 @@ export const Survey = ({
           </div>
         </div>
       ))}
-      <div className="my-12 space-x-4 inline-flex">
+      <div className='my-12 space-x-4 inline-flex'>
         <Button
-          color="primary"
+          color='primary'
           isDisabled={backButtonDisabled}
           onClick={handlePreviousQuestions}
         >
@@ -211,17 +239,16 @@ export const Survey = ({
         </Button>
 
         <Button
-          color="primary"
+          color='primary'
           isDisabled={nextButtonDisabled}
           onClick={handleNextQuestions}
         >
           {nextText.toUpperCase()}
         </Button>
 
-
         {isTestDone && (
           <Button
-            color="secondary"
+            color='secondary'
             onClick={submitTest}
             disabled={loading}
             isLoading={loading}
@@ -231,10 +258,7 @@ export const Survey = ({
         )}
 
         {isDev && !isTestDone && (
-          <Button
-            color="primary"
-            onClick={skipToEnd}
-          >
+          <Button color='primary' onClick={skipToEnd}>
             Skip to end (dev)
           </Button>
         )}

@@ -5,12 +5,14 @@ const arabic = {
     locale: 'ar'
   },
   seo: {
-    keywords: 'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+    keywords:
+      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Free open-source BigFive personality traits test',
-      description: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+      description:
+        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
     title: 'اختبار السمات الخمسة الكبرى للشخصية',
     call_to_action: 'ابدأ الاختبار الآن مجاناً',
@@ -44,19 +46,22 @@ const arabic = {
     description: {
       top: 'تعرّف على نفسك أكثر عن طريق هذا الاختبار <violet>المجاني</violet> ومفتوح المصدر',
       subtop: 'The',
-      subtop2: ' is the most scientifically validated and reliable psychological model to measure personality.',
+      subtop2:
+        ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'الاختبار يحتوي على ١٢٠ سؤال وسيستغرق منك إتمامه حوالي ١٠ دقائق',
-      result: 'After you have completed the test you will receive a detailed personality report in the following domains:',
+      result:
+        'After you have completed the test you will receive a detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'
     }
   },
   about: {
     seo: {
       title: 'About and the big five team',
-      description: 'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+      description:
+        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
     }
   },
   toolbar: {
@@ -131,14 +136,16 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     title: 'الانفتاحية',
     seo: {
       title: 'Overview of the domain Openness To Experience.',
-      description: 'Read more about the Openness To Experience domain in the b5 model'
+      description:
+        'Read more about the Openness To Experience domain in the b5 model'
     }
   },
   conscientiousness: {
     title: 'اليقظة/التفاني',
     seo: {
       title: 'Overview of the domain Conscientiousness',
-      description: 'Read more about the Conscientiousness domain in the b5 model'
+      description:
+        'Read more about the Conscientiousness domain in the b5 model'
     }
   },
   extraversion: {
@@ -164,7 +171,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   getCompare: {
     title: 'قم بالمقارنة بين الأفراد والمجموعات',
-    description1: 'قم بمقارنة نتائج اختبار السمات الخمسة الكبرى للشخصية بين عدة أفراد',
+    description1:
+      'قم بمقارنة نتائج اختبار السمات الخمسة الكبرى للشخصية بين عدة أفراد',
     description2: 'ضع الرمز الذي حصلت عليه من نتيجة الاختبار، مثل ',
     description3: ' في الحقل المناسب',
     needToAddPeople: 'لتمكين المقارنة يجب إضافة أكثر من شخص',
@@ -179,17 +187,20 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     theBigFive: 'السمات الخمسة الكبرى',
     score: 'الدرجة',
     important: '!مهم',
-    saveResults: 'احفط الرمز التالي لتتمكن من رؤية نتيجتك في وقت لاحق أو لتتمكن من ',
+    saveResults:
+      'احفط الرمز التالي لتتمكن من رؤية نتيجتك في وقت لاحق أو لتتمكن من ',
     compare: 'مقارنة ',
     toOthers: 'نتيجتك بغيرك ',
     seo: {
       title: 'My results from the BigFive personality test',
-      description: 'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+      description:
+        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
     }
   },
   getResult: {
     result: 'النتيجة',
-    explanation: 'سبق وأخذت الاختبار واحتفظت برمز النتيجة؟ يمكنك تحصيل نتيجتك هنا عن طريق إدخال رمز النتيجة مثل ',
+    explanation:
+      'سبق وأخذت الاختبار واحتفظت برمز النتيجة؟ يمكنك تحصيل نتيجتك هنا عن طريق إدخال رمز النتيجة مثل ',
     idInput: ' في الحقل أدناه',
     urlOrId: 'رابط أو رمز النتيجة',
     getResult: 'احصل على النتيجة',
@@ -202,6 +213,6 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     copiedLink: 'تم النسخ',
     shareResults: '!شارك نتيجتك'
   }
-}
+};
 
 export default arabic;

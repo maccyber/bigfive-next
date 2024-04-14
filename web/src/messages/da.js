@@ -4,12 +4,14 @@ const dansk = {
     locale: 'da'
   },
   seo: {
-    keywords: 'big five personlighedstest, big 5 personlighedstest, b5 test, bigfive test, her er hvordan du, harald eia, sammenligne, gratis, jordan peterson'
+    keywords:
+      'big five personlighedstest, big 5 personlighedstest, b5 test, bigfive test, her er hvordan du, harald eia, sammenligne, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Gratis open source big five personlighedstest',
-      description: 'Tag en gratis open source Big Five-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
+      description:
+        'Tag en gratis open source Big Five-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
     },
     title: 'Big Five personlighedstest',
     call_to_action: 'Start testen',
@@ -17,8 +19,10 @@ const dansk = {
     tests_taken: 'Over <green>{n}</green> mennesker har taget testen',
     compare: {
       title: 'Sammenlign dig selv med andre',
-      text1: 'Sammenlign dig selv med din partner, kolleger, venner eller familie.',
-      text2: 'Lær hvordan du kan differentiere dig fra andre mennesker på de fem domæner:',
+      text1:
+        'Sammenlign dig selv med din partner, kolleger, venner eller familie.',
+      text2:
+        'Lær hvordan du kan differentiere dig fra andre mennesker på de fem domæner:',
       action: 'Se sammenligning i handling'
     },
     share: 'Del med dine venner, og find ud af hvor kompatibel du er.',
@@ -43,19 +47,22 @@ const dansk = {
     description: {
       top: 'Forstå dig selv og andre bedre med en <violet>gratis</violet> open source-personlighedstest.',
       subtop: '',
-      subtop2: ' er en videnskabelig og troværdig psykologisk model til måling af personlighed.',
+      subtop2:
+        ' er en videnskabelig og troværdig psykologisk model til måling af personlighed.',
       reference: `Tester og evalueringer for bigfive-test.com er hentet fra
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'Den følgende test har 120 spørgsmål, og den estimerede tid er 10 minutter.',
-      result: 'Efter afslutningen af testen får du en detaljeret personlighedsrapport inden for følgende domæner:',
+      result:
+        'Efter afslutningen af testen får du en detaljeret personlighedsrapport inden for følgende domæner:',
       tests_taken: 'tester utført hidtil'
     }
   },
   about: {
     seo: {
       title: 'Om "big five" laget',
-      description: 'BigFive har et meget aktivt og engageret team, der konstant forsøger at skubbe BigFive fremad BigGive har et meget aktivt og engageret team, der konstant forsøger at skubbe BigFive fremad.'
+      description:
+        'BigFive har et meget aktivt og engageret team, der konstant forsøger at skubbe BigFive fremad BigGive har et meget aktivt og engageret team, der konstant forsøger at skubbe BigFive fremad.'
     }
   },
   toolbar: {
@@ -130,7 +137,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     title: 'Åbenhed for oplevelse',
     seo: {
       title: 'Oversikt over domenet Åpenhet for erfaringer',
-      description: 'Les mer om domenet åpenhet for erfaringer i bigfive modellen'
+      description:
+        'Les mer om domenet åpenhet for erfaringer i bigfive modellen'
     }
   },
   conscientiousness: {
@@ -163,7 +171,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   getCompare: {
     title: 'Sammenlign mennesker eller grupper',
-    description1: 'Sammenlign dine resultater fra personlighedstesten med flere andre.',
+    description1:
+      'Sammenlign dine resultater fra personlighedstesten med flere andre.',
     description2: 'Indsæt det ID, du fik fra testen, f.eks.',
     description3: 'i ID-tekstfeltet',
     needToAddPeople: 'Du skal tilføje folk for at sammenligne dem.',
@@ -183,12 +192,14 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     toOthers: 'dig sammen med andre',
     seo: {
       title: 'Min rapport fra BigFive personlighedstest',
-      description: 'Se min personlighed, og sammenlign dig selv på følgende fem domæner: Neurotisme, åbenhed for oplevelser, planlagt, ekstraversion og menneskehed'
+      description:
+        'Se min personlighed, og sammenlign dig selv på følgende fem domæner: Neurotisme, åbenhed for oplevelser, planlagt, ekstraversion og menneskehed'
     }
   },
   getResult: {
     result: 'Hent resultater',
-    explanation: 'Hvis du tidligere har taget testen og gemt ID, kan du se dine resultater her ved at indsætte det ID, du fik f.eks.',
+    explanation:
+      'Hvis du tidligere har taget testen og gemt ID, kan du se dine resultater her ved at indsætte det ID, du fik f.eks.',
     idInput: 'i ID-tekstfeltet',
     urlOrId: 'Lenken eller ID til resultatet',
     getResult: 'Hent resultat',
@@ -201,6 +212,6 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     copiedLink: 'Kopierte lenke',
     shareResults: 'Del dine resultater!'
   }
-}
+};
 
-export default dansk
+export default dansk;

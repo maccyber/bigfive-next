@@ -4,12 +4,14 @@ const english = {
     locale: 'en'
   },
   seo: {
-    keywords: 'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+    keywords:
+      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Free open-source BigFive personality traits test',
-      description: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+      description:
+        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
     title: 'Big Five Personality Test',
     call_to_action: 'Take the free test now',
@@ -17,7 +19,8 @@ const english = {
     tests_taken: 'Over <green>{n}</green> people have taken the test',
     compare: {
       title: 'Compare yourself to others',
-      text1: 'Compare yourself with your partner, colleagues, friends or family.',
+      text1:
+        'Compare yourself with your partner, colleagues, friends or family.',
       text2: 'Learn how you differ from other people in the five domains:',
       action: 'See it live in action'
     },
@@ -43,19 +46,22 @@ const english = {
     description: {
       top: 'Learn to know yourself better with a <violet>free</violet>, open-source personality test.',
       subtop: 'The',
-      subtop2: ' is the most scientifically validated and reliable psychological model to measure personality.',
+      subtop2:
+        ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'The following test contains 120 questions which is estimated to take you about 10 minutes to complete.',
-      result: 'After you have completed the test you will receive a detailed personality report in the following domains:',
+      result:
+        'After you have completed the test you will receive a detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'
     }
   },
   about: {
     seo: {
       title: 'About and the big five team',
-      description: 'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+      description:
+        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
     }
   },
   toolbar: {
@@ -130,14 +136,16 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     title: 'Openness to Experience',
     seo: {
       title: 'Overview of the domain Openness To Experience.',
-      description: 'Read more about the Openness To Experience domain in the b5 model'
+      description:
+        'Read more about the Openness To Experience domain in the b5 model'
     }
   },
   conscientiousness: {
     title: 'Conscientiousness',
     seo: {
       title: 'Overview of the domain Conscientiousness',
-      description: 'Read more about the Conscientiousness domain in the b5 model'
+      description:
+        'Read more about the Conscientiousness domain in the b5 model'
     }
   },
   extraversion: {
@@ -163,7 +171,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   getCompare: {
     title: 'Compare people or teams',
-    description1: 'Compare results from the bigfive personality test with multiple people.',
+    description1:
+      'Compare results from the bigfive personality test with multiple people.',
     description2: 'Type in the ID you got from the test results i.e.',
     description3: 'in the ID-input field',
     needToAddPeople: 'You need to add people to compare them',
@@ -183,12 +192,14 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     toOthers: 'yourself to others',
     seo: {
       title: 'My results from the BigFive personality test',
-      description: 'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+      description:
+        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
     }
   },
   getResult: {
     result: 'Result',
-    explanation: 'If you have taken the test and saved your ID, you can see the results here by typing in the ID you got i.e. ',
+    explanation:
+      'If you have taken the test and saved your ID, you can see the results here by typing in the ID you got i.e. ',
     idInput: 'in the ID-input field',
     urlOrId: 'URL or ID of your result',
     getResult: 'Get result',
@@ -201,6 +212,6 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     copiedLink: 'Copied link',
     shareResults: 'Share your results!'
   }
-}
+};
 
-export default english
+export default english;

@@ -4,12 +4,14 @@ const polish = {
     locale: 'pl'
   },
   seo: {
-    keywords: 'test osobowości wielkiej piątki, big 5 test osobowości, wielka piątka, b5 test, bigfive test, cechy osobowości, bigfive, porównanie, za darmo, jordan peterson'
+    keywords:
+      'test osobowości wielkiej piątki, big 5 test osobowości, wielka piątka, b5 test, bigfive test, cechy osobowości, bigfive, porównanie, za darmo, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Darmowy, open source\'owy test osobowości BigFive',
-      description: 'Zrób darmowy, open-source`owy test Wielkiej Piątki. Poznaj swoje cechy osobowości i porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.'
+      title: "Darmowy, open source'owy test osobowości BigFive",
+      description:
+        'Zrób darmowy, open-source`owy test Wielkiej Piątki. Poznaj swoje cechy osobowości i porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.'
     },
     title: 'Test Osobowości Wielkiej Piątki',
     call_to_action: 'Rozpocznij darmowy test',
@@ -17,11 +19,14 @@ const polish = {
     tests_taken: 'Ponad <green>{n}</green> ludzi wzięło udział w teście',
     compare: {
       title: 'Porównaj się z innymi',
-      text1: 'Porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.',
-      text2: 'Dowiedz się, jak różnisz się od innych ludzi pod względem pięciu czynników:',
+      text1:
+        'Porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.',
+      text2:
+        'Dowiedz się, jak różnisz się od innych ludzi pod względem pięciu czynników:',
       action: 'Zobacz'
     },
-    share: 'Udostępnij test przyjaciołom i dowiedz się jak bardzo jesteście kompatybilni',
+    share:
+      'Udostępnij test przyjaciołom i dowiedz się jak bardzo jesteście kompatybilni',
     cards: {
       open: {
         title: 'Otwarty',
@@ -41,21 +46,24 @@ const polish = {
       }
     },
     description: {
-      top: 'Poznaj siebie dzięki <violet>darmowemu</violet>, open-source\'owemu testowi osobowości.',
+      top: "Poznaj siebie dzięki <violet>darmowemu</violet>, open-source'owemu testowi osobowości.",
       subtop: '',
-      subtop2: 'jest najbardziej wiarygodnym i naukowo potwierdzonym modelem psychologicznym opisującym osobowość.',
+      subtop2:
+        'jest najbardziej wiarygodnym i naukowo potwierdzonym modelem psychologicznym opisującym osobowość.',
       reference: `Testy i ocena użyte na tej stronie pochodzą z
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'Następujący test zawiera 120 pytań. Odpowiedź na wszystkie zajmuje ok. 10 minut.',
-      result: 'Kiedy wypełnisz test, otrzymasz szczegółowy opis Twojej osobowości obejmujący pięć czynników:',
+      result:
+        'Kiedy wypełnisz test, otrzymasz szczegółowy opis Twojej osobowości obejmujący pięć czynników:',
       tests_taken: 'dotychczasowe testy'
     }
   },
   about: {
     seo: {
       title: 'O nas',
-      description: 'BigFive jest prowadzony przez bardzo aktywny i zaangażowany zespół, który ciągle rozwija projekt.'
+      description:
+        'BigFive jest prowadzony przez bardzo aktywny i zaangażowany zespół, który ciągle rozwija projekt.'
     }
   },
   toolbar: {
@@ -92,7 +100,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   form: {
     information: 'Informacja',
-    informationText: 'Używamy podanych przez Ciebie informacji, by dostarczyć Ci',
+    informationText:
+      'Używamy podanych przez Ciebie informacji, by dostarczyć Ci',
     mostAccurate: 'możliwie najdoładniejszy wynik.',
     readMoreAbout: 'Przeczytaj o',
     privacy: 'Prywatność',
@@ -130,35 +139,40 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     title: 'Otwartość na doświadczenie',
     seo: {
       title: 'Przegląd czynnika "Otwartość na doświadczenie"',
-      description: 'Przeczytaj więcej o czynniku "Otwartość na doświadczenie" w modelu Wielkiej Piątki'
+      description:
+        'Przeczytaj więcej o czynniku "Otwartość na doświadczenie" w modelu Wielkiej Piątki'
     }
   },
   conscientiousness: {
     title: 'Sumienność',
     seo: {
       title: 'Przegląd czynnika "Sumienność"',
-      description: 'Przeczytaj więcej o czynniku "Sumienność" w modelu Wielkiej Piątki'
+      description:
+        'Przeczytaj więcej o czynniku "Sumienność" w modelu Wielkiej Piątki'
     }
   },
   extraversion: {
     title: 'Ekstrawersja',
     seo: {
       title: 'Przegląd czynnika "Ekstrawersja"',
-      description: 'Przeczytaj więcej o czynniku "Ekstrawersja" w modelu Wielkiej Piątki'
+      description:
+        'Przeczytaj więcej o czynniku "Ekstrawersja" w modelu Wielkiej Piątki'
     }
   },
   agreeableness: {
     title: 'Ugodowość',
     seo: {
       title: 'Przegląd czynnika "Ugodowość"',
-      description: 'Przeczytaj więcej o czynniku "Ugodowość" w modelu Wielkiej Piątki'
+      description:
+        'Przeczytaj więcej o czynniku "Ugodowość" w modelu Wielkiej Piątki'
     }
   },
   neuroticism: {
     title: 'Neurotyczność',
     seo: {
       title: 'Przegląd czynnika "Neurotyczność"',
-      description: 'Przeczytaj więcej o czynniku "Neurotyczność" w modelu Wielkiej Piątki'
+      description:
+        'Przeczytaj więcej o czynniku "Neurotyczność" w modelu Wielkiej Piątki'
     }
   },
   getCompare: {
@@ -183,12 +197,14 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     toOthers: 'się z innymi',
     seo: {
       title: 'Moje wyniki testu osobowości BigFive.',
-      description: 'Poznaj moją osobowość i porównaj ze swoją w następujących pięciu kategoriach: Neurotyczność, Otwartość na doświadczenia, Sumienność, Ekstrawersja, Ugodowość.'
+      description:
+        'Poznaj moją osobowość i porównaj ze swoją w następujących pięciu kategoriach: Neurotyczność, Otwartość na doświadczenia, Sumienność, Ekstrawersja, Ugodowość.'
     }
   },
   getResult: {
     result: 'Wynik',
-    explanation: 'Jeśli wykonywałeś już test i zapisałeś ID, możesz zobaczyć wynik po wpisaniu otrzymanego ID',
+    explanation:
+      'Jeśli wykonywałeś już test i zapisałeś ID, możesz zobaczyć wynik po wpisaniu otrzymanego ID',
     idInput: 'w pole wprowadzania ID',
     urlOrId: 'URL lub ID Twojego wyniku',
     getResult: 'Otrzymaj wynik',
@@ -201,6 +217,6 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     copiedLink: 'Skopiowany link',
     shareResults: 'Podziel się wynikami!'
   }
-}
+};
 
-export default polish
+export default polish;

@@ -4,12 +4,15 @@ const finnish = {
     locale: 'fi'
   },
   seo: {
-    keywords: 'iso viisi persoonallisuustesti, iso 5 persoonallisuustesti, b5-testi, bigfive-testi, persoonallisuuden piirteet, bigfive, vertaa, ilmainen, Jordan Peterson '
+    keywords:
+      'iso viisi persoonallisuustesti, iso 5 persoonallisuustesti, b5-testi, bigfive-testi, persoonallisuuden piirteet, bigfive, vertaa, ilmainen, Jordan Peterson '
   },
   frontpage: {
     seo: {
-      title: 'Ilmainen avoimen lähdekoodin BigFive-persoonallisuuspiirteiden testi',
-      description: 'Ota ilmainen, avoimen lähdekoodin Big Five -henkilöstötesti. Opi tuntemaan persoonallisuutesi ja vertaamaan itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.'
+      title:
+        'Ilmainen avoimen lähdekoodin BigFive-persoonallisuuspiirteiden testi',
+      description:
+        'Ota ilmainen, avoimen lähdekoodin Big Five -henkilöstötesti. Opi tuntemaan persoonallisuutesi ja vertaamaan itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.'
     },
     title: 'Viiden suuren persoonallisuustesti',
     call_to_action: 'Ota ilmainen testi nyt',
@@ -43,19 +46,22 @@ const finnish = {
     description: {
       top: 'Opi tuntemaan itsesi paremmin <violet>ilmaisen</violet>, avoimen lähdekoodin persoonallisuustestin avulla.',
       subtop: 'The',
-      subtop2: ' on tieteellisesti validoitu ja luotettava psykologinen malli persoonallisuuden mittaamiseksi.',
+      subtop2:
+        ' on tieteellisesti validoitu ja luotettava psykologinen malli persoonallisuuden mittaamiseksi.',
       reference: `Tämän sivuston testit ja arvioinnit on kerätty osoitteesta
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   varasto on peräisin <i>Johnsonin (2014) 120 nimikkeen IPIP NEO-PI-R</i>.`,
       info: 'Seuraava testi sisältää 120 kysymystä, joiden suorittamisen arvioidaan vievän noin 10 minuuttia.',
-      result: 'Testin suorittamisen jälkeen saat yksityiskohtaisen persoonallisuusraportin seuraavista verkkotunnuksista:',
+      result:
+        'Testin suorittamisen jälkeen saat yksityiskohtaisen persoonallisuusraportin seuraavista verkkotunnuksista:',
       tests_taken: 'toistaiseksi tehdyt testit'
     }
   },
   about: {
     seo: {
       title: 'Tietoja ja viisi suurta joukkuetta',
-      description: 'BigFivella on erittäin aktiivinen ja sitoutunut tiimi, joka pyrkii jatkuvasti työntämään BigFivea eteenpäin.'
+      description:
+        'BigFivella on erittäin aktiivinen ja sitoutunut tiimi, joka pyrkii jatkuvasti työntämään BigFivea eteenpäin.'
     }
   },
   toolbar: {
@@ -163,7 +169,8 @@ const finnish = {
   },
   getCompare: {
     title: 'Vertaa ihmisiä tai joukkueita',
-    description1: 'Vertaa bigfive-persoonallisuustestin tuloksia useiden ihmisten kanssa.',
+    description1:
+      'Vertaa bigfive-persoonallisuustestin tuloksia useiden ihmisten kanssa.',
     description2: 'Kirjoita testituloksista saamasi tunnus, ts.',
     description3: 'ID-syöttökentässä',
     needToAddPeople: 'Sinun on lisättävä ihmisiä vertaamaan niitä',
@@ -183,12 +190,14 @@ const finnish = {
     toOthers: 'itsesi muille',
     seo: {
       title: 'Tulokseni BigFive-persoonallisuustestistä',
-      description: 'Katso persoonallisuuttani ja vertaa itseäsi seuraavilla viidellä osa-alueella: neurotismi, avoimuus kokemukselle, tunnollisuus, ekstraversio, sopusointuisuus'
+      description:
+        'Katso persoonallisuuttani ja vertaa itseäsi seuraavilla viidellä osa-alueella: neurotismi, avoimuus kokemukselle, tunnollisuus, ekstraversio, sopusointuisuus'
     }
   },
   getResult: {
     result: 'Tulos',
-    explanation: 'Jos olet suorittanut testin ja tallentanut henkilötodistuksesi, näet tulokset täältä kirjoittamalla saamasi henkilötodistuksen.',
+    explanation:
+      'Jos olet suorittanut testin ja tallentanut henkilötodistuksesi, näet tulokset täältä kirjoittamalla saamasi henkilötodistuksen.',
     idInput: 'ID-syöttökentässä',
     urlOrId: 'Tuloksesi URL-osoite tai tunniste',
     getResult: 'Hanki tulos',
@@ -201,6 +210,6 @@ const finnish = {
     copiedLink: 'Kopioitu linkki',
     shareResults: 'Jaa tulokset!'
   }
-}
+};
 
-export default finnish
+export default finnish;

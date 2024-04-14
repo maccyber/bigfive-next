@@ -1,4 +1,4 @@
-import { title } from "@/components/primitives";
+import { title } from '@/components/primitives';
 import { useTranslations } from 'next-intl';
 import { GetResultPage } from './get-result';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -14,10 +14,11 @@ export default function ResultPage({ params: { locale } }: Props) {
   return (
     <div>
       <h1 className={title()}>{t('result')}</h1>
-      <div className="mt-10">
-        {t('explanation')}
-      </div>
-        <GetResultPage viewPreviousText={t('viewPrevious')} getResultsText={t('getResult')} />
+      <div className='mt-10'>{t('explanation')}</div>
+      <GetResultPage
+        viewPreviousText={t('viewPrevious')}
+        getResultsText={t('getResult')}
+      />
     </div>
   );
 }

@@ -4,12 +4,14 @@ const spanish = {
     locale: 'es'
   },
   seo: {
-    keywords: 'test de personalidad Big Five, test de personalidad Big Five, test b5, test Big Five, rasgos de personalidad, Big Five, comparar, gratis, jordan peterson'
+    keywords:
+      'test de personalidad Big Five, test de personalidad Big Five, test b5, test Big Five, rasgos de personalidad, Big Five, comparar, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Prueba gratuita y open-source de rasgos de personalidad BigFive',
-      description: 'Realiza la prueba de personalidad Big Five, gratuita y open-source. Aprende a conocer tus rasgos de personalidad y compárate con tu pareja, compañeros, amigos o familiares.'
+      description:
+        'Realiza la prueba de personalidad Big Five, gratuita y open-source. Aprende a conocer tus rasgos de personalidad y compárate con tu pareja, compañeros, amigos o familiares.'
     },
     title: 'Prueba de personalidad Big Five',
     call_to_action: 'Haz la prueba gratis ahora',
@@ -18,7 +20,8 @@ const spanish = {
     compare: {
       title: 'Compárese con los demás',
       text1: 'Compárese con su pareja, colegas, amigos o familiares.',
-      text2: 'Descubra en qué se diferencia de otras personas en los cinco dominios:',
+      text2:
+        'Descubra en qué se diferencia de otras personas en los cinco dominios:',
       action: 'Míralo en vivo en acción'
     },
     share: 'Comparte con tus amigos y descubre qué tan compatible eres',
@@ -43,19 +46,22 @@ const spanish = {
     description: {
       top: 'Aprende a conocerte mejor con un test de personalidad <violet>gratuito</violet> y open-source',
       subtop: 'el',
-      subtop2: ' es el modelo psicológico más confiable y científicamente validado para medir la personalidad.',
+      subtop2:
+        ' es el modelo psicológico más confiable y científicamente validado para medir la personalidad.',
       reference: `Las pruebas y la evaluación de este sitio se obtienen de
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
       info: 'La siguiente prueba contiene 120 preguntas que estimamos le tomará unos 10 minutos completar.',
-      result: 'Una vez que haya completado la prueba, recibirá un informe de personalidad detallado en los siguientes dominios:',
+      result:
+        'Una vez que haya completado la prueba, recibirá un informe de personalidad detallado en los siguientes dominios:',
       tests_taken: 'pruebas tomadas hasta ahora'
     }
   },
   about: {
     seo: {
       title: 'Acerca de y el equipo de BigFive',
-      description: 'BigFive tiene un equipo muy activo y comprometido que se esfuerza constantemente por impulsar BigFive adelante'
+      description:
+        'BigFive tiene un equipo muy activo y comprometido que se esfuerza constantemente por impulsar BigFive adelante'
     }
   },
   toolbar: {
@@ -130,7 +136,8 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     title: 'Apertura a la Experiencia',
     seo: {
       title: 'Descripción general del dominio Apertura a la Experiencia.',
-      description: 'Más información sobre el dominio Apertura a la Experiencia en el modelo b5'
+      description:
+        'Más información sobre el dominio Apertura a la Experiencia en el modelo b5'
     }
   },
   conscientiousness: {
@@ -163,8 +170,10 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
   },
   getCompare: {
     title: 'Comparar personas o equipos',
-    description1: 'Compare los resultados del test de personalidad Big Five con varias personas.',
-    description2: 'Escriba la identificación que obtuvo de los resultados de la prueba, es decir, ',
+    description1:
+      'Compare los resultados del test de personalidad Big Five con varias personas.',
+    description2:
+      'Escriba la identificación que obtuvo de los resultados de la prueba, es decir, ',
     description3: 'en el campo de entrada de ID ',
     needToAddPeople: 'Necesitas agregar personas para compararlas',
     addAnother: 'Agregar otra persona',
@@ -183,12 +192,14 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     toOthers: 'usted mismo a los demás',
     seo: {
       title: 'Mis resultados de la prueba de personalidad Big Five',
-      description: 'Vea mi personalidad y compárese en los siguientes cinco dominios: neuroticismo, apertura a la experiencia, escrupulosidad, extraversión, amabilidad'
+      description:
+        'Vea mi personalidad y compárese en los siguientes cinco dominios: neuroticismo, apertura a la experiencia, escrupulosidad, extraversión, amabilidad'
     }
   },
   getResult: {
     result: 'Resultado',
-    explanation: 'Si ha realizado la prueba y ha guardado su identificación, puede ver los resultados aquí escribiendo la identificación que obtuvo, es decir, ',
+    explanation:
+      'Si ha realizado la prueba y ha guardado su identificación, puede ver los resultados aquí escribiendo la identificación que obtuvo, es decir, ',
     idInput: 'en el campo de entrada de ID',
     urlOrId: 'URL o ID de su resultado',
     getResult: 'Obtener resultado',
@@ -201,6 +212,6 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     copiedLink: 'Enlace copiado',
     shareResults: 'Comparte tus resultados!'
   }
-}
+};
 
-export default spanish
+export default spanish;

@@ -4,12 +4,14 @@ const svenska = {
     locale: 'sv'
   },
   seo: {
-    keywords: 'big five personlighetstest, big 5 personlighetstest, b5 test, bigfive test, gratis, jordan peterson'
+    keywords:
+      'big five personlighetstest, big 5 personlighetstest, b5 test, bigfive test, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Gratis open source big five personlighetstest',
-      description: 'Ta ett gratis, open source Big Five-personlighetstest. Lär känna dina personlighetsdrag - jämför med din partner, kollegor, vänner eller familj.'
+      description:
+        'Ta ett gratis, open source Big Five-personlighetstest. Lär känna dina personlighetsdrag - jämför med din partner, kollegor, vänner eller familj.'
     },
     title: 'Big Five personlighetstest',
     call_to_action: 'Starta testet',
@@ -18,7 +20,8 @@ const svenska = {
     compare: {
       title: 'Jämför dig med andra',
       text1: 'Jämför dig själv med din partner, kollegor, vänner eller familj.',
-      text2: 'Lär dig hur du kan skilja dig från andra människor inom de fem domänerna:',
+      text2:
+        'Lär dig hur du kan skilja dig från andra människor inom de fem domänerna:',
       action: 'Se jämförelse i praktiken'
     },
     share: 'Dela med dina vänner och ta reda på hur kompatibel du är.',
@@ -43,19 +46,22 @@ const svenska = {
     description: {
       top: 'Förstå dig själv och andra bättre med ett <violet>gratis</violet> personlighetstest med öppen källkod.',
       subtop: '',
-      subtop2: ' är en vetenskaplig och trovärdig psykologisk modell för att mäta personlighet.',
+      subtop2:
+        ' är en vetenskaplig och trovärdig psykologisk modell för att mäta personlighet.',
       reference: `Tester og evalueringer for bigfive-test.com er hentet fra
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'Testet som följer har 120 frågor och beräknad tid är 10 minuter.',
-      result: 'När du har slutfört testet får du en detaljerad personlighetsrapport inom följande domäner:',
+      result:
+        'När du har slutfört testet får du en detaljerad personlighetsrapport inom följande domäner:',
       tests_taken: 'test utförda hittills'
     }
   },
   about: {
     seo: {
       title: 'Om "big five" laget',
-      description: 'BigFive har ett mycket aktivt och engagerat team som ständigt försöker driva BigFive framåt BigFive har ett mycket aktivt och engagerat team som ständigt försöker driva BigFive framåt.'
+      description:
+        'BigFive har ett mycket aktivt och engagerat team som ständigt försöker driva BigFive framåt BigFive har ett mycket aktivt och engagerat team som ständigt försöker driva BigFive framåt.'
     }
   },
   toolbar: {
@@ -130,7 +136,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     title: 'Öppenhet för upplevelser',
     seo: {
       title: 'Översikt över domänen Öppenhet för upplevelser',
-      description: 'Läs mer om domänen Öppenhet för upplevelser i bigfive-modellen'
+      description:
+        'Läs mer om domänen Öppenhet för upplevelser i bigfive-modellen'
     }
   },
   conscientiousness: {
@@ -163,7 +170,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   getCompare: {
     title: 'Jämför personer eller grupper',
-    description1: 'Jämför dina resultat från personlighetstestet med flera andra.',
+    description1:
+      'Jämför dina resultat från personlighetstestet med flera andra.',
     description2: 'Klistra in ID som du fick från testet, t.ex.',
     description3: 'i ID-textfältet',
     needToAddPeople: 'Du måste lägga till personer för att jämföra dem.',
@@ -183,12 +191,14 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     toOthers: 'du med andra',
     seo: {
       title: 'Min rapport från Big Five personlighetstestet',
-      description: 'Se min personlighet och jämför dig på följande fem domäner: Neuroticism, öppenhet för upplevelse, samvetsgrannhet, extraversion och tillmötesgående'
+      description:
+        'Se min personlighet och jämför dig på följande fem domäner: Neuroticism, öppenhet för upplevelse, samvetsgrannhet, extraversion och tillmötesgående'
     }
   },
   getResult: {
     result: 'Se resultat',
-    explanation: 'Om du tidigare har gjort testet, och lagrat din rapports ID, så kan du se ditt resultat här om du klistrar in det ID du fick, dvs en kod liknande',
+    explanation:
+      'Om du tidigare har gjort testet, och lagrat din rapports ID, så kan du se ditt resultat här om du klistrar in det ID du fick, dvs en kod liknande',
     idInput: 'i ID-textrutan',
     urlOrId: 'Resultatets länk eller ID',
     getResult: 'Se resultat',
@@ -201,6 +211,6 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     copiedLink: 'Kopiera länk',
     shareResults: 'Dela ditt resultat!'
   }
-}
+};
 
-export default svenska
+export default svenska;

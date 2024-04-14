@@ -2,19 +2,19 @@
 title: Conscientiousness
 date: 2021-12-24
 description: An article on the personality trait Conscientiousness.
-image: "/blog/traits/conscientiousness_2.webp"
+image: '/blog/traits/conscientiousness_2.webp'
 author:
-  name: "Jonas Enge"
-  username: "maccyber"
-  link: "https://twitter.com/maccyber"
-  avatar: "/avatars/maccyber.png"
+  name: 'Jonas Enge'
+  username: 'maccyber'
+  link: 'https://twitter.com/maccyber'
+  avatar: '/avatars/maccyber.png'
 ---
 
 Conscientiousness concerns the way in which we control, regulate, and direct our impulses.
 
 Impulses are not inherently bad; occasionally time constraints require a snap decision, and acting on our first impulse can be an effective response. Also, in times of play rather than work, acting spontaneously and impulsively can be fun. Impulsive individuals can be seen by others as colorful, fun-to-be-with, and zany. Nonetheless, acting on impulse can lead to trouble in a number of ways. Some impulses are antisocial.
 
->  Conscientiousness is a tendency to display self-discipline, act dutifully, and strive for achievement against measures or outside expectations. It is related to the way in which people control, regulate, and direct their impulses.
+> Conscientiousness is a tendency to display self-discipline, act dutifully, and strive for achievement against measures or outside expectations. It is related to the way in which people control, regulate, and direct their impulses.
 
 Uncontrolled antisocial acts not only harm other members of society, but also can result in retribution toward the perpetrator of such impulsive acts.
 Another problem with impulsive acts is that they often produce immediate rewards but undesirable, long-term consequences.
@@ -37,7 +37,6 @@ Conscientious individuals avoid trouble and achieve high levels of success throu
 On the negative side, they can be compulsive perfectionists and workaholics. Furthermore, extremely conscientious individuals might be regarded as stuffy and boring.
 
 Unconscientious people may be criticized for their unreliability, lack of ambition, and failure to stay within the lines, but they will experience many short-lived pleasures and they will never be called stuffy.
-
 
 ### Self-Efficacy
 
@@ -62,5 +61,3 @@ Self-discipline-what many people call will-power-refers to the ability to persis
 ### Cautiousness
 
 Cautiousness describes the disposition to think through possibilities before acting. High scorers on the Cautiousness scale take their time when making decisions. Low scorers often say or do first thing that comes to mind without deliberating alternatives and the probable consequences of those alternatives.
-
-

@@ -2,12 +2,12 @@
 title: Openness to experience
 date: 2021-12-24
 description: An article on the personality trait openness to experience.
-image: "/blog/traits/openness_2.webp"
+image: '/blog/traits/openness_2.webp'
 author:
-  name: "Jonas Enge"
-  username: "maccyber"
-  link: "https://twitter.com/maccyber"
-  avatar: "/avatars/maccyber.png"
+  name: 'Jonas Enge'
+  username: 'maccyber'
+  link: 'https://twitter.com/maccyber'
+  avatar: '/avatars/maccyber.png'
 ---
 
 Openness to Experience describes a dimension of cognitive style that distinguishes imaginative, creative people from down-to-earth, conventional people.
@@ -16,14 +16,13 @@ Open people are intellectually curious, appreciative of art, and sensitive to be
 
 Intellectuals typically score high on Openness to Experience; consequently, this factor has also been called Culture or Intellect.
 
->  Openness to Experience describes a dimension of cognitive style that distinguishes imaginative, creative people from down-to-earth, conventional people.
+> Openness to Experience describes a dimension of cognitive style that distinguishes imaginative, creative people from down-to-earth, conventional people.
 
 Nonetheless, Intellect is probably best regarded as one aspect of openness to experience. Scores on Openness to Experience are only modestly related to years of education and scores on standard intelligent tests.
 
 Another characteristic of the open cognitive style is a facility for thinking in symbols and abstractions far removed from concrete experience.
 
 Depending on the individual's specific intellectual abilities, this symbolic cognition may take the form of mathematical, logical, or geometric thinking, artistic and metaphorical use of language, music composition or performance, or one of the many visual or performing arts.
-
 
 ### Low scores
 
@@ -86,6 +85,3 @@ Psychological liberalism refers to a readiness to challenge authority, conventio
 In its most extreme form, psychological liberalism can even represent outright hostility toward rules, sympathy for law-breakers, and love of ambiguity, chaos, and disorder.
 
 Psychological conservatives prefer the security and stability brought by conformity to tradition. Psychological liberalism and conservatism are not identical to political affiliation, but certainly incline individuals toward certain political parties.
-
-
-

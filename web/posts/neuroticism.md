@@ -2,12 +2,12 @@
 title: Neuroticism
 date: 2021-12-24
 description: An article on the personality trait Neuroticism.
-image: "/blog/traits/neuroticism_2.webp"
+image: '/blog/traits/neuroticism_2.webp'
 author:
-  name: "Jonas Enge"
-  username: "maccyber"
-  link: "https://twitter.com/maccyber"
-  avatar: "/avatars/maccyber.png"
+  name: 'Jonas Enge'
+  username: 'maccyber'
+  link: 'https://twitter.com/maccyber'
+  avatar: '/avatars/maccyber.png'
 ---
 
 Neuroticism refers to the tendency to experience negative feelings.
@@ -20,7 +20,7 @@ Today neuroticism refers to the tendency to experience negative feelings.
 
 Those who score high on Neuroticism may experience primarily one specific negative feeling such as anxiety, anger, or depression, but are likely to experience several of these emotions.
 
->  Neuroticism refers to the tendency to experience negative feelings.
+> Neuroticism refers to the tendency to experience negative feelings.
 
 People high in neuroticism are emotionally reactive.
 
@@ -55,4 +55,3 @@ Immoderate individuals feel strong cravings and urges that they have have diffic
 ### Vulnerability
 
 High scorers on Vulnerability experience panic, confusion, and helplessness when under pressure or stress. Low scorers feel more poised, confident, and clear-thinking when stressed.
-

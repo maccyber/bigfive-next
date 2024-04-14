@@ -4,12 +4,14 @@ const indonesian = {
     locale: 'id'
   },
   seo: {
-    keywords: 'tes kepribadian lima besar, tes kepribadian 5 besar, tes b5, tes bigfive, ciri-ciri kepribadian, bigfive, bandingkan, gratis, jordan peterson'
+    keywords:
+      'tes kepribadian lima besar, tes kepribadian 5 besar, tes b5, tes bigfive, ciri-ciri kepribadian, bigfive, bandingkan, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Tes open-source sifat kepribadian BigFive gratis',
-      description: 'Ikuti tes open-source kepribadian Lima Besar gratis. Belajar untuk mengetahui ciri-ciri kepribadian Anda dan bandingkan diri Anda dengan pasangan, kolega, teman atau keluarga Anda.'
+      description:
+        'Ikuti tes open-source kepribadian Lima Besar gratis. Belajar untuk mengetahui ciri-ciri kepribadian Anda dan bandingkan diri Anda dengan pasangan, kolega, teman atau keluarga Anda.'
     },
     title: 'Tes Kepribadian Lima Besar',
     call_to_action: 'Ikuti tes gratis sekarang',
@@ -17,11 +19,13 @@ const indonesian = {
     tests_taken: 'Lebih dari <green>{n}</green> orang telah mengikuti tes',
     compare: {
       title: 'Bandingkan diri Anda dengan orang lain',
-      text1: 'Bandingkan diri Anda dengan pasangan, kolega, teman, atau keluarga Anda.',
+      text1:
+        'Bandingkan diri Anda dengan pasangan, kolega, teman, atau keluarga Anda.',
       text2: 'Pelajari bagaimana Anda berbeda dari orang lain di lima domain:',
       action: 'Lihat langsung beraksi'
     },
-    share: 'Bagikan dengan teman-teman Anda dan cari tahu seberapa kompatibel Anda',
+    share:
+      'Bagikan dengan teman-teman Anda dan cari tahu seberapa kompatibel Anda',
     cards: {
       open: {
         title: 'Buka',
@@ -43,19 +47,22 @@ const indonesian = {
     description: {
       top: 'Belajar mengenal diri Anda lebih baik dengan tes kepribadian sumber terbuka <violet>gratis</violet>.',
       subtop: 'Itu',
-      subtop2: ' adalah model psikologis yang paling tervalidasi secara ilmiah dan dapat diandalkan untuk mengukur kepribadian.',
+      subtop2:
+        ' adalah model psikologis yang paling tervalidasi secara ilmiah dan dapat diandalkan untuk mengukur kepribadian.',
       reference: `Tes dan evaluasi untuk situs ini dikumpulkan dari
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventaris berasal<i>Johnson (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'Tes berikut berisi 120 soal yang diperkirakan membutuhkan waktu sekitar 10 menit untuk diselesaikan.',
-      result: 'Setelah Anda menyelesaikan tes, Anda akan menerima laporan kepribadian terperinci di domain berikut: ',
+      result:
+        'Setelah Anda menyelesaikan tes, Anda akan menerima laporan kepribadian terperinci di domain berikut: ',
       tests_taken: 'tes yang dilakukan sejauh ini'
     }
   },
   about: {
     seo: {
       title: 'Tentang dan tim lima besar',
-      description: 'BigFive memiliki tim yang sangat aktif dan terlibat yang terus berusaha untuk mendorong BigFive ke depan.'
+      description:
+        'BigFive memiliki tim yang sangat aktif dan terlibat yang terus berusaha untuk mendorong BigFive ke depan.'
     }
   },
   toolbar: {
@@ -92,7 +99,8 @@ const indonesian = {
   },
   form: {
     information: 'Informasi',
-    informationText: 'Kami menggunakan informasi yang Anda berikan untuk melayani Anda',
+    informationText:
+      'Kami menggunakan informasi yang Anda berikan untuk melayani Anda',
     mostAccurate: 'hasil yang paling akurat',
     readMoreAbout: 'Baca lebih lanjut tentang',
     privacy: 'privasi',
@@ -130,14 +138,16 @@ const indonesian = {
     title: 'Keterbukaan terhadap Pengalaman',
     seo: {
       title: 'Gambaran umum tentang domain Keterbukaan terhadap Pengalaman.',
-      description: 'Baca lebih lanjut tentang domain Keterbukaan terhadap Pengalaman dalam model b5'
+      description:
+        'Baca lebih lanjut tentang domain Keterbukaan terhadap Pengalaman dalam model b5'
     }
   },
   conscientiousness: {
     title: 'Kehati-hatian',
     seo: {
       title: 'Sekilas tentang domain Kehati-hatian',
-      description: 'Baca lebih lanjut tentang domain Kehati-hatian dalam model b5'
+      description:
+        'Baca lebih lanjut tentang domain Kehati-hatian dalam model b5'
     }
   },
   extraversion: {
@@ -151,19 +161,22 @@ const indonesian = {
     title: 'Kepersetujuan',
     seo: {
       title: 'Ikhtisar domain Kepersetujuan',
-      description: 'Baca lebih lanjut tentang domain Kepersetujuan dalam model b5'
+      description:
+        'Baca lebih lanjut tentang domain Kepersetujuan dalam model b5'
     }
   },
   neuroticism: {
     title: 'Neurotisisme',
     seo: {
       title: 'Tinjauan tentang domain Neurotisisme',
-      description: 'Baca lebih lanjut tentang domain Neurotisisme dalam model b5'
+      description:
+        'Baca lebih lanjut tentang domain Neurotisisme dalam model b5'
     }
   },
   getCompare: {
     title: 'Bandingkan orang atau tim',
-    description1: 'Bandingkan hasil tes kepribadian bigfive dengan banyak orang.',
+    description1:
+      'Bandingkan hasil tes kepribadian bigfive dengan banyak orang.',
     description2: 'Ketik ID yang Anda dapatkan dari hasil tes, mis.',
     description3: 'di kolom ID-input',
     needToAddPeople: 'Anda perlu menambahkan orang untuk membandingkan mereka',
@@ -183,12 +196,14 @@ const indonesian = {
     toOthers: 'diri Anda kepada orang lain',
     seo: {
       title: 'Hasil saya dari tes kepribadian BigFive',
-      description: 'Lihat kepribadian saya dan bandingkan diri Anda dalam lima domain berikut: Neurotisisme, Keterbukaan terhadap Pengalaman, Kehati-hatian, Ekstraversi, Kepersetujuan'
+      description:
+        'Lihat kepribadian saya dan bandingkan diri Anda dalam lima domain berikut: Neurotisisme, Keterbukaan terhadap Pengalaman, Kehati-hatian, Ekstraversi, Kepersetujuan'
     }
   },
   getResult: {
     result: 'Hasil',
-    explanation: 'Jika Anda telah mengikuti tes dan menyimpan ID Anda, Anda dapat melihat hasilnya di sini dengan mengetikkan ID yang Anda dapatkan, yaitu.',
+    explanation:
+      'Jika Anda telah mengikuti tes dan menyimpan ID Anda, Anda dapat melihat hasilnya di sini dengan mengetikkan ID yang Anda dapatkan, yaitu.',
     idInput: 'di kolom input-ID',
     urlOrId: 'URL atau ID hasil Anda',
     getResult: 'Dapatkan hasil',
@@ -201,6 +216,6 @@ const indonesian = {
     copiedLink: 'Tautan disalin',
     shareResults: 'Bagikan hasil Anda!'
   }
-}
+};
 
-export default indonesian
+export default indonesian;

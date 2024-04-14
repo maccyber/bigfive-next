@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import { ApexOptions } from "apexcharts";
-import { useTheme } from "next-themes";
-import dynamic from "next/dynamic";
-const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import { ApexOptions } from 'apexcharts';
+import { useTheme } from 'next-themes';
+import dynamic from 'next/dynamic';
+const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 interface BarChartProps {
   max: number;
@@ -12,7 +12,7 @@ interface BarChartProps {
 
 export const BarChart = ({ max, results }: BarChartProps) => {
   const { theme } = useTheme();
-  const apexChartTheme = theme === 'dark' ? 'dark' : 'light'
+  const apexChartTheme = theme === 'dark' ? 'dark' : 'light';
   const options: ApexOptions = {
     theme: {
       mode: apexChartTheme
@@ -25,7 +25,7 @@ export const BarChart = ({ max, results }: BarChartProps) => {
         show: false
       },
       fontFamily: 'Inter, sans-serif',
-      background: 'transparent',
+      background: 'transparent'
     },
     yaxis: {
       max
@@ -34,7 +34,7 @@ export const BarChart = ({ max, results }: BarChartProps) => {
       categories: results.map((result: any) => result.title),
       labels: {
         style: {
-          fontFamily: 'Inter, sans-serif',
+          fontFamily: 'Inter, sans-serif'
         }
       }
     },
@@ -46,22 +46,24 @@ export const BarChart = ({ max, results }: BarChartProps) => {
     fill: {
       colors: ['#9353d3', '#006FEE', '#f31260', '#f5a524', '#17c964', '#E2711D']
     }
-  }
+  };
 
-  const series = [{
-    name: 'You',
-    data: results.map((result: any) => result.score)
-  }]
+  const series = [
+    {
+      name: 'You',
+      data: results.map((result: any) => result.score)
+    }
+  ];
 
   return (
     <>
       <ApexChart
-        type="bar"
+        type='bar'
         options={options}
         series={series}
         height={350}
-        width="100%"
+        width='100%'
       />
     </>
-  )
-}
+  );
+};

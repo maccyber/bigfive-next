@@ -4,12 +4,14 @@ const chinese = {
     locale: 'zh'
   },
   seo: {
-    keywords: 'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+    keywords:
+      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Free open-source BigFive personality traits test',
-      description: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+      description:
+        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
     title: '五大人格测试',
     call_to_action: '现在参加免费测试',
@@ -55,7 +57,8 @@ const chinese = {
   about: {
     seo: {
       title: '关于五大人格测试',
-      description: 'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+      description:
+        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
     }
   },
   toolbar: {
@@ -130,14 +133,16 @@ const chinese = {
     title: '经验开放性',
     seo: {
       title: 'Overview of the domain Openness To Experience.',
-      description: 'Read more about the Openness To Experience domain in the b5 model'
+      description:
+        'Read more about the Openness To Experience domain in the b5 model'
     }
   },
   conscientiousness: {
     title: '尽责性',
     seo: {
       title: 'Overview of the domain Conscientiousness',
-      description: 'Read more about the Conscientiousness domain in the b5 model'
+      description:
+        'Read more about the Conscientiousness domain in the b5 model'
     }
   },
   extraversion: {
@@ -183,7 +188,8 @@ const chinese = {
     toOthers: '自己对别人',
     seo: {
       title: 'My results from the BigFive personality test',
-      description: 'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+      description:
+        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
     }
   },
   getResult: {
@@ -201,6 +207,6 @@ const chinese = {
     copiedLink: '复制链接',
     shareResults: '分享您的结果！'
   }
-}
+};
 
-export default chinese
+export default chinese;

@@ -2,19 +2,19 @@
 title: Extraversion
 date: 2021-12-24
 description: An article on the personality trait extraversion.
-image: "/blog/traits/extraversion_3.webp"
+image: '/blog/traits/extraversion_3.webp'
 author:
-  name: "Jonas Enge"
-  username: "maccyber"
-  link: "https://twitter.com/maccyber"
-  avatar: "/avatars/maccyber.png"
+  name: 'Jonas Enge'
+  username: 'maccyber'
+  link: 'https://twitter.com/maccyber'
+  avatar: '/avatars/maccyber.png'
 ---
 
 Extraversion is marked by pronounced engagement with the external world.
 
 Extraverts enjoy being with people, are full of energy, and often experience positive emotions. They tend to be enthusiastic, action-oriented, individuals who are likely to say "Yes!" or "Let's go!" to opportunities for excitement. In groups they like to talk, assert themselves, and draw attention to themselves.
 
->  Extraversion is marked by pronounced engagement with the external world.
+> Extraversion is marked by pronounced engagement with the external world.
 
 Introverts lack the exuberance, energy, and activity levels of extraverts. They tend to be quiet, low-key, deliberate, and disengaged from the social world. Their lack of social involvement should not be interpreted as shyness or depression; the introvert simply needs less stimulation than an extravert and prefers to be alone. The independence and reserve of the introvert is sometimes mistaken as unfriendliness or arrogance. In reality, an introvert who scores high on the extraversion dimension will not seek others out but will be quite pleasant when approached.
 
@@ -41,4 +41,3 @@ High scorers on this scale are easily bored without high levels of stimulation. 
 ### Cheerfulness
 
 This scale measures positive mood and feelings, not negative emotions (which are a part of the Neuroticism domain). Persons who score high on this scale typically experience a range of positive feelings, including happiness, enthusiasm, optimism, and joy. Low scorers are not as prone to such energetic, high spirits.
-

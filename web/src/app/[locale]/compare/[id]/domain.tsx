@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import { heading } from "@/components/primitives";
-import Link from "next/link";
-import { Facet  } from "@bigfive-org/results";
-import { BarChartCompare } from "@/components/bar-chart-generic";
+import { heading } from '@/components/primitives';
+import Link from 'next/link';
+import { Facet } from '@bigfive-org/results';
+import { BarChartCompare } from '@/components/bar-chart-generic';
 
 interface DomainProps {
   title: string;
@@ -13,31 +13,33 @@ interface DomainProps {
 
 type NamedScore = {
   name: string;
-  facets: Facet[]
-}
+  facets: Facet[];
+};
 
-export const DomainComparePage = ({ title, shortDescription, domain }: DomainProps) => {
-  const categories = domain[0].facets.map((facet) => facet.title)
-  const scores = domain.map((d) => ({ name: d.name, data: d.facets.map(f => f.score) }))
-  console.log(scores)
+export const DomainComparePage = ({
+  title,
+  shortDescription,
+  domain
+}: DomainProps) => {
+  const categories = domain[0].facets.map((facet) => facet.title);
+  const scores = domain.map((d) => ({
+    name: d.name,
+    data: d.facets.map((f) => f.score)
+  }));
+  console.log(scores);
   return (
     <>
-      <div className="mt-5">
+      <div className='mt-5'>
         <Link href={`#${title}`}>
-          <h2
-            className={heading()}
-            id={title}
-          >
+          <h2 className={heading()} id={title}>
             {title}
           </h2>
         </Link>
-        <div className="mt-3">
-          {shortDescription}
-        </div>
+        <div className='mt-3'>{shortDescription}</div>
         <div>
           <BarChartCompare max={20} categories={categories} series={scores} />
         </div>
       </div>
     </>
-  )
-}
+  );
+};

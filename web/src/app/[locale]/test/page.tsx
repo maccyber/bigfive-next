@@ -1,26 +1,33 @@
-import { getItems, getInfo } from "@bigfive-org/questions"
-import { Survey } from "./survey";
-import { useTranslations } from "next-intl";
-import { saveTest } from "@/actions";
+import { getItems, getInfo } from '@bigfive-org/questions';
+import { Survey } from './survey';
+import { useTranslations } from 'next-intl';
+import { saveTest } from '@/actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { TestLanguageSwitch } from "./test-language-switch";
+import { TestLanguageSwitch } from './test-language-switch';
 
-const questionLanguages = getInfo().languages
+const questionLanguages = getInfo().languages;
 
 interface Props {
   params: { locale: string };
   searchParams: { lang?: string };
 }
 
-export default function TestPage({ params: { locale }, searchParams: { lang } }: Props) {
+export default function TestPage({
+  params: { locale },
+  searchParams: { lang }
+}: Props) {
   unstable_setRequestLocale(locale);
-  const language = lang || (questionLanguages.some(l => l.id === locale) ? locale : 'en');
-  const questions = getItems(language)
-  const t = useTranslations('test')
+  const language =
+    lang || (questionLanguages.some((l) => l.id === locale) ? locale : 'en');
+  const questions = getItems(language);
+  const t = useTranslations('test');
   return (
     <>
-      <div className="flex justify-end">
-        <TestLanguageSwitch availableLanguages={questionLanguages} language={language} />
+      <div className='flex justify-end'>
+        <TestLanguageSwitch
+          availableLanguages={questionLanguages}
+          language={language}
+        />
       </div>
       <Survey
         questions={questions}

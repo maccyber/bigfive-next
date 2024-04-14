@@ -2,12 +2,12 @@
 title: Agreeableness
 date: 2021-12-24
 description: An article on the personality trait agreeableness.
-image: "/blog/traits/agreeableness_2.webp"
+image: '/blog/traits/agreeableness_2.webp'
 author:
-  name: "Jonas Enge"
-  username: "@maccyber"
-  link: "https://twitter.com/maccyber"
-  avatar: "/avatars/maccyber.png"
+  name: 'Jonas Enge'
+  username: '@maccyber'
+  link: 'https://twitter.com/maccyber'
+  avatar: '/avatars/maccyber.png'
 ---
 
 Agreeableness reflects individual differences in concern with cooperation and social harmony. Agreeable individuals value getting along with others.
@@ -20,12 +20,11 @@ Disagreeable individuals place self-interest above getting along with others.
 They are generally unconcerned with others' well-being, and therefore are unlikely to extend themselves for other people.
 Sometimes their skepticism about others' motives causes them to be suspicious, unfriendly, and uncooperative.
 
->  Agreeableness reflects individual differences in concern with cooperation and social harmony.
+> Agreeableness reflects individual differences in concern with cooperation and social harmony.
 
 Agreeableness is obviously advantageous for attaining and maintaining popularity. Agreeable people are better liked than disagreeable people.
 On the other hand, agreeableness is not useful in situations that require tough or absolute objective decisions.
 Disagreeable people can make excellent scientists, critics, or soldiers.
-
 
 ### Trust
 
@@ -50,7 +49,6 @@ Individuals who score high on this scale dislike confrontations.
 They are perfectly willing to compromise or to deny their own needs in order to get along with others.
 Those who score low on this scale are more likely to intimidate others to get their way.
 
-
 ### Modesty
 
 High scorers on this scale do not like to claim that they are better than other people.
@@ -63,7 +61,3 @@ People who score high on this scale are tenderhearted and compassionate.
 They feel the pain of others vicariously and are easily moved to pity.
 Low scorers are not affected strongly by human suffering. They pride themselves on making objective judgments based on reason.
 They are more concerned with truth and impartial justice than with mercy.
-
-
-
-

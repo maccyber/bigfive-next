@@ -1,8 +1,8 @@
-'use client'
+'use client';
 import { ChangeEvent } from 'react';
 import { useLocale } from 'next-intl';
 import { languages } from '../config/site';
-import { Select, SelectItem } from "@nextui-org/select";
+import { Select, SelectItem } from '@nextui-org/select';
 import { useRouter, usePathname } from '../navigation';
 
 export default function LocaleSwitcher() {
@@ -13,25 +13,20 @@ export default function LocaleSwitcher() {
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value;
-    router.replace(
-      pathname,
-      { locale: nextLocale }
-    );
+    router.replace(pathname, { locale: nextLocale });
   }
   return (
     <div className='w-20'>
       <Select
         selectedKeys={[locale]}
         onChange={onSelectChange}
-        aria-label="Select language"
-        name="localeSelectSmall"
+        aria-label='Select language'
+        name='localeSelectSmall'
       >
         {languages.map((lang) => (
-          <SelectItem
-            key={lang.code}
-            value={lang.code}
-            textValue={lang.code}
-          >{lang.code}</SelectItem>
+          <SelectItem key={lang.code} value={lang.code} textValue={lang.code}>
+            {lang.code}
+          </SelectItem>
         ))}
       </Select>
     </div>

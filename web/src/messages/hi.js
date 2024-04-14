@@ -4,12 +4,14 @@ const hindi = {
     locale: 'hi'
   },
   seo: {
-    keywords: 'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+    keywords:
+      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Free open-source BigFive personality traits test',
-      description: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+      description:
+        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
     title: 'बिग फाइव पर्सनैलिटी टेस्ट',
     call_to_action: 'अब फ्री टेस्ट लें',
@@ -43,19 +45,22 @@ const hindi = {
     description: {
       top: 'एक मुक्त, मुक्त-स्रोत व्यक्तित्व परीक्षण के साथ खुद को बेहतर जानना सीखें।',
       subtop: 'The',
-      subtop2: ' is the most scientifically validated and reliable psychological model to measure personality.',
+      subtop2:
+        ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'निम्नलिखित परीक्षण में 120 प्रश्न शामिल हैं जिन्हें पूरा करने में आपको लगभग 10 मिनट लगने का अनुमान है।',
-      result: 'After you have completed the test you will receive a detailed personality report in the following domains:',
+      result:
+        'After you have completed the test you will receive a detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'
     }
   },
   about: {
     seo: {
       title: 'About and the big five team',
-      description: 'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+      description:
+        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
     }
   },
   toolbar: {
@@ -130,14 +135,16 @@ const hindi = {
     title: 'अनुभव के लिए खुलापन',
     seo: {
       title: 'Overview of the domain Openness To Experience.',
-      description: 'Read more about the Openness To Experience domain in the b5 model'
+      description:
+        'Read more about the Openness To Experience domain in the b5 model'
     }
   },
   conscientiousness: {
     title: 'कर्त्तव्य निष्ठां',
     seo: {
       title: 'Overview of the domain Conscientiousness',
-      description: 'Read more about the Conscientiousness domain in the b5 model'
+      description:
+        'Read more about the Conscientiousness domain in the b5 model'
     }
   },
   extraversion: {
@@ -163,7 +170,8 @@ const hindi = {
   },
   getCompare: {
     title: 'लोगों या टीमों की तुलना करें',
-    description1: 'कई लोगों के साथ बड़े व्यक्तित्व परीक्षण के परिणामों की तुलना करें।',
+    description1:
+      'कई लोगों के साथ बड़े व्यक्तित्व परीक्षण के परिणामों की तुलना करें।',
     description2: 'परीक्षा परिणाम से प्राप्त आईडी में टाइप करें, यानि की',
     description3: 'आईडी-इनपुट क्षेत्र में',
     needToAddPeople: 'उनकी तुलना करने के लिए आपको लोगों को जोड़ना होगा',
@@ -183,12 +191,14 @@ const hindi = {
     toOthers: 'खुद दूसरों के लिए',
     seo: {
       title: 'My results from the BigFive personality test',
-      description: 'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+      description:
+        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
     }
   },
   getResult: {
     result: 'परिणाम',
-    explanation: 'यदि आपने टेस्ट लिया है और अपनी आईडी को सेव किया है, तो आप यहां पर आईडी में टाइप करके परिणाम देख सकते हैं, अर्थात।',
+    explanation:
+      'यदि आपने टेस्ट लिया है और अपनी आईडी को सेव किया है, तो आप यहां पर आईडी में टाइप करके परिणाम देख सकते हैं, अर्थात।',
     idInput: 'आईडी-इनपुट क्षेत्र में',
     urlOrId: 'आपके परिणाम का URL या ID',
     getResult: 'परिणाम प्राप्त करें',
@@ -201,6 +211,6 @@ const hindi = {
     copiedLink: 'लिंक को कॉपी किया गया',
     shareResults: 'अपने परिणाम साझा करें!'
   }
-}
+};
 
-export default hindi
+export default hindi;

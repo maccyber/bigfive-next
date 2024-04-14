@@ -4,12 +4,14 @@ const icelandic = {
     locale: 'is'
   },
   seo: {
-    keywords: 'stór fimm persónuleikapróf, stór 5 persónuleikapróf, b5 próf, bigfive próf, persónueinkenni, bigfive, bera saman, ókeypis, Jordan Peterson '
+    keywords:
+      'stór fimm persónuleikapróf, stór 5 persónuleikapróf, b5 próf, bigfive próf, persónueinkenni, bigfive, bera saman, ókeypis, Jordan Peterson '
   },
   frontpage: {
     seo: {
       title: 'Ókeypis opið uppspretta BigFive persónueinkenni próf',
-      description: 'Taktu ókeypis opið uppsprettu Big Five persónuleikapróf. Lærðu að þekkja persónueinkenni þín og berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.'
+      description:
+        'Taktu ókeypis opið uppsprettu Big Five persónuleikapróf. Lærðu að þekkja persónueinkenni þín og berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.'
     },
     title: 'Stór fimm persónuleikapróf',
     call_to_action: 'Taktu ókeypis prófið núna',
@@ -17,7 +19,8 @@ const icelandic = {
     tests_taken: 'Yfir <green>{n}</green> manns hafa tekið prófið',
     compare: {
       title: 'Berðu þig saman við aðra',
-      text1: 'Berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.',
+      text1:
+        'Berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.',
       text2: 'Lærðu hvernig þú ert frábrugðin öðru fólki á lénunum fimm:',
       action: 'Sjáðu það í beinni útsendingu'
     },
@@ -43,19 +46,22 @@ const icelandic = {
     description: {
       top: 'Lærðu að þekkja sjálfan þig betur með <violet>ókeypis</violet> opnu persónuleikaprófi.',
       subtop: 'The',
-      subtop2: ' er vísindalega staðfestasta og áreiðanlegasta sálfræðilíkanið til að mæla persónuleika.',
+      subtop2:
+        ' er vísindalega staðfestasta og áreiðanlegasta sálfræðilíkanið til að mæla persónuleika.',
       reference: `Próf og mat fyrir þessa síðu er safnað saman frá
         <a href="http://ipip.ori.org" rel="noopener" target="_blank"> ipip.ori.org </a>,
         birgðir eru frá <i> Johnson (2014) 120 hlutum IPIP NEO-PI-R </i>.`,
       info: 'Eftirfarandi próf inniheldur 120 spurningar sem áætlað er að taki þig um það bil 10 mínútur.',
-      result: 'Eftir að prófinu lýkur færðu nákvæma persónuleikaskýrslu á eftirfarandi sviðum:',
+      result:
+        'Eftir að prófinu lýkur færðu nákvæma persónuleikaskýrslu á eftirfarandi sviðum:',
       tests_taken: 'próf sem tekin hafa verið hingað til'
     }
   },
   about: {
     seo: {
       title: 'Um og fimm stóra liðið',
-      description: 'BigFive er með mjög virkt og trúlofað lið sem er stöðugt að reyna að ýta BigFive áfram.'
+      description:
+        'BigFive er með mjög virkt og trúlofað lið sem er stöðugt að reyna að ýta BigFive áfram.'
     }
   },
   toolbar: {
@@ -163,8 +169,10 @@ const icelandic = {
   },
   getCompare: {
     title: 'Berðu fólk eða lið saman',
-    description1: 'Berðu saman niðurstöður úr bigfive persónuleikaprófinu við marga.',
-    description2: 'Sláðu inn skilríkin sem þú fékkst frá niðurstöðum prófanna þ.e.a.s.',
+    description1:
+      'Berðu saman niðurstöður úr bigfive persónuleikaprófinu við marga.',
+    description2:
+      'Sláðu inn skilríkin sem þú fékkst frá niðurstöðum prófanna þ.e.a.s.',
     description3: 'í auðkennisreitinn',
     needToAddPeople: 'Þú verður að bæta við fólki til að bera það saman',
     addAnother: 'Bættu við annarri manneskju',
@@ -178,17 +186,20 @@ const icelandic = {
     theBigFive: 'Fimm stóru',
     score: 'mark',
     important: 'Mikilvægt!',
-    saveResults: 'Vistaðu eftirfarandi auðkenni til að sjá niðurstöðurnar síðar eða',
+    saveResults:
+      'Vistaðu eftirfarandi auðkenni til að sjá niðurstöðurnar síðar eða',
     compare: 'bera saman',
     toOthers: 'sjálfur við aðra',
     seo: {
       title: 'Niðurstöður mínar úr BigFive persónuleikaprófinu',
-      description: 'Sjáðu persónuleika minn og berðu þig saman á eftirfarandi fimm sviðum: Taugaveiki, hreinskilni til að upplifa, samviskusemi, aukaatriði, samþykki'
+      description:
+        'Sjáðu persónuleika minn og berðu þig saman á eftirfarandi fimm sviðum: Taugaveiki, hreinskilni til að upplifa, samviskusemi, aukaatriði, samþykki'
     }
   },
   getResult: {
     result: 'Niðurstaða',
-    explanation: 'Ef þú hefur tekið prófið og vistað skilríkin geturðu séð niðurstöðurnar hér með því að slá inn skilríkin sem þú fékkst þ.e.a.s. ',
+    explanation:
+      'Ef þú hefur tekið prófið og vistað skilríkin geturðu séð niðurstöðurnar hér með því að slá inn skilríkin sem þú fékkst þ.e.a.s. ',
     idInput: 'í auðkennisreitinn',
     urlOrId: 'Slóð eða auðkenni niðurstöðu þinnar',
     getResult: 'Fáðu niðurstöðu',
@@ -201,6 +212,6 @@ const icelandic = {
     copiedLink: 'Afritaður hlekkur',
     shareResults: 'Deildu niðurstöðum þínum!'
   }
-}
+};
 
-export default icelandic
+export default icelandic;
