@@ -40,7 +40,7 @@ export async function generateMetadata({
     alternates: {
       canonical: '/',
       languages: alternatesLang
-    },
+    }
   };
 }
 export const viewport: Viewport = {
