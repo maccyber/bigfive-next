@@ -3,13 +3,13 @@
 import { subtitle, heading } from "@/components/primitives";
 import Link from "next/link";
 import { Chart } from "./chart";
-import { FacetReport, TestReport } from "@bigfive-org/results";
+import { Facet, Domain } from "@bigfive-org/results";
 
 interface DomainProps {
-  domain: TestReport;
+  domain: Domain;
 }
 
-export const Domain: React.FC<DomainProps> = ({ domain }) => {
+export const DomainPage: React.FC<DomainProps> = ({ domain }) => {
   return (
     <>
       <div className="mt-5">
@@ -24,7 +24,7 @@ export const Domain: React.FC<DomainProps> = ({ domain }) => {
         <Chart max={20} results={domain.facets} />
         <div>
           {
-            domain.facets.map((facet: FacetReport, index: number) => (
+            domain.facets.map((facet: Facet, index: number) => (
               <div key={index} className="mt-5">
                 <Link href={`#${facet.title}`}>
                   <h3
@@ -35,7 +35,7 @@ export const Domain: React.FC<DomainProps> = ({ domain }) => {
                   </h3>
                 </Link>
                 <div>
-                  Score: {facet.score} - {facet.scoreText} 
+                  Score: {facet.score} - {facet.scoreText}
                 </div>
                 <p>{facet.text}</p>
               </div>

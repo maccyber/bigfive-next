@@ -3,8 +3,8 @@ import { Snippet } from '@nextui-org/snippet'
 import { Chart } from './chart'
 import { useTranslations } from 'next-intl'
 import { title } from "@/components/primitives";
-import { Domain } from './domain';
-import { TestReport } from '@bigfive-org/results';
+import { DomainPage } from './domain';
+import { Domain } from '@bigfive-org/results';
 import { getTranslations } from 'next-intl/server';
 
 
@@ -48,8 +48,8 @@ const Results: React.FC<ResultsProps> = ({ testResults }) => {
       </div>
       <Chart max={120} results={testResults.results} />
       {
-        testResults.results.map((result: TestReport, index: number) => (
-            <Domain domain={result} key={index} />
+        testResults.results.map((result: Domain, index: number) => (
+            <DomainPage domain={result} key={index} />
         ))
       }
     </>

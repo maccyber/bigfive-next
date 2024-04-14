@@ -1,5 +1,6 @@
 'use client'
 
+import { ApexOptions } from "apexcharts";
 import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
@@ -11,9 +12,10 @@ interface ChartProps {
 
 export const Chart: React.FC<ChartProps> = ({ max, results }) => {
   const { theme } = useTheme();
+  const apexChartTheme = theme === 'dark' ? 'dark' : 'light'
   const options = {
     theme: {
-      mode: theme === 'dark' ? 'dark' : 'light'
+      mode: apexChartTheme
     },
     legend: {
       show: false
@@ -44,7 +46,7 @@ export const Chart: React.FC<ChartProps> = ({ max, results }) => {
     fill: {
       colors: ['#9353d3', '#006FEE', '#f31260', '#f5a524', '#17c964']
     }
-  }
+  } as ApexOptions
 
   const series = [{
     name: 'You',
