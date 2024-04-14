@@ -21,6 +21,7 @@ interface SurveyProps {
   prevText: string;
   resultsText: string;
   saveTest: Function;
+  language: string;
 }
 
 export const Survey = ({
@@ -28,7 +29,8 @@ export const Survey = ({
   nextText,
   prevText,
   resultsText,
-  saveTest
+  saveTest,
+  language
 }: SurveyProps) => {
   const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -112,7 +114,7 @@ export const Survey = ({
     confetti({});
     const result = await saveTest({
       testId: "b5-120",
-      lang: 'en',
+      lang: language,
       invalid: false,
       timeElapsed: seconds,
       dateStamp: new Date(),

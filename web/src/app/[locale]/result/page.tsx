@@ -1,6 +1,6 @@
 import { title } from "@/components/primitives";
 import { useTranslations } from 'next-intl';
-import { ViewPreviousButton } from './view-previous-button';
+import { GetResultPage } from './get-result';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 interface Props {
@@ -17,7 +17,7 @@ export default function ResultPage({ params: { locale } }: Props) {
       <div className="mt-10">
         {t('explanation')}
       </div>
-        <ViewPreviousButton viewPreviousText={t('viewPrevious')} getResultsText={t('getResult')} />
+        <GetResultPage viewPreviousText={t('viewPrevious')} getResultsText={t('getResult')} />
     </div>
   );
 }

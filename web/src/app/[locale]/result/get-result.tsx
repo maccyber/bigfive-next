@@ -10,12 +10,12 @@ import { useEffect, useMemo, useState } from "react";
 import { Input } from "@nextui-org/input";
 import { ResultIcon } from "@/components/icons";
 
-interface ViewPreviousButtonProps {
+interface GetResultPageProps {
   viewPreviousText: string;
   getResultsText: string;
 }
 
-export const ViewPreviousButton = ({ viewPreviousText, getResultsText }: ViewPreviousButtonProps) => {
+export const GetResultPage = ({ viewPreviousText, getResultsText }: GetResultPageProps) => {
   const router = useRouter();
 
   const [previousResultId, setPreviousResultId] = useState<string | null>(null)

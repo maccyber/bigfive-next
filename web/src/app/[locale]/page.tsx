@@ -53,41 +53,43 @@ export default function Home({ params: { locale } }: Props) {
 
   return (
     <section className="overflow-hidden relative">
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10">
-          <div className="text-center justify-center mt-10">
-            <h1 className={title()}>{titleDescription}</h1>
-            <br />
-            <h2 className={subtitle({ class: "mt-4" })}>
-              {t('description.info')}
-            </h2>
+      <div className="lg:h-[calc(100vh-74px)]">
+        <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+          <div className="flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10">
+            <div className="text-center justify-center mt-10">
+              <h1 className={title()}>{titleDescription}</h1>
+              <br />
+              <h2 className={subtitle({ class: "mt-4" })}>
+                {t('description.info')}
+              </h2>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
+              <Link
+                href="/test"
+                className={clsx(buttonStyles({ color: "primary", radius: "full", variant: "shadow", size: "lg", fullWidth: true }), "md:w-auto")}
+              >
+                {t('call_to_action')} <ArrowRightIcon />
+              </Link>
+              <Link
+                isExternal
+                className={clsx(buttonStyles({ variant: "bordered", radius: "full", size: "lg", fullWidth: true }), "md:w-auto")}
+                href={siteConfig.links.github}
+              >
+                <GithubIcon size={20} />
+                GitHub
+              </Link>
+            </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
-            <Link
-              href="/test"
-              className={clsx(buttonStyles({ color: "primary", radius: "full", variant: "shadow", size: "lg", fullWidth: true }), "md:w-auto")}
-            >
-              {t('call_to_action')} <ArrowRightIcon />
-            </Link>
-            <Link
-              isExternal
-              className={clsx(buttonStyles({ variant: "bordered", radius: "full", size: "lg", fullWidth: true }), "md:w-auto")}
-              href={siteConfig.links.github}
-            >
-              <GithubIcon size={20} />
-              GitHub
-            </Link>
+          <div className="font-normal text-default-500 block max-w-full text-center underline">
+            {t('no_registration')}
           </div>
-        </div>
+        </section>
 
-        <div className="font-normal text-default-500 block max-w-full text-center underline">
-          {t('no_registration')}
+        <div className="mt-20 mx-2">
+          <FeaturesGrid features={features} />
         </div>
-      </section>
-
-      <div className="mt-20 mx-2">
-        <FeaturesGrid features={features} />
       </div>
 
       <section className="border-t border-b border-divider px-8 mt-16 lg:mt-44 text-center">
@@ -176,10 +178,10 @@ export default function Home({ params: { locale } }: Props) {
                     as={Link}
                     href={e.href}
                   >{e.name}</Chip>
-                  </div>
-                  ))
+                </div>
+              ))
             }
-                </div >
+          </div >
         </SonarPulse>
       </div>
 
@@ -225,11 +227,11 @@ const buildCircle = (list: { name: string; href: string }[]) => {
       name: item.name,
       href: item.href,
       style: {
-        transform: `rotate(${rotate}deg) translate(${radius-20}px) rotate(${-rotate}deg)`,
+        transform: `rotate(${rotate}deg) translate(${radius - 20}px) rotate(${-rotate}deg)`,
         width: '195px'
       },
       smallStyle: {
-        transform: `rotate(${rotate}deg) translate(${radius-60}px) rotate(${-rotate}deg)`,
+        transform: `rotate(${rotate}deg) translate(${radius - 60}px) rotate(${-rotate}deg)`,
       }
     };
   });
