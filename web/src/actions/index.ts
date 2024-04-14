@@ -23,6 +23,7 @@ export async function getTestResult(id: string): Promise<TestResult | undefined>
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
     const testResult = await collection.findOne(query);
+    console.log(testResult)
     if (!testResult) {
       return
     }
