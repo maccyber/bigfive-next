@@ -27,6 +27,7 @@ export const TestLanguageSwitch = ({ availableLanguages, language }: TestLanguag
         aria-label="Select language"
         name="localeSelectSmall"
         className='w-48'
+        label="Select language"
         items={availableLanguages}
       >
       {(language) => <SelectItem key={language.id} value={language.id}>{language.text}</SelectItem>}

@@ -19,7 +19,9 @@ export default function TestPage({ params: { locale }, searchParams: { lang } }:
   const t = useTranslations('test')
   return (
     <>
-      <TestLanguageSwitch availableLanguages={questionLanguages} language={language} />
+      <div className="flex justify-end">
+        <TestLanguageSwitch availableLanguages={questionLanguages} language={language} />
+      </div>
       <Survey
         questions={questions}
         nextText={t('next')}

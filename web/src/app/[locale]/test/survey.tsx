@@ -160,7 +160,7 @@ export const Survey = ({
   const backButtonDisabled = (currentQuestionIndex === 0) || loading;
 
   return (
-    <>
+    <div className="mt-2">
       <Progress
         aria-label="Progress bar"
         value={progress}
@@ -239,6 +239,6 @@ export const Survey = ({
           </Button>
         )}
       </div>
-    </>
+    </div>
   );
 };
