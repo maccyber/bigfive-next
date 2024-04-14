@@ -5,7 +5,8 @@ import { DeleteIcon, EditIcon, PersonIcon, ResultIcon } from "@/components/icons
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import React, { useState } from "react";
-import { formatId, validId } from "@/lib/helpers";
+import { base64url, formatId, validId } from "@/lib/helpers";
+import { useRouter } from "@/navigation";
 
 interface CompareProps {
   addPersonText: string;
@@ -14,6 +15,7 @@ interface CompareProps {
 }
 
 export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePeopleText, paramId }) => {
+  const router = useRouter();
   const columns = [
     {
       key: "name",
@@ -61,6 +63,12 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
       setName('');
       setId('');
     }
+  }
+
+  function comparePeople() {
+    const urlParam = base64url.encode(JSON.stringify(rows));
+    console.log(urlParam);
+    router.push(`/compare/${urlParam}`);
   }
 
   return (
@@ -130,6 +138,7 @@ export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePe
           color="primary"
           className="mt-4"
           isDisabled={rows.length < 2}
+          onClick={comparePeople}
         >
           {comparePeopleText}
         </Button>

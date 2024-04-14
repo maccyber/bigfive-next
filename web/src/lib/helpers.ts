@@ -25,3 +25,11 @@ export function formatTimer(seconds: number): string {
 }
 
 export const isDev: boolean = process.env.NEXT_PUBLIC_ENV === 'development'
+
+const unescape = (str: string) => (str + '==='.slice((str.length + 3) % 4)).replace(/-/g, '+').replace(/_/g, '/')
+const escape = (str: string) => str.replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '')
+
+export const base64url = {
+    encode: (str: string) => escape(Buffer.from(str, 'utf8').toString('base64')),
+    decode: (str: string) => JSON.parse(Buffer.from(unescape(str), 'base64').toString('utf8'))
+}
