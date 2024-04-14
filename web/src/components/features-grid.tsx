@@ -32,7 +32,7 @@ interface FeaturesGridProps {
   classNames?: SlotsToClasses<FeaturesGridSlots>;
 }
 
-export const FeaturesGrid: React.FC<FeaturesGridProps> = ({ features, classNames, ...props }) => {
+export const FeaturesGrid = ({ features, classNames, ...props }: FeaturesGridProps) => {
   const router = useRouter();
 
   const slots = styles();

@@ -16,7 +16,7 @@ type Scores = {
   data: number[];
 }
 
-export const BarChartCompare: React.FC<BarChartCompareProps> = ({ max, series, categories }) => {
+export const BarChartCompare = ({ max, series, categories }: BarChartCompareProps) => {
   const { theme } = useTheme();
   const apexChartTheme = theme === 'dark' ? 'dark' : 'light'
   const options: ApexOptions = {

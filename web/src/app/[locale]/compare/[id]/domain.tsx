@@ -16,7 +16,7 @@ type NamedScore = {
   facets: Facet[]
 }
 
-export const DomainComparePage: React.FC<DomainProps> = ({ title, shortDescription, domain }) => {
+export const DomainComparePage = ({ title, shortDescription, domain }: DomainProps) => {
   const categories = domain[0].facets.map((facet) => facet.title)
   const scores = domain.map((d) => ({ name: d.name, data: d.facets.map(f => f.score) }))
   console.log(scores)

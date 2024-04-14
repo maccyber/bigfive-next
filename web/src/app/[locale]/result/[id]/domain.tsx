@@ -10,7 +10,7 @@ interface DomainProps {
   scoreText: string;
 }
 
-export const DomainPage: React.FC<DomainProps> = ({ domain, scoreText }) => {
+export const DomainPage = ({ domain, scoreText }: DomainProps) => {
   return (
     <>
       <div className="mt-5">

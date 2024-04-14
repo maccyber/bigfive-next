@@ -14,7 +14,7 @@ interface CompareProps {
   paramId?: string;
 }
 
-export const ComparePeople: React.FC<CompareProps> = ({ addPersonText, comparePeopleText, paramId }) => {
+export const ComparePeople = ({ addPersonText, comparePeopleText, paramId }: CompareProps) => {
   const router = useRouter();
   const columns = [
     {

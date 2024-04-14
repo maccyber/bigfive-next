@@ -23,13 +23,13 @@ interface SurveyProps {
   saveTest: Function;
 }
 
-export const Survey: React.FC<SurveyProps> = ({
+export const Survey = ({
   questions,
   nextText,
   prevText,
   resultsText,
   saveTest
-}) => {
+}: SurveyProps) => {
   const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [questionsPerPage, setQuestionsPerPage] = useState(1);

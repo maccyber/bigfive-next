@@ -220,7 +220,7 @@ export const SearchIcon = (props: IconSvgProps) => (
   </svg>
 );
 
-export const NextUILogo: React.FC<IconSvgProps> = (props) => {
+export const NextUILogo = (props: IconSvgProps) => {
   const { width, height = 40 } = props;
 
   return (

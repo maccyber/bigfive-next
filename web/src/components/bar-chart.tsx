@@ -10,7 +10,7 @@ interface BarChartProps {
   results: any;
 }
 
-export const BarChart: React.FC<BarChartProps> = ({ max, results }) => {
+export const BarChart = ({ max, results }: BarChartProps) => {
   const { theme } = useTheme();
   const apexChartTheme = theme === 'dark' ? 'dark' : 'light'
   const options: ApexOptions = {

@@ -55,6 +55,7 @@ export default async function ComparePage({ params: { id } }: ComparePageProps) 
       />
       {reports[0].report.results.map((domain) =>
         <DomainComparePage
+          key={domain.domain}
           title={domain.title}
           shortDescription={domain.shortDescription}
           // @ts-ignore

@@ -35,7 +35,7 @@ interface ResultsProps {
   report: Report
 }
 
-const Results: React.FC<ResultsProps> = ({ report }) => {
+const Results = ({ report }: ResultsProps) => {
   const t = useTranslations('results')
   return (
     <>

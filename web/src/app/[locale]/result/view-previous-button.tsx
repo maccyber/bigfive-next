@@ -15,7 +15,7 @@ interface ViewPreviousButtonProps {
   getResultsText: string;
 }
 
-export const ViewPreviousButton: React.FC<ViewPreviousButtonProps> = ({ viewPreviousText, getResultsText }) => {
+export const ViewPreviousButton = ({ viewPreviousText, getResultsText }: ViewPreviousButtonProps) => {
   const router = useRouter();
 
   const [previousResultId, setPreviousResultId] = useState<string | null>(null)
