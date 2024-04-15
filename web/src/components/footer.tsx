@@ -15,59 +15,57 @@ export default function Footer() {
   return (
     <footer className='container mx-auto max-w-7xl py-12 px-12'>
       <div className='container mx-auto flex justify-between'>
-        <div className='w-1/3'>
+        <div className='w-1/2'>
           <span className='text-center'>
             <Logo />
           </span>
         </div>
-        <div className='w-1/3'>
-          <span className='text-center'>
-            <ul className='flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
-              {siteConfig.footerLinks.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    className='hover:underline me-4 md:me-6'
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </span>
+        <div className='w-1/2 flex justify-end'>
+          <NextUILink
+            isExternal
+            href={siteConfig.links.twitter}
+            aria-label='Twitter'
+          >
+            <TwitterIcon size={48} className='text-default-500' />
+          </NextUILink>
+          <NextUILink
+            isExternal
+            href={siteConfig.links.github}
+            aria-label='Github'
+          >
+            <GithubIcon size={48} className='text-default-500' />
+          </NextUILink>
+          <NextUILink
+            isExternal
+            href={siteConfig.links.linkedIn}
+            aria-label='LinkedIn'
+          >
+            <LinkedInIcon size={48} className='text-default-500' />
+          </NextUILink>
+          <NextUILink
+            isExternal
+            href={siteConfig.links.facebook}
+            aria-label='Facebook'
+          >
+            <FacebookIcon size={48} className='text-default-500' />
+          </NextUILink>
         </div>
-        <div className='w-1/3'>
-          <span className='text-center'>
-            <NextUILink
-              isExternal
-              href={siteConfig.links.twitter}
-              aria-label='Twitter'
-            >
-              <TwitterIcon size={48} className='text-default-500' />
-            </NextUILink>
-            <NextUILink
-              isExternal
-              href={siteConfig.links.github}
-              aria-label='Github'
-            >
-              <GithubIcon size={48} className='text-default-500' />
-            </NextUILink>
-            <NextUILink
-              isExternal
-              href={siteConfig.links.linkedIn}
-              aria-label='LinkedIn'
-            >
-              <LinkedInIcon size={48} className='text-default-500' />
-            </NextUILink>
-            <NextUILink
-              isExternal
-              href={siteConfig.links.facebook}
-              aria-label='Facebook'
-            >
-              <FacebookIcon size={48} className='text-default-500' />
-            </NextUILink>
-          </span>
-        </div>
+      </div>
+
+
+      <div className='w-full flex justify-center mt-4'>
+        <ul className='flex mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
+          {siteConfig.footerLinks.map((item, index) => (
+            <li key={index}>
+              <Link
+                href={item.href}
+                className='hover:underline me-4 md:me-6'
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <p className='text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center'>

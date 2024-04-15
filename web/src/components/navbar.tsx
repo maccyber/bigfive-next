@@ -9,10 +9,7 @@ import {
 } from '@nextui-org/navbar';
 import LocaleSwitcher from '@/components/locale-switcher';
 import LocaleSwitcherFull from '@/components/locale-switcher-full';
-import { Button } from '@nextui-org/button';
-import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
-import { Input } from '@nextui-org/input';
 
 import { link as linkStyles } from '@nextui-org/theme';
 
@@ -23,34 +20,11 @@ import { ThemeSwitch } from '@/components/theme-switch';
 import {
   TwitterIcon,
   GithubIcon,
-  HeartFilledIcon,
-  SearchIcon,
   Logo
 } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label='Search'
-      classNames={{
-        inputWrapper: 'bg-default-100',
-        input: 'text-sm'
-      }}
-      endContent={
-        <Kbd className='hidden lg:inline-block' keys={['command']}>
-          K
-        </Kbd>
-      }
-      labelPlacement='outside'
-      placeholder='Search...'
-      startContent={
-        <SearchIcon className='text-base text-default-400 pointer-events-none flex-shrink-0' />
-      }
-      type='search'
-    />
-  );
-
   return (
     <NextUINavbar maxWidth='xl' position='sticky'>
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
@@ -81,9 +55,6 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      {/* <NavbarContent className="sm:basis-full" justify="end"> */}
-      {/* </NavbarContent> */}
-
       <NavbarContent
         className='hidden md:flex basis-1/5 sm:basis-full'
         justify='end'
@@ -97,22 +68,9 @@ export const Navbar = () => {
           </Link>
           <ThemeSwitch />
         </NavbarItem>
-        {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
         <NavbarItem>
           <LocaleSwitcherFull />
         </NavbarItem>
-        {/* <NavbarItem className="hidden lg:flex"> */}
-        {/*   <Button */}
-        {/*     isExternal */}
-        {/*     as={Link} */}
-        {/*     className="text-sm font-normal text-default-600 bg-default-100" */}
-        {/*     href={siteConfig.links.github} */}
-        {/*     startContent={<HeartFilledIcon className="text-danger" />} */}
-        {/*     variant="flat" */}
-        {/*   > */}
-        {/*     Sponsor */}
-        {/*   </Button> */}
-        {/* </NavbarItem> */}
       </NavbarContent>
 
       <NavbarContent className='md:hidden basis-1 pl-4' justify='end'>
@@ -125,7 +83,6 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu>
-        {searchInput}
         <div className='mx-4 mt-2 flex flex-col gap-2'>
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>

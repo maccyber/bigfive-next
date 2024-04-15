@@ -20,6 +20,7 @@ import { Input } from '@nextui-org/input';
 import React, { useState } from 'react';
 import { base64url, formatId, validId } from '@/lib/helpers';
 import { useRouter } from '@/navigation';
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
 
 interface CompareProps {
   addPersonText: string;
@@ -52,9 +53,14 @@ export const ComparePeople = ({
     id: string;
     name: string;
   };
-  const [rows, setRows] = useState([] as Row[]);
-  const [name, setName] = useState('' as string);
+  const [rows, setRows] = useState<Row[]>([]);
+  const [name, setName] = useState<string>('');
   const [id, setId] = useState(paramId ?? '');
+
+  const [editName, setEditName] = useState<string>('');
+  const [editId, setEditId] = useState<string>('');
+  const [editIndex, setEditIndex] = useState<number>();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const isInvalidId = React.useMemo(() => {
     if (id === '') return false;
@@ -64,6 +70,14 @@ export const ComparePeople = ({
 
     return !validId(newId);
   }, [id, rows]);
+
+
+  const isInvalidEditId = React.useMemo(() => {
+    if (editId === '') return false;
+
+    const newId = formatId(editId);
+    return !validId(newId);
+  }, [editId, rows]);
 
   function deleteItem(id: string) {
     setRows((prev) => {
@@ -84,8 +98,34 @@ export const ComparePeople = ({
 
   function comparePeople() {
     const urlParam = base64url.encode(JSON.stringify(rows));
-    console.log(urlParam);
     router.push(`/compare/${urlParam}`);
+  }
+
+  function onOpenEditPerson(onOpen: () => void, item: Row) {
+    setEditName(item.name);
+    setEditId(item.id);
+    setEditIndex(rows.findIndex(({ id }) => id === item.id));
+    onOpen();
+  }
+
+  function editPerson(onClose: () => void) {
+    const newId = formatId(editId);
+    console.log(editName)
+    console.log(editId)
+    console.log(isInvalidEditId)
+    console.log(editIndex)
+    console.log(editName && editId && !isInvalidEditId && editIndex)
+    if (editName && editId && !isInvalidEditId && editIndex !== undefined) {
+      setRows((prev) => {
+        const updatedRows = [...prev];
+        updatedRows[editIndex] = { id: newId, name: editName };
+        return updatedRows;
+      });
+      setEditName('');
+      setEditId('');
+      setEditIndex(undefined);
+      onClose();
+    }
   }
 
   return (
@@ -94,6 +134,7 @@ export const ComparePeople = ({
         <Input
           type='text'
           label='Name'
+          autoFocus
           labelPlacement='outside'
           placeholder='Arthur Dent'
           startContent={
@@ -141,7 +182,7 @@ export const ComparePeople = ({
                 {(columnKey) =>
                   columnKey === 'actions' ? (
                     <TableCell className='flex justify-end'>
-                      <Button isIconOnly variant='light' aria-label='Edit'>
+                      <Button isIconOnly variant='light' aria-label='Edit' onPress={() => onOpenEditPerson(onOpen, item)}>
                         <EditIcon />
                       </Button>
                       <Button
@@ -170,6 +211,58 @@ export const ComparePeople = ({
           {comparePeopleText}
         </Button>
       </div>
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        placement="center"
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Edit person
+              </ModalHeader>
+              <ModalBody>
+                <Input
+                  type='text'
+                  autoFocus
+                  label='Name'
+                  labelPlacement='outside'
+                  placeholder='Arthur Dent'
+                  startContent={
+                    <PersonIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0' />
+                  }
+                  value={editName}
+                  onValueChange={setEditName}
+                />
+                <Input
+                  type='text'
+                  label='ID'
+                  labelPlacement='outside'
+                  placeholder='58a70606a835c400c8b38e84'
+                  startContent={
+                    <ResultIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0' />
+                  }
+                  value={editId}
+                  onValueChange={setEditId}
+                  isInvalid={isInvalidEditId}
+                  errorMessage={
+                    isInvalidEditId && 'Please enter a valid ID.'
+                  }
+                />
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="flat" onPress={onClose}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={() => editPerson(onClose)}>
+                  Save
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 };

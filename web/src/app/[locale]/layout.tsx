@@ -1,5 +1,5 @@
 import '@/styles/globals.css';
-import { Viewport } from 'next';
+import { Metadata, Viewport } from 'next';
 import { fontSans } from '@/config/fonts';
 import { Providers } from '../providers';
 import { Navbar } from '@/components/navbar';
@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import Footer from '@/components/footer';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { locales } from '@/config/site';
+import { basePath, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 
@@ -19,7 +19,7 @@ export async function generateMetadata({
   params: { locale }
 }: {
   params: { locale: string };
-}) {
+}): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'frontpage' });
   const s = await getTranslations({ locale, namespace: 'seo' });
   const alternatesLang = locales.reduce((a, v) => ({ ...a, [v]: `/${v}` }), {});
@@ -40,6 +40,27 @@ export async function generateMetadata({
     alternates: {
       canonical: '/',
       languages: alternatesLang
+    },
+    openGraph: {
+      type: 'website',
+      url: basePath,
+      title: t('seo.title'),
+      description: t('seo.description'),
+      images: {
+        url: `${basePath}/og-image.png`,
+        alt: 'People comparing personality tests'
+      }
+    },
+    twitter: {
+      title: t('seo.title'),
+      card: 'summary_large_image',
+      description: t('seo.description'),
+      site: basePath,
+      creator: siteConfig.creator,
+      images: {
+        url: `${basePath}/twitter-image.webp`,
+        alt: 'People comparing personality tests'
+      }
     }
   };
 }
@@ -47,7 +68,6 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  userScalable: false,
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
