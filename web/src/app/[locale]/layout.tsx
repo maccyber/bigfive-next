@@ -58,7 +58,7 @@ export async function generateMetadata({
       site: basePath,
       creator: siteConfig.creator,
       images: {
-        url: `${basePath}/twitter-image.webp`,
+        url: `${basePath}/og-image.png`,
         alt: 'People comparing personality tests'
       }
     }
