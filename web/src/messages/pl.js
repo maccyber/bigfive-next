@@ -96,7 +96,9 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   common: {
     and: 'i',
     pages: 'strony',
-    languages: 'języki'
+    languages: 'języki',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Informacja',

@@ -91,7 +91,9 @@ const chinese = {
   common: {
     and: '和',
     pages: '页面',
-    languages: '语言'
+    languages: '语言',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Information',

@@ -94,7 +94,9 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
   common: {
     and: 'y',
     pages: 'páginas',
-    languages: 'idiomas'
+    languages: 'idiomas',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Información',

@@ -6,7 +6,7 @@ const arabic = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      'اختبار الشخصية الخمسة الكبار، اختبار الخمس الكبار للشخصية، اختبار بي 5، اختبار بيغفايف، صفات الشخصية، بيغفايف، مقارنة، مجاني، جوردان بيترسون'
   },
   frontpage: {
     seo: {
@@ -94,7 +94,9 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   common: {
     and: 'و',
     pages: 'صفحات',
-    languages: 'اللغات'
+    languages: 'اللغات',
+    save: 'محل',
+    close: 'يغلق'
   },
   form: {
     information: 'Information',

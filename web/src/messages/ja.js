@@ -94,7 +94,9 @@ const japanese = {
   common: {
     and: 'そして',
     pages: 'ページ',
-    languages: '言語'
+    languages: '言語',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: '情報',

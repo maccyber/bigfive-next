@@ -94,7 +94,9 @@ const thai = {
   common: {
     and: 'และ',
     pages: 'หน้า',
-    languages: 'ภาษา'
+    languages: 'ภาษา',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'ข้อมูล',

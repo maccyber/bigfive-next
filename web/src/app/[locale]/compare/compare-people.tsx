@@ -77,7 +77,7 @@ export const ComparePeople = ({
 
     const newId = formatId(editId);
     return !validId(newId);
-  }, [editId, rows]);
+  }, [editId]);
 
   function deleteItem(id: string) {
     setRows((prev) => {

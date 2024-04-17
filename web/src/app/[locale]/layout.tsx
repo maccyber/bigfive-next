@@ -10,6 +10,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { basePath, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import useTextDirection from '@/hooks/use-text-direction';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -83,9 +84,10 @@ export default function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
+  const direction = useTextDirection(locale)
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
       <head />
       <body
         className={clsx(
@@ -95,7 +97,7 @@ export default function RootLayout({
       >
         <Providers
           themeProps={
-            { attribute: 'class', defaultTheme: 'dark' } as ThemeProviderProps
+            { attribute: 'class', defaultTheme: 'light' } as ThemeProviderProps
           }
         >
           <div className='relative flex flex-col h-screen'>

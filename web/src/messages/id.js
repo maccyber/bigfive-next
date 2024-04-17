@@ -95,7 +95,9 @@ const indonesian = {
   common: {
     and: 'dan',
     pages: 'halaman',
-    languages: 'bahasa'
+    languages: 'bahasa',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Informasi',

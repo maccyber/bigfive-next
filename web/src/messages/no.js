@@ -95,7 +95,9 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   common: {
     and: 'og',
     pages: 'sider',
-    languages: 'språk'
+    languages: 'språk',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'informasjon',

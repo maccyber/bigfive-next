@@ -95,7 +95,9 @@ const french = {
   common: {
     and: 'et',
     pages: 'pages',
-    languages: 'langages'
+    languages: 'langages',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Information',

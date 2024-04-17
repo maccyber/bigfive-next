@@ -2,7 +2,7 @@
 
 import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
-import { DbResult, Feedback } from '@/types';
+import { B5Error, DbResult, Feedback } from '@/types';
 import calculateScore from '@bigfive-org/score';
 import generateResult, {
   getInfo,
@@ -32,7 +32,8 @@ export async function getTestResult(
     const collection = db.collection(collectionName);
     const report = await collection.findOne(query);
     if (!report) {
-      return;
+      console.error(`The test results with id ${id} are not found!`)
+      throw new B5Error({ name: 'NotFoundError', message: `The test results with id ${id} is not found in the database!` })
     }
     const selectedLanguage =
       language ||
@@ -47,17 +48,24 @@ export async function getTestResult(
       results
     };
   } catch (error) {
-    console.error(error);
-    return;
+    if (error instanceof B5Error) {
+      throw error
+    }
+    throw new Error('Something wrong happend. Failed to get test result!')
   }
 }
 
 export async function saveTest(testResult: DbResult) {
   'use server';
-  const db = await connectToDatabase();
-  const collection = db.collection(collectionName);
-  const result = await collection.insertOne(testResult);
-  return { id: result.insertedId.toString() };
+  try {
+    const db = await connectToDatabase();
+    const collection = db.collection(collectionName);
+    const result = await collection.insertOne(testResult);
+    return { id: result.insertedId.toString() };
+  } catch (error) {
+    console.error(error)
+    throw new B5Error({ name: 'SavingError', message: 'Failed to save test result!' })
+  }
 }
 
 export type FeebackState = {

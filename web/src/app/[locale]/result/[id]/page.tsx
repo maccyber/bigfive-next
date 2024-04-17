@@ -30,7 +30,14 @@ export default async function ResultPage({
   params: { id: string };
   searchParams: { lang: string };
 }) {
-  const report = await getTestResult(params.id, searchParams.lang);
+  let report;
+
+  try {
+    report = await getTestResult(params.id, searchParams.lang);
+  } catch (error) {
+    throw new Error('Could not retrieve report');
+  }
+
   if (!report)
     return (
       <Alert title='Could not retrive report'>

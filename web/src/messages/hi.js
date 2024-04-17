@@ -93,7 +93,9 @@ const hindi = {
   common: {
     and: 'तथा',
     pages: 'पृष्ठों',
-    languages: 'भाषाओं'
+    languages: 'भाषाओं',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Information',

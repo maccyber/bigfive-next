@@ -13,7 +13,7 @@ import { siteConfig } from '@/config/site';
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className='container mx-auto max-w-7xl py-12 px-12'>
+    <footer className='container mx-auto max-w-7xl py-24 px-12'>
       <div className='container mx-auto flex justify-between'>
         <div className='w-1/2'>
           <span className='text-center'>
@@ -52,8 +52,7 @@ export default function Footer() {
         </div>
       </div>
 
-
-      <div className='w-full flex justify-center mt-4'>
+      <div className='w-full flex justify-center mt-12'>
         <ul className='flex mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
           {siteConfig.footerLinks.map((item, index) => (
             <li key={index}>
@@ -68,9 +67,9 @@ export default function Footer() {
         </ul>
       </div>
 
-      <p className='text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center'>
+      <div className='flex text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 mt-14 justify-center'>
         © {year} — B5 Holding AS - all rights reserved.
-      </p>
+      </div>
     </footer>
   );
 }

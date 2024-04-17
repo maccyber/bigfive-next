@@ -94,7 +94,9 @@ const icelandic = {
   common: {
     and: 'og',
     pages: 'blaðsíður',
-    languages: 'tungumálum'
+    languages: 'tungumálum',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Upplýsingar',

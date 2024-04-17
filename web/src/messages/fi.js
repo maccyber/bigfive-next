@@ -94,7 +94,9 @@ const finnish = {
   common: {
     and: 'ja',
     pages: 'sivuja',
-    languages: 'Kieli (kielet'
+    languages: 'Kieli (kielet)',
+    save: 'Save',
+    close: 'Close'
   },
   form: {
     information: 'Tiedot',
