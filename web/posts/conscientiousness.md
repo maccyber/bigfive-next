@@ -7,7 +7,7 @@ author:
   name: 'Jonas Enge'
   username: 'maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.png'
+  avatar: '/avatars/maccyber.webp'
 ---
 
 Conscientiousness concerns the way in which we control, regulate, and direct our impulses.

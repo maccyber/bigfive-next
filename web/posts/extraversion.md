@@ -7,7 +7,7 @@ author:
   name: 'Jonas Enge'
   username: 'maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.png'
+  avatar: '/avatars/maccyber.webp'
 ---
 
 Extraversion is marked by pronounced engagement with the external world.

@@ -7,7 +7,7 @@ author:
   name: 'Jonas Enge'
   username: '@maccyber'
   link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.png'
+  avatar: '/avatars/maccyber.webp'
 ---
 
 Agreeableness reflects individual differences in concern with cooperation and social harmony. Agreeable individuals value getting along with others.
