@@ -4,7 +4,7 @@ import { Button } from '@nextui-org/button';
 import { Image } from '@nextui-org/image';
 import { useCallback } from 'react';
 import { useRouter } from '@/navigation';
-import { title } from '@/components/primitives'
+import { title } from '@/components/primitives';
 
 export default function NotFound() {
   const router = useRouter();
@@ -18,13 +18,7 @@ export default function NotFound() {
       <h1 className={title()}>Not found</h1>
       <h2 className='text-center mt-4'>Could not find requested resource</h2>
       <div className='flex space-x-4'>
-        <Button
-          color='danger'
-          className='mt-4'
-          onClick={
-            () => onBackClick()
-          }
-        >
+        <Button color='danger' className='mt-4' onClick={() => onBackClick()}>
           Go back
         </Button>
       </div>

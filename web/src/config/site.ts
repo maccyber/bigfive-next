@@ -15,12 +15,22 @@ export const languages: Language[] = [
   { code: 'en', name: 'English', countryCode: 'us', map: ['en-GB'] },
   { code: 'ar', name: 'Arabic', map: ['ar-sa'] },
   { code: 'de', name: 'German', countryCode: 'de', map: ['de-DE'] },
-  { code: 'es', name: 'Spanish', countryCode: 'es', map: ['es-ES', 'es-US', 'es-MX', 'ca'] },
+  {
+    code: 'es',
+    name: 'Spanish',
+    countryCode: 'es',
+    map: ['es-ES', 'es-US', 'es-MX', 'ca']
+  },
   { code: 'fr', name: 'French', countryCode: 'fr', map: ['fr-FR', 'fr-CA'] },
   { code: 'id', name: 'Indonesian', countryCode: 'id' },
   { code: 'it', name: 'Italian', countryCode: 'it', map: ['it-IT'] },
   { code: 'no', name: 'Norwegian', countryCode: 'no', map: ['nb', 'nn'] },
-  { code: 'pt', name: 'Portuguese', countryCode: 'pt', map: ['pt-BR', 'pt-PT'] },
+  {
+    code: 'pt',
+    name: 'Portuguese',
+    countryCode: 'pt',
+    map: ['pt-BR', 'pt-PT']
+  },
   { code: 'sv', name: 'Swedish', countryCode: 'se' },
   { code: 'uk', name: 'Ukrainian', countryCode: 'ua' },
   { code: 'da', name: 'Danish', countryCode: 'dk' },
@@ -31,7 +41,12 @@ export const languages: Language[] = [
   { code: 'pl', name: 'Polish', countryCode: 'pl' },
   { code: 'ru', name: 'Russian', countryCode: 'ru' },
   { code: 'th', name: 'Thai', countryCode: 'th' },
-  { code: 'zh', name: 'Chinese', countryCode: 'cn', map: ['zh-CN', 'zh-Hans', 'zh-Hant'] }
+  {
+    code: 'zh',
+    name: 'Chinese',
+    countryCode: 'cn',
+    map: ['zh-CN', 'zh-Hans', 'zh-Hant']
+  }
 ];
 
 export const locales = languages.map((lang) => lang.code) as string[];

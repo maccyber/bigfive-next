@@ -1,6 +1,5 @@
 # bigfive-web
 
-
 https://bigfive-test.com
 
 Website for five factor model of personality based on work from [IPIP-NEO-PI](https://github.com/kholia/IPIP-NEO-PI).
@@ -18,6 +17,7 @@ Download and install [nodejs](https://nodejs.org),
 [git](https://git-scm.com/downloads) and [vercel-cli](https://vercel.com/download)
 
 Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)
+
 ```
 npm install --global yarn
 ```
@@ -44,6 +44,7 @@ yarn
 ```
 
 Start mongodb server
+
 ```
 docker-compose up -d
 ```
@@ -53,7 +54,6 @@ Run the development server
 ```
 yarn dev
 ```
-
 
 ## Linting
 

@@ -32,8 +32,11 @@ export async function getTestResult(
     const collection = db.collection(collectionName);
     const report = await collection.findOne(query);
     if (!report) {
-      console.error(`The test results with id ${id} are not found!`)
-      throw new B5Error({ name: 'NotFoundError', message: `The test results with id ${id} is not found in the database!` })
+      console.error(`The test results with id ${id} are not found!`);
+      throw new B5Error({
+        name: 'NotFoundError',
+        message: `The test results with id ${id} is not found in the database!`
+      });
     }
     const selectedLanguage =
       language ||
@@ -49,9 +52,9 @@ export async function getTestResult(
     };
   } catch (error) {
     if (error instanceof B5Error) {
-      throw error
+      throw error;
     }
-    throw new Error('Something wrong happend. Failed to get test result!')
+    throw new Error('Something wrong happend. Failed to get test result!');
   }
 }
 
@@ -63,8 +66,11 @@ export async function saveTest(testResult: DbResult) {
     const result = await collection.insertOne(testResult);
     return { id: result.insertedId.toString() };
   } catch (error) {
-    console.error(error)
-    throw new B5Error({ name: 'SavingError', message: 'Failed to save test result!' })
+    console.error(error);
+    throw new B5Error({
+      name: 'SavingError',
+      message: 'Failed to save test result!'
+    });
   }
 }
 

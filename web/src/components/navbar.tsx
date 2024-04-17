@@ -17,11 +17,7 @@ import { siteConfig } from '@/config/site';
 import clsx from 'clsx';
 
 import { ThemeSwitch } from '@/components/theme-switch';
-import {
-  TwitterIcon,
-  GithubIcon,
-  Logo
-} from '@/components/icons';
+import { TwitterIcon, GithubIcon, Logo } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
 
 export const Navbar = () => {

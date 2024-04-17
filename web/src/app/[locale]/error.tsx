@@ -4,11 +4,11 @@ import { Button } from '@nextui-org/button';
 import { Image } from '@nextui-org/image';
 import { useCallback, useEffect } from 'react';
 import { useRouter } from '@/navigation';
-import { title } from '@/components/primitives'
+import { title } from '@/components/primitives';
 
 export default function Error({
   error,
-  reset,
+  reset
 }: {
   error: Error & { digest?: string };
   reset: () => void;
@@ -26,25 +26,15 @@ export default function Error({
   return (
     <main className='flex h-full flex-col items-center justify-center'>
       <h1 className={title()}>Error</h1>
-      <h2 className='text-center mt-4'>{error ? error.message : 'Something went wrong!'}</h2>
+      <h2 className='text-center mt-4'>
+        {error ? error.message : 'Something went wrong!'}
+      </h2>
       <div className='flex space-x-4'>
-        <Button
-          color='danger'
-          className='mt-4'
-          onClick={
-            () => onBackClick()
-          }
-        >
+        <Button color='danger' className='mt-4' onClick={() => onBackClick()}>
           Go back
         </Button>
 
-        <Button
-          color='primary'
-          className='mt-4'
-          onClick={
-            () => reset()
-          }
-        >
+        <Button color='primary' className='mt-4' onClick={() => reset()}>
           Try again
         </Button>
       </div>

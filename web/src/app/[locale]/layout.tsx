@@ -84,7 +84,7 @@ export default function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
-  const direction = useTextDirection(locale)
+  const direction = useTextDirection(locale);
 
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>

@@ -20,7 +20,14 @@ import { Input } from '@nextui-org/input';
 import React, { useState } from 'react';
 import { base64url, formatId, validId } from '@/lib/helpers';
 import { useRouter } from '@/navigation';
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure
+} from '@nextui-org/modal';
 
 interface CompareProps {
   addPersonText: string;
@@ -71,7 +78,6 @@ export const ComparePeople = ({
     return !validId(newId);
   }, [id, rows]);
 
-
   const isInvalidEditId = React.useMemo(() => {
     if (editId === '') return false;
 
@@ -110,11 +116,11 @@ export const ComparePeople = ({
 
   function editPerson(onClose: () => void) {
     const newId = formatId(editId);
-    console.log(editName)
-    console.log(editId)
-    console.log(isInvalidEditId)
-    console.log(editIndex)
-    console.log(editName && editId && !isInvalidEditId && editIndex)
+    console.log(editName);
+    console.log(editId);
+    console.log(isInvalidEditId);
+    console.log(editIndex);
+    console.log(editName && editId && !isInvalidEditId && editIndex);
     if (editName && editId && !isInvalidEditId && editIndex !== undefined) {
       setRows((prev) => {
         const updatedRows = [...prev];
@@ -182,7 +188,12 @@ export const ComparePeople = ({
                 {(columnKey) =>
                   columnKey === 'actions' ? (
                     <TableCell className='flex justify-end'>
-                      <Button isIconOnly variant='light' aria-label='Edit' onPress={() => onOpenEditPerson(onOpen, item)}>
+                      <Button
+                        isIconOnly
+                        variant='light'
+                        aria-label='Edit'
+                        onPress={() => onOpenEditPerson(onOpen, item)}
+                      >
                         <EditIcon />
                       </Button>
                       <Button
@@ -211,15 +222,11 @@ export const ComparePeople = ({
           {comparePeopleText}
         </Button>
       </div>
-      <Modal
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        placement="center"
-      >
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement='center'>
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader className='flex flex-col gap-1'>
                 Edit person
               </ModalHeader>
               <ModalBody>
@@ -246,16 +253,14 @@ export const ComparePeople = ({
                   value={editId}
                   onValueChange={setEditId}
                   isInvalid={isInvalidEditId}
-                  errorMessage={
-                    isInvalidEditId && 'Please enter a valid ID.'
-                  }
+                  errorMessage={isInvalidEditId && 'Please enter a valid ID.'}
                 />
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="flat" onPress={onClose}>
+                <Button color='danger' variant='flat' onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={() => editPerson(onClose)}>
+                <Button color='primary' onPress={() => editPerson(onClose)}>
                   Save
                 </Button>
               </ModalFooter>

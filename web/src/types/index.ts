@@ -27,8 +27,7 @@ export type Feedback = {
   message: string;
 };
 
-
-type ErrorName = 'NotFoundError' | 'SavingError'
+type ErrorName = 'NotFoundError' | 'SavingError';
 
 class ErrorBase<T extends string> extends Error {
   name: T;
@@ -51,4 +50,4 @@ class ErrorBase<T extends string> extends Error {
   }
 }
 
-export class B5Error extends ErrorBase<ErrorName> { }
+export class B5Error extends ErrorBase<ErrorName> {}

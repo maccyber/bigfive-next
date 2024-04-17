@@ -56,10 +56,7 @@ export default function Footer() {
         <ul className='flex mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
           {siteConfig.footerLinks.map((item, index) => (
             <li key={index}>
-              <Link
-                href={item.href}
-                className='hover:underline me-4 md:me-6'
-              >
+              <Link href={item.href} className='hover:underline me-4 md:me-6'>
                 {item.label}
               </Link>
             </li>
