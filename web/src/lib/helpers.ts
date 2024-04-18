@@ -36,6 +36,13 @@ const escape = (str: string) =>
 
 export const base64url = {
   encode: (str: string) => escape(Buffer.from(str, 'utf8').toString('base64')),
-  decode: (str: string) =>
-    JSON.parse(Buffer.from(unescape(str), 'base64').toString('utf8'))
+  decode: (str: string) => {
+    const trimmedString = str
+      .split('?')[0]
+      .replaceAll('=', '')
+      .replaceAll('%3D', '');
+    return JSON.parse(
+      Buffer.from(unescape(trimmedString), 'base64').toString('utf8')
+    );
+  }
 };
