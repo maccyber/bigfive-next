@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -19,10 +21,17 @@ import clsx from 'clsx';
 import { ThemeSwitch } from '@/components/theme-switch';
 import { TwitterIcon, GithubIcon, Logo } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
+import { useState } from 'react';
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <NextUINavbar maxWidth='xl' position='sticky'>
+    <NextUINavbar
+      maxWidth='xl'
+      position='sticky'
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
           <NextLink
@@ -90,6 +99,7 @@ export const Navbar = () => {
                       ? 'danger'
                       : 'foreground'
                 }
+                onClick={() => setIsMenuOpen(false)}
                 href={item.href}
                 size='lg'
               >
