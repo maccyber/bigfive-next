@@ -7,7 +7,8 @@ const articles = [
   'conscientiousness',
   'extraversion',
   'neuroticism',
-  'openness'
+  'openness',
+  'conscientiousness_longevity'
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 

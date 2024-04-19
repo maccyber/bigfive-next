@@ -9,3 +9,7 @@ h3 {
 blockquote {
   @apply text-xl italic font-semibold text-gray-900 dark:text-white;
 }
+
+.articlePage a {
+  @apply underline;
+}

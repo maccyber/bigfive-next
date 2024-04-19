@@ -76,7 +76,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
         <div
-          className='[&>*]:mb-3 [&>*:last-child]:mb-0'
+          className='[&>*]:mb-3 [&>*:last-child]:mb-0 articlePage'
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </div>
