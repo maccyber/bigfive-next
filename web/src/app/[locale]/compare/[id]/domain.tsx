@@ -26,7 +26,6 @@ export const DomainComparePage = ({
     name: d.name,
     data: d.facets.map((f) => f.score)
   }));
-  console.log(scores);
   return (
     <>
       <div className='mt-5'>

@@ -92,8 +92,6 @@ export default async function RootLayout({
   const navMenuItems = await getNavItems({ locale, linkType: 'navMenuItems' });
   const footerLinks = await getNavItems({ locale, linkType: 'footerLinks' });
 
-  console.log(navItems);
-
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <head />

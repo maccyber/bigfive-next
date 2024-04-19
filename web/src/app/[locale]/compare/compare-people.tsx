@@ -116,11 +116,6 @@ export const ComparePeople = ({
 
   function editPerson(onClose: () => void) {
     const newId = formatId(editId);
-    console.log(editName);
-    console.log(editId);
-    console.log(isInvalidEditId);
-    console.log(editIndex);
-    console.log(editName && editId && !isInvalidEditId && editIndex);
     if (editName && editId && !isInvalidEditId && editIndex !== undefined) {
       setRows((prev) => {
         const updatedRows = [...prev];

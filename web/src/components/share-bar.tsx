@@ -47,7 +47,6 @@ export default function ShareBar({ report }: ShareBarProps) {
           radius='full'
           size='lg'
           variant='light'
-          onPress={(_) => console.log('asd')}
         >
           <PDFIcon size={32} />
         </Button>
