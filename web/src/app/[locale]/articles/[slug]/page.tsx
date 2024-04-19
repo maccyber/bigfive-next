@@ -60,9 +60,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
               height={600}
               className='mb-4 w-full object-cover'
             />
-            <div className='absolute inset-0 flex mt-8 mx-2 md:mx-4'>
+            <div className='absolute inset-0 flex md:mt-8 mt-2 mx-2 md:mx-4'>
               <div className='bg-foreground px-4 py-2 z-10 h-fit rounded'>
-                <h1 className='lg:text-5xl text-4xl font-bold z-20 text-background'>
+                <h1 className='lg:text-5xl md:text-4xl text-xl font-bold z-20 text-background'>
                   {post.title}
                 </h1>
               </div>
