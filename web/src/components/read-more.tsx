@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 interface ReadMoreProps {
   children: React.ReactNode;
-  showExpanded: boolean;
+  showExpanded?: boolean;
 }
 
 const ReadMore = ({ children, showExpanded = false }: ReadMoreProps) => {
