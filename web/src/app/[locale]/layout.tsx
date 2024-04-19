@@ -10,6 +10,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { basePath, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
 import useTextDirection from '@/hooks/use-text-direction';
 
 export function generateStaticParams() {
@@ -108,6 +109,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </Providers>
+        <Analytics />
       </body>
       <GoogleAnalytics gaId={gaId} />
     </html>
