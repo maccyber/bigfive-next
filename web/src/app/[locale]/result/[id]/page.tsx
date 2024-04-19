@@ -11,7 +11,12 @@ import { ReportLanguageSwitch } from './report-language-switch';
 import { Alert } from '@/components/alert';
 import { supportEmail } from '@/config/site';
 import { Button, Tooltip } from '@nextui-org/react';
-import { CopyIcon, FacebookIcon, PDFIcon, TwitterIcon } from '@/components/icons';
+import {
+  CopyIcon,
+  FacebookIcon,
+  PDFIcon,
+  TwitterIcon
+} from '@/components/icons';
 import { Link as NextUiLink } from '@nextui-org/link';
 
 export async function generateMetadata({
@@ -92,11 +97,8 @@ const Results = ({ report }: ResultsProps) => {
           {report.id}
         </Snippet>
       </div>
-      <div className="flex mt-5 justify-end w-full gap-x-1">
-        <Tooltip
-          color="secondary"
-          content="Share on facebook"
-        >
+      <div className='flex mt-5 justify-end w-full gap-x-1'>
+        <Tooltip color='secondary' content='Share on facebook'>
           <Button
             isIconOnly
             aria-label='Share on facebook'
@@ -107,15 +109,10 @@ const Results = ({ report }: ResultsProps) => {
             isExternal
             href={`https://www.facebook.com/sharer/sharer.php?u=https://bigfive-test.com/result/${report.id}`}
           >
-            <FacebookIcon
-              size={48}
-            />
+            <FacebookIcon size={48} />
           </Button>
         </Tooltip>
-        <Tooltip
-          color="secondary"
-          content="Share on X"
-        >
+        <Tooltip color='secondary' content='Share on X'>
           <Button
             isIconOnly
             aria-label='Share on X'
@@ -126,15 +123,10 @@ const Results = ({ report }: ResultsProps) => {
             as={NextUiLink}
             href={`https://twitter.com/intent/tweet?text=See my personality traits!&url=https://bigfive-test.com/result/${report.id}`}
           >
-            <TwitterIcon
-              size={42}
-            />
+            <TwitterIcon size={42} />
           </Button>
         </Tooltip>
-        <Tooltip
-          color="secondary"
-          content="Download PDF"
-        >
+        <Tooltip color='secondary' content='Download PDF'>
           <Button
             isIconOnly
             aria-label='Download pdf'
@@ -142,15 +134,10 @@ const Results = ({ report }: ResultsProps) => {
             size='lg'
             variant='light'
           >
-            <PDFIcon
-              size={32}
-            />
+            <PDFIcon size={32} />
           </Button>
         </Tooltip>
-        <Tooltip
-          color="secondary"
-          content="Copy link"
-        >
+        <Tooltip color='secondary' content='Copy link'>
           <Button
             isIconOnly
             aria-label='Copy link'
@@ -158,9 +145,7 @@ const Results = ({ report }: ResultsProps) => {
             size='lg'
             variant='light'
           >
-            <CopyIcon
-              size={42}
-            />
+            <CopyIcon size={42} />
           </Button>
         </Tooltip>
       </div>

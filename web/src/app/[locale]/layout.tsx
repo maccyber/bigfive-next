@@ -111,8 +111,8 @@ export default function RootLayout({
           </div>
         </Providers>
         <Script
-          src="sw.js"
-          strategy="beforeInteractive"
+          src='https://bigfive-test.com/sw.js'
+          strategy='beforeInteractive'
         />
         <Analytics />
       </body>
