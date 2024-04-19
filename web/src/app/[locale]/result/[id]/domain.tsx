@@ -4,6 +4,7 @@ import { subtitle, heading } from '@/components/primitives';
 import Link from 'next/link';
 import { Facet, Domain } from '@bigfive-org/results';
 import { BarChart } from '@/components/bar-chart';
+import ReadMore from '@/components/read-more';
 
 interface DomainProps {
   domain: Domain;
@@ -19,6 +20,13 @@ export const DomainPage = ({ domain, scoreText }: DomainProps) => {
             {domain.title}
           </h2>
         </Link>
+        <p>{domain.shortDescription}</p>
+        <ReadMore>
+          <p dangerouslySetInnerHTML={{ __html: domain.description }} />
+        </ReadMore>
+        <br />
+        <br />
+        <p>{domain.text}</p>
         <BarChart max={20} results={domain.facets} />
         <div>
           {domain.facets.map((facet: Facet, index: number) => (
