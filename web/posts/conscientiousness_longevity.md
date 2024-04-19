@@ -24,7 +24,7 @@ Similarly, conscientious people often form social networks with others who share
 
 Overall, the consistent finding across various studies and analyses points to the profound impact that personality, specifically conscientiousness, can have on one's health and lifespan.
 
-How conscientiousness influences longevity:
+### How conscientiousness influences longevity
 
 **Health-Supportive Habits**
 

@@ -11,7 +11,8 @@ import { ReportLanguageSwitch } from './report-language-switch';
 import { Alert } from '@/components/alert';
 import { supportEmail } from '@/config/site';
 import { Button, Tooltip } from '@nextui-org/react';
-import { FacebookIcon, PDFIcon, TwitterIcon } from '@/components/icons';
+import { CopyIcon, FacebookIcon, PDFIcon, TwitterIcon } from '@/components/icons';
+import { Link as NextUiLink } from '@nextui-org/link';
 
 export async function generateMetadata({
   params: { locale }
@@ -91,7 +92,7 @@ const Results = ({ report }: ResultsProps) => {
           {report.id}
         </Snippet>
       </div>
-      <div className="flex mt-5 justify-center w-full gap-x-1">
+      <div className="flex mt-5 justify-end w-full gap-x-1">
         <Tooltip
           color="secondary"
           content="Share on facebook"
@@ -102,6 +103,8 @@ const Results = ({ report }: ResultsProps) => {
             radius='full'
             size='lg'
             variant='light'
+            as={NextUiLink}
+            isExternal
             href={`https://www.facebook.com/sharer/sharer.php?u=https://bigfive-test.com/result/${report.id}`}
           >
             <FacebookIcon
@@ -119,8 +122,8 @@ const Results = ({ report }: ResultsProps) => {
             radius='full'
             size='lg'
             variant='light'
-            // as={Link}
             target='_blank'
+            as={NextUiLink}
             href={`https://twitter.com/intent/tweet?text=See my personality traits!&url=https://bigfive-test.com/result/${report.id}`}
           >
             <TwitterIcon
@@ -155,8 +158,8 @@ const Results = ({ report }: ResultsProps) => {
             size='lg'
             variant='light'
           >
-            <PDFIcon
-              size={32}
+            <CopyIcon
+              size={42}
             />
           </Button>
         </Tooltip>
