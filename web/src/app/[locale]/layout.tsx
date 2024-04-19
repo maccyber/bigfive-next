@@ -12,6 +12,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
 import useTextDirection from '@/hooks/use-text-direction';
+import Script from 'next/script';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -109,6 +110,10 @@ export default function RootLayout({
             <Footer />
           </div>
         </Providers>
+        <Script
+          src="sw.js"
+          strategy="beforeInteractive"
+        />
         <Analytics />
       </body>
       <GoogleAnalytics gaId={gaId} />
