@@ -72,7 +72,8 @@ const icelandic = {
     privacy: 'Persónuvernd',
     about: 'Um það bil',
     see_results: 'Sjáðu niðurstöðurnar þínar',
-    compare_with: 'Berðu saman við aðra'
+    compare_with: 'Berðu saman við aðra',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

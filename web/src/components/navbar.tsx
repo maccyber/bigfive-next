@@ -23,7 +23,12 @@ import { TwitterIcon, GithubIcon, Logo } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
 import { useState } from 'react';
 
-export const Navbar = () => {
+interface NavbarProps {
+  navItems: { label: string; href: string }[];
+  navMenuItems: { label: string; href: string }[];
+}
+
+export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <NextUINavbar
@@ -43,7 +48,7 @@ export const Navbar = () => {
           </NextLink>
         </NavbarBrand>
         <ul className='hidden md:flex gap-4 justify-start ml-2'>
-          {siteConfig.navItems.map((item) => (
+          {navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
@@ -89,13 +94,13 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <div className='mx-4 mt-2 flex flex-col gap-2'>
-          {siteConfig.navMenuItems.map((item, index) => (
+          {navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color={
                   index === 2
                     ? 'primary'
-                    : index === siteConfig.navMenuItems.length - 1
+                    : index === navMenuItems.length - 1
                       ? 'danger'
                       : 'foreground'
                 }

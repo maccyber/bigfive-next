@@ -1,3 +1,5 @@
+import { getTranslations } from 'next-intl/server';
+
 export type SiteConfig = typeof siteConfig;
 
 export const basePath = 'https://bigfive-test.com';
@@ -58,71 +60,71 @@ export const siteConfig = {
     'Learn to know yourself better with a free, open-source personality test.',
   navItems: [
     {
-      label: 'Home',
+      label: 'home',
       href: '/'
     },
     {
-      label: 'Result',
+      label: 'result',
       href: '/result'
     },
     {
-      label: 'Compare',
+      label: 'compare',
       href: '/compare'
     },
     {
-      label: 'Articles',
+      label: 'articles',
       href: '/articles'
     },
     {
-      label: 'About',
+      label: 'about',
       href: '/about'
     }
   ],
   navMenuItems: [
     {
-      label: 'See your result',
+      label: 'see_results',
       href: '/result'
     },
     {
-      label: 'Compare with others',
+      label: 'compare_with',
       href: '/compare'
     },
     {
-      label: 'Articles',
+      label: 'articles',
       href: '/articles'
     },
     {
-      label: 'Privacy',
+      label: 'privacy',
       href: '/privacy'
     },
     {
-      label: 'About',
+      label: 'about',
       href: '/about'
     },
     {
-      label: 'FAQ',
+      label: 'faq',
       href: '/faq'
     }
   ],
   footerLinks: [
     {
-      label: 'Home',
+      label: 'home',
       href: '/'
     },
     {
-      label: 'Articles',
+      label: 'articles',
       href: '/articles'
     },
     {
-      label: 'Privacy',
+      label: 'privacy',
       href: '/privacy'
     },
     {
-      label: 'About',
+      label: 'about',
       href: '/about'
     },
     {
-      label: 'FAQ',
+      label: 'faq',
       href: '/faq'
     }
   ],
@@ -132,4 +134,18 @@ export const siteConfig = {
     linkedIn: 'https://www.linkedin.com/company/rubynor-as/',
     facebook: 'https://www.facebook.com/rubynorno'
   }
+};
+
+export const getNavItems = async ({
+  locale,
+  linkType
+}: {
+  locale: string;
+  linkType: 'navItems' | 'navMenuItems' | 'footerLinks';
+}) => {
+  const t = await getTranslations({ locale, namespace: 'toolbar' });
+  return siteConfig[linkType].map((link) => ({
+    label: t(`${link.label}`),
+    href: link.href
+  }));
 };

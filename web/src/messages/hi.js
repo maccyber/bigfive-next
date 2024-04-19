@@ -71,7 +71,8 @@ const hindi = {
     privacy: 'एकांत',
     about: 'के बारे में',
     see_results: 'अपना परिणाम देखें',
-    compare_with: 'दूसरों के साथ तुलना करें'
+    compare_with: 'दूसरों के साथ तुलना करें',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

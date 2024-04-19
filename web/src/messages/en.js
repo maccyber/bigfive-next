@@ -16,6 +16,7 @@ const english = {
     title: 'Big Five Personality Test',
     call_to_action: 'Take the free test now',
     no_registration: '* No registration required',
+    // do not translate <green>, {n}, and </green> tags
     tests_taken: 'Over <green>{n}</green> people have taken the test',
     compare: {
       title: 'Compare yourself to others',
@@ -72,7 +73,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     privacy: 'Privacy',
     about: 'About',
     see_results: 'See your results',
-    compare_with: 'Compare with others'
+    compare_with: 'Compare with others',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

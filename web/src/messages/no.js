@@ -73,7 +73,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     privacy: 'Personvern',
     about: 'Om',
     see_results: 'Se resultater',
-    compare_with: 'Se sammenligning'
+    compare_with: 'Se sammenligning',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

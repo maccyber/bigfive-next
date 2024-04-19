@@ -10,7 +10,14 @@ import {
 } from '@/components/icons';
 import { siteConfig } from '@/config/site';
 
-export default function Footer() {
+interface FooterProps {
+  footerLinks: {
+    label: string;
+    href: string;
+  }[];
+}
+
+export default function Footer({ footerLinks }: FooterProps) {
   const year = new Date().getFullYear();
   return (
     <footer className='container mx-auto max-w-7xl py-24 px-12'>
@@ -54,7 +61,7 @@ export default function Footer() {
 
       <div className='w-full flex justify-center mt-12'>
         <ul className='flex mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
-          {siteConfig.footerLinks.map((item, index) => (
+          {footerLinks.map((item, index) => (
             <li key={index}>
               <Link href={item.href} className='hover:underline me-4 md:me-6'>
                 {item.label}

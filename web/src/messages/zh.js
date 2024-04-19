@@ -69,7 +69,8 @@ const chinese = {
     privacy: '隐私',
     about: '关于我们',
     see_results: '查看您的结果',
-    compare_with: '与其他人比较'
+    compare_with: '与其他人比较',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

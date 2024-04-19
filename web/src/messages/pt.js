@@ -74,7 +74,8 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     privacy: 'Privacidade',
     about: 'Sobre',
     see_results: 'Veja seus resultados',
-    compare_with: 'Compare com outros'
+    compare_with: 'Compare com outros',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

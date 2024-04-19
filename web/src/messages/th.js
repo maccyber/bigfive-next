@@ -72,7 +72,8 @@ const thai = {
     privacy: 'ความเป็นส่วนตัว',
     about: 'เกี่ยวกับเรา',
     see_results: 'ดูผลลัพธ์ของคุณ',
-    compare_with: 'เปรียบเทียบกับคนอื่นๆ'
+    compare_with: 'เปรียบเทียบกับคนอื่นๆ',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

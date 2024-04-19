@@ -72,7 +72,8 @@ const finnish = {
     privacy: 'Yksityisyys',
     about: 'Noin',
     see_results: 'Katso tulokset',
-    compare_with: 'Vertaa muihin'
+    compare_with: 'Vertaa muihin',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

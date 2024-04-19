@@ -72,7 +72,8 @@ const japanese = {
     privacy: 'プライバシー',
     about: '約',
     see_results: '結果を見る',
-    compare_with: '他の人と比較する'
+    compare_with: '他の人と比較する',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

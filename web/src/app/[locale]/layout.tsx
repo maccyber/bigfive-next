@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import Footer from '@/components/footer';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { basePath, locales, siteConfig } from '@/config/site';
+import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
@@ -40,10 +40,10 @@ export async function generateMetadata({
       apple: '/apple-touch-icon.png'
     },
     metadataBase: new URL('https://bigfive-test.com'),
-    alternates: {
-      canonical: '/',
-      languages: alternatesLang
-    },
+    // alternates: {
+    //   canonical: '/',
+    //   languages: alternatesLang
+    // },
     openGraph: {
       type: 'website',
       url: basePath,
@@ -77,7 +77,7 @@ export const viewport: Viewport = {
   ]
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale }
 }: {
@@ -87,6 +87,12 @@ export default function RootLayout({
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
   const direction = useTextDirection(locale);
+
+  const navItems = await getNavItems({ locale, linkType: 'navItems' });
+  const navMenuItems = await getNavItems({ locale, linkType: 'navMenuItems' });
+  const footerLinks = await getNavItems({ locale, linkType: 'footerLinks' });
+
+  console.log(navItems);
 
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
@@ -103,11 +109,11 @@ export default function RootLayout({
           }
         >
           <div className='relative flex flex-col h-screen'>
-            <Navbar />
+            <Navbar navItems={navItems} navMenuItems={navMenuItems} />
             <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
               {children}
             </main>
-            <Footer />
+            <Footer footerLinks={footerLinks} />
           </div>
         </Providers>
         <Script

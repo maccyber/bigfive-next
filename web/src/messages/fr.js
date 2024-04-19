@@ -73,7 +73,8 @@ const french = {
     privacy: 'Intimité',
     about: 'Sur',
     see_results: 'Voir vos résultats',
-    compare_with: 'Comparez avec les autres'
+    compare_with: 'Comparez avec les autres',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

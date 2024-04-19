@@ -72,7 +72,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     privacy: 'الخصوصية',
     about: 'عنّا',
     see_results: 'شاهد نتيجتك',
-    compare_with: 'قارن مع غيرك'
+    compare_with: 'قارن مع غيرك',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {

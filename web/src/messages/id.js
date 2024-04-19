@@ -73,7 +73,8 @@ const indonesian = {
     privacy: 'Privasi',
     about: 'Tentang',
     see_results: 'Lihat hasil Anda',
-    compare_with: 'Bandingkan dengan orang lain'
+    compare_with: 'Bandingkan dengan orang lain',
+    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
