@@ -8,7 +8,8 @@ const articles = [
   'extraversion',
   'neuroticism',
   'openness',
-  'conscientiousness_longevity'
+  'conscientiousness_longevity',
+  'bigfive_relationships'
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 

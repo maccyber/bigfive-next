@@ -13,3 +13,7 @@ blockquote {
 .articlePage a {
   @apply underline;
 }
+
+.articlePage ul {
+  @apply list-disc list-inside; 
+}
