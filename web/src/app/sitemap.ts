@@ -9,7 +9,8 @@ const articles = [
   'neuroticism',
   'openness',
   'conscientiousness_longevity',
-  'bigfive_relationships'
+  'bigfive_relationships',
+  'personality_disases'
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 
