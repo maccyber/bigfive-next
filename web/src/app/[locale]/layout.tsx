@@ -84,7 +84,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '';
+  const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
   const direction = useTextDirection(locale);
 
