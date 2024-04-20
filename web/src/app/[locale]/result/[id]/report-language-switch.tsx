@@ -28,6 +28,7 @@ export const ReportLanguageSwitch = ({
         aria-label='Select language'
         name='localeSelectSmall'
         className='w-48'
+        size='sm'
         label='Report language'
       >
         {availableLanguages.map((lang) => (

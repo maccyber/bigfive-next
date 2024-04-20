@@ -28,6 +28,7 @@ export const TestLanguageSwitch = ({
         defaultSelectedKeys={[language]}
         onChange={onSelectChange}
         aria-label='Select survey language'
+        size='sm'
         name='localeSelectSmall'
         className='w-48'
         label='Survey language'

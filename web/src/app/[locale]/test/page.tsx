@@ -23,7 +23,7 @@ export default function TestPage({
   const t = useTranslations('test');
   return (
     <>
-      <div className='flex justify-end'>
+      <div className='flex'>
         <TestLanguageSwitch
           availableLanguages={questionLanguages}
           language={language}

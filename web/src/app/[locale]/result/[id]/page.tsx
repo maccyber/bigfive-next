@@ -75,7 +75,7 @@ const Results = ({ report }: ResultsProps) => {
           />
         </div>
         <div className='text-gray-500 dark:text-gray-400'>
-          {new Date(report.timestamp).toLocaleString()}
+          {new Date(report.timestamp).toLocaleDateString()}
         </div>
       </div>
       <div className='text-center mt-4'>
