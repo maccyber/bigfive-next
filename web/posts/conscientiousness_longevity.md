@@ -45,4 +45,6 @@ Being conscientious helps individuals manage stress more effectively. They typic
 Each of these aspects contributes to why conscientious individuals tend to live longer. The compound effect of healthy habits, successful careers, supportive relationships, and effective stress management creates a life trajectory that favors longevity.
 For a more detailed exploration of these studies and their findings, the sources cited provide extensive information on the subject.
 
+#### **Sources**
+
 [(Psychology Today)](https://www.psychologytoday.com/us/blog/insight-therapy/202102/one-personality-trait-predicts-longevity-more-others-why) [(Well+Good)](https://www.wellandgood.com/conscientiousness-longevity/).

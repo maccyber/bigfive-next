@@ -39,4 +39,6 @@ The research underscores the complex interplay between individual personality tr
 
 This groundbreaking study not only adds a new dimension to our understanding of relationship dynamics but also offers practical guidance for enhancing relationship satisfaction through personal growth and mutual understanding.
 
+#### **Sources**
+
 [(Science Direct)](https://www.sciencedirect.com/science/article/abs/pii/S0092656616300496)

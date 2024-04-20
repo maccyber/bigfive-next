@@ -84,11 +84,17 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
       </NavbarContent>
 
       <NavbarContent className='md:hidden basis-1 pl-4' justify='end'>
-        <LocaleSwitcher />
-        <Link isExternal href={siteConfig.links.github} aria-label='Github'>
-          <GithubIcon className='text-default-500' />
-        </Link>
-        <ThemeSwitch />
+        <NavbarItem>
+          <LocaleSwitcher />
+        </NavbarItem>
+        <NavbarItem>
+          <Link isExternal href={siteConfig.links.github} aria-label='Github'>
+            <GithubIcon className='text-default-500' />
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <ThemeSwitch />
+        </NavbarItem>
         <NavbarMenuToggle />
       </NavbarContent>
 
@@ -114,6 +120,6 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
           ))}
         </div>
       </NavbarMenu>
-    </NextUINavbar>
+    </NextUINavbar >
   );
 };
