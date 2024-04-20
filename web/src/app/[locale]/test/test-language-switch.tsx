@@ -27,10 +27,10 @@ export const TestLanguageSwitch = ({
       <Select
         defaultSelectedKeys={[language]}
         onChange={onSelectChange}
-        aria-label='Select language'
+        aria-label='Select survey language'
         name='localeSelectSmall'
         className='w-48'
-        label='Select language'
+        label='Survey language'
         items={availableLanguages}
       >
         {(language) => (

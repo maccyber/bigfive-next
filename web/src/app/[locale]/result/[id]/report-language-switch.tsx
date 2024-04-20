@@ -28,6 +28,7 @@ export const ReportLanguageSwitch = ({
         aria-label='Select language'
         name='localeSelectSmall'
         className='w-48'
+        label='Report language'
       >
         {availableLanguages.map((lang) => (
           <SelectItem key={lang.id} value={lang.id} textValue={lang.text}>
