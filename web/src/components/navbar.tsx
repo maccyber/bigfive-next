@@ -47,7 +47,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
             <Logo />
           </NextLink>
         </NavbarBrand>
-        <ul className='hidden md:flex gap-4 justify-start ml-2'>
+        <div className='hidden md:flex gap-4 justify-start ml-2'>
           {navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -62,7 +62,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
               </NextLink>
             </NavbarItem>
           ))}
-        </ul>
+        </div>
       </NavbarContent>
 
       <NavbarContent
