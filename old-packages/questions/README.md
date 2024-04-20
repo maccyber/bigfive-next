@@ -103,6 +103,7 @@ returns an [array with questions and choices](examples/items-en.json)
 | ro   | Romanian  | [Cătălin Topală](https://github.com/catalintopala)
 | ca   | Catalan   | Èric Arnau Soler Professor de filosofia Institut el Joncar Barcelona |
 | sl   | Slovenian | Prof. Dr. Janek Musek
+| sr   | Serbian   | Snezana Smederevac and Petar Colovic
 
 
 ## Help wanted
