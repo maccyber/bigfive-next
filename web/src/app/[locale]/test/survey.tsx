@@ -70,6 +70,17 @@ export const Survey = ({
 
   const isTestDone = questions.length === answers.length;
 
+  const progress = Math.round((answers.length / questions.length) * 100);
+
+  const nextButtonDisabled =
+    inProgress ||
+    currentQuestionIndex + questionsPerPage > answers.length ||
+    (isTestDone &&
+      currentQuestionIndex === questions.length - questionsPerPage) ||
+    loading;
+
+  const backButtonDisabled = currentQuestionIndex === 0 || loading;
+
   async function handleAnswer(id: string, value: string) {
     const question = questions.find((question) => question.id === id);
     if (!question) return;
@@ -86,7 +97,9 @@ export const Survey = ({
       newAnswer
     ]);
 
-    if (questionsPerPage === 1 && questions.length !== answers.length + 1) {
+    const latestAnswerId = answers.slice(-1)[0]?.id
+
+    if (questionsPerPage === 1 && questions.length !== answers.length + 1 && id !== latestAnswerId) {
       setInProgress(true);
       await sleep(700);
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -102,6 +115,7 @@ export const Survey = ({
   }
 
   function handleNextQuestions() {
+    if (inProgress) return;
     setCurrentQuestionIndex((prev) => prev + questionsPerPage);
     window.scrollTo(0, 0);
     if (restored) setRestored(false);
@@ -167,14 +181,6 @@ export const Survey = ({
     localStorage.removeItem('b5data');
     location.reload();
   }
-
-  const progress = Math.round((answers.length / questions.length) * 100);
-  const nextButtonDisabled =
-    currentQuestionIndex + questionsPerPage > answers.length ||
-    (isTestDone &&
-      currentQuestionIndex === questions.length - questionsPerPage) ||
-    loading;
-  const backButtonDisabled = currentQuestionIndex === 0 || loading;
 
   return (
     <div className='mt-2'>
