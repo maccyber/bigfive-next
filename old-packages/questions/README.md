@@ -102,6 +102,7 @@ returns an [array with questions and choices](examples/items-en.json)
 | ko   | Korean    | [TimeTREE](https://github.com/TimeTREE98) |
 | ro   | Romanian  | [Cătălin Topală](https://github.com/catalintopala)
 | ca   | Catalan   | Èric Arnau Soler Professor de filosofia Institut el Joncar Barcelona |
+| sl   | Slovenian | Prof. Dr. Janek Musek
 
 
 ## Help wanted
