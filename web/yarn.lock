@@ -19,10 +19,10 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@bigfive-org/questions@1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@bigfive-org/questions/-/questions-1.2.5.tgz#f604605471acd649395c5f61bd505905b4f2d999"
-  integrity sha512-pFmD3tUwmZJPOk3oLJ0YS2PkHx3I49+0pR9LpxPRTzVuEgJIves7lngJZF9LKv4WRdcAm4ysCqGOlG+9nrCoLA==
+"@bigfive-org/questions@1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@bigfive-org/questions/-/questions-1.2.6.tgz#dd0113bb69b94ffbfceabbb842fd1fe8126687e8"
+  integrity sha512-zxPiig3CifXr4a1aISyESf3DTQBU87t0JGP7yZ3sTGnhEksVee4xPCtdPACC0uyzQi1+f6al709UyaJk/H8jXQ==
 
 "@bigfive-org/results@1.2.8":
   version "1.2.8"
