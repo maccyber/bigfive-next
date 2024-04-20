@@ -41,7 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${basePath}/result/58a70606a835c400c8b38e84?showExpanded=true`,
       lastModified: new Date(),
       alternates: {
-        languages: alternatesParamsLang('/result/58a70606a835c400c8b38e84?showExpanded=true')
+        languages: alternatesParamsLang(
+          '/result/58a70606a835c400c8b38e84?showExpanded=true'
+        )
       }
     },
     {
