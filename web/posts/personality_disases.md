@@ -62,7 +62,6 @@ Additionally, the trait of openness, indicating a willingness to embrace new ide
 
 In the latest studies, researchers found no correlation between any of the five broad personality traits and an increased risk of cancer, underscoring the complex and nuanced nature of personality's impact on health.
 
-
 #### **Sources**
 
 - [University of Melbourne: «Can your personality bed good, or bad, for your health?»](https://pdfs.semanticscholar.org/5d8f/dc3e9ae4edb9746d1f86e3f91112419595df.pdf)

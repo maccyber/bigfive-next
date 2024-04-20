@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locales.reduce((a, v) => ({ ...a, [v]: basePath + `/${v}${path}` }), {});
   const alternatesParamsLang = (path: string = '') =>
     resultLanguages.reduce(
-      (a, v) => ({ ...a, [v]: basePath + `${path}?lang=${v}` }),
+      (a, v) => ({ ...a, [v]: basePath + `${path}&lang=${v}` }),
       {}
     );
   return [
@@ -38,10 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     },
     {
-      url: `${basePath}/result/58a70606a835c400c8b38e84`,
+      url: `${basePath}/result/58a70606a835c400c8b38e84?showExpanded=true`,
       lastModified: new Date(),
       alternates: {
-        languages: alternatesParamsLang('/result/58a70606a835c400c8b38e84')
+        languages: alternatesParamsLang('/result/58a70606a835c400c8b38e84?showExpanded=true')
       }
     },
     {

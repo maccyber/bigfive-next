@@ -9,9 +9,14 @@ import ReadMore from '@/components/read-more';
 interface DomainProps {
   domain: Domain;
   scoreText: string;
+  showExpanded?: boolean;
 }
 
-export const DomainPage = ({ domain, scoreText }: DomainProps) => {
+export const DomainPage = ({
+  domain,
+  scoreText,
+  showExpanded
+}: DomainProps) => {
   return (
     <>
       <div className='mt-5'>
@@ -21,7 +26,7 @@ export const DomainPage = ({ domain, scoreText }: DomainProps) => {
           </h2>
         </Link>
         <p>{domain.shortDescription}</p>
-        <ReadMore>
+        <ReadMore showExpanded={showExpanded}>
           <p dangerouslySetInnerHTML={{ __html: domain.description }} />
         </ReadMore>
         <br />

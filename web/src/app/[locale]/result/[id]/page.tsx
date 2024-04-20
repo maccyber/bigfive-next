@@ -31,13 +31,15 @@ export async function generateMetadata({
   };
 }
 
+interface ResultPageParams {
+  params: { id: string };
+  searchParams: { lang: string; showExpanded?: boolean };
+}
+
 export default async function ResultPage({
   params,
   searchParams
-}: {
-  params: { id: string };
-  searchParams: { lang: string };
-}) {
+}: ResultPageParams) {
   let report;
 
   try {
@@ -56,14 +58,15 @@ export default async function ResultPage({
       </Alert>
     );
 
-  return <Results report={report} />;
+  return <Results report={report} showExpanded={searchParams.showExpanded} />;
 }
 
 interface ResultsProps {
   report: Report;
+  showExpanded?: boolean;
 }
 
-const Results = ({ report }: ResultsProps) => {
+const Results = ({ report, showExpanded }: ResultsProps) => {
   const t = useTranslations('results');
   return (
     <>
@@ -154,7 +157,12 @@ const Results = ({ report }: ResultsProps) => {
       </div>
       <BarChart max={120} results={report.results} />
       {report.results.map((result: Domain, index: number) => (
-        <DomainPage key={index} domain={result} scoreText={t('score')} />
+        <DomainPage
+          key={index}
+          domain={result}
+          scoreText={t('score')}
+          showExpanded={showExpanded}
+        />
       ))}
     </>
   );

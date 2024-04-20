@@ -15,14 +15,19 @@ In a fascinating study published in 2016, researchers delved into how the Big Fi
 ### Key Findings
 
 #### **Personality Traits and Relationship Satisfaction**
-  - **Neuroticism** is negatively associated with relationship satisfaction, possibly because high neuroticism can lead to negative interpretations within the relationship.
-  - **Agreeableness, Conscientiousness, and Extraversion** are positively linked to relationship satisfaction. These traits contribute to better coping mechanisms during stress, which can enhance relationship quality.
-  - **Openness** showed mixed results, indicating that while it could introduce novelty into relationships, it might also lead to a lack of commitment.
+
+- **Neuroticism** is negatively associated with relationship satisfaction, possibly because high neuroticism can lead to negative interpretations within the relationship.
+- **Agreeableness, Conscientiousness, and Extraversion** are positively linked to relationship satisfaction. These traits contribute to better coping mechanisms during stress, which can enhance relationship quality.
+- **Openness** showed mixed results, indicating that while it could introduce novelty into relationships, it might also lead to a lack of commitment.
+
 #### **Self-Esteem as a Mediator**
-  - Self-esteem plays a crucial mediating role between personality traits and relationship satisfaction. Higher levels of self-esteem are linked to better relationship satisfaction across all personality traits.
-  - The study used the Actor-Partner Interdependence Mediation Model (APIMeM) to analyze both individual and partner effects, revealing intricate dynamics between personal traits, self-esteem, and relationship satisfaction.
+
+- Self-esteem plays a crucial mediating role between personality traits and relationship satisfaction. Higher levels of self-esteem are linked to better relationship satisfaction across all personality traits.
+- The study used the Actor-Partner Interdependence Mediation Model (APIMeM) to analyze both individual and partner effects, revealing intricate dynamics between personal traits, self-esteem, and relationship satisfaction.
+
 #### **Longitudinal Insights**
-  - The study also examined the effects over a two-year period, finding that traits like agreeableness and (marginally) neuroticism could predict relationship satisfaction later. Interestingly, relationship satisfaction also influenced some personality traits over time, indicating a bidirectional relationship.
+
+- The study also examined the effects over a two-year period, finding that traits like agreeableness and (marginally) neuroticism could predict relationship satisfaction later. Interestingly, relationship satisfaction also influenced some personality traits over time, indicating a bidirectional relationship.
 
 ### Theoretical Implications and Future Directions
 

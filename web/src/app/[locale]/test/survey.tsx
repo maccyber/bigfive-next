@@ -97,9 +97,13 @@ export const Survey = ({
       newAnswer
     ]);
 
-    const latestAnswerId = answers.slice(-1)[0]?.id
+    const latestAnswerId = answers.slice(-1)[0]?.id;
 
-    if (questionsPerPage === 1 && questions.length !== answers.length + 1 && id !== latestAnswerId) {
+    if (
+      questionsPerPage === 1 &&
+      questions.length !== answers.length + 1 &&
+      id !== latestAnswerId
+    ) {
       setInProgress(true);
       await sleep(700);
       setCurrentQuestionIndex((prev) => prev + 1);

@@ -15,7 +15,7 @@ const ReadMore = ({ children, showExpanded = false }: ReadMoreProps) => {
   };
 
   return (
-    <p>
+    <>
       {!showExpanded && (
         <Button
           className='my-2'
@@ -27,7 +27,7 @@ const ReadMore = ({ children, showExpanded = false }: ReadMoreProps) => {
         </Button>
       )}
       {(isReadMoreShown || showExpanded) && text}
-    </p>
+    </>
   );
 };
 
