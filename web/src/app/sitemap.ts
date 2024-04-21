@@ -10,7 +10,7 @@ const articles = [
   'openness',
   'conscientiousness_longevity',
   'bigfive_relationships',
-  'personality_disases'
+  'personality_diseases'
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 

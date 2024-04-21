@@ -22,6 +22,7 @@ import { Button } from '@nextui-org/button';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Chip, Tooltip } from '@nextui-org/react';
 import NextLink from 'next/link';
+import { Translated } from '@/components/translated';
 
 interface Props {
   params: { locale: string };
@@ -257,6 +258,8 @@ export default function Home({ params: { locale } }: Props) {
           </Link>
         </div>
       </div>
+
+      <Translated />
     </section>
   );
 }
