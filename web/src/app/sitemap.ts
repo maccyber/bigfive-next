@@ -10,7 +10,8 @@ const articles = [
   'openness',
   'conscientiousness_longevity',
   'bigfive_relationships',
-  'personality_diseases'
+  'personality_diseases',
+  'the_dark_of_personality'
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 

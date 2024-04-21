@@ -34,8 +34,8 @@ export default function Home({ params: { locale } }: Props) {
   const f = useTranslations('facets');
 
   const posts = allPosts
-    .slice(0, 3)
-    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+    .slice(0, 3);
 
   const features = [
     {

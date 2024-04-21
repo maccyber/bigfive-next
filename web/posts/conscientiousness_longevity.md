@@ -47,4 +47,4 @@ For a more detailed exploration of these studies and their findings, the sources
 
 #### **Sources**
 
-[(Psychology Today)](https://www.psychologytoday.com/us/blog/insight-therapy/202102/one-personality-trait-predicts-longevity-more-others-why) [(Well+Good)](https://www.wellandgood.com/conscientiousness-longevity/).
+- [Psychology Today](https://www.psychologytoday.com/us/blog/insight-therapy/202102/one-personality-trait-predicts-longevity-more-others-why) [(Well+Good)](https://www.wellandgood.com/conscientiousness-longevity/).
