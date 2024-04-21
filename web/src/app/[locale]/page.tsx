@@ -28,8 +28,6 @@ interface Props {
   params: { locale: string };
 }
 
-export const revalidate = 60
-
 export default function Home({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('frontpage');
