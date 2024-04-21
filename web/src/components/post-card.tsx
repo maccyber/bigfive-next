@@ -5,8 +5,10 @@ import { format, parseISO } from 'date-fns';
 import { Post } from 'contentlayer/generated';
 import { Link } from '@/navigation';
 import { calculateReadingTime } from '@/lib/helpers';
+import { ViewCounterGetter } from './view-counter';
 
 export function PostCard(post: Post) {
+  console.log(post._id)
   return (
     <Link href={post.url}>
       <Card
@@ -29,15 +31,16 @@ export function PostCard(post: Post) {
           </p>
         </CardBody>
         <CardFooter className='flex justify-between items-center'>
-          <div className='flex text-small text-default-500'>
+          <div className='flex text-small text-default-500 gap-x-5'>
             <time
-              className='block mr-2'
+              className='block'
               dateTime={post.date}
               suppressHydrationWarning
             >
               {format(parseISO(post.date), 'LLLL d, yyyy')}
             </time>
-            <p>| {calculateReadingTime(post.body.raw)} min read</p>
+            <p>{calculateReadingTime(post.body.raw)} min read</p>
+            <ViewCounterGetter postId={post._id} />
           </div>
           <Avatar size='sm' src={post.author?.avatar} />
         </CardFooter>
