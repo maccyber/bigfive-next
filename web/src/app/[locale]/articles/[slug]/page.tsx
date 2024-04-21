@@ -5,6 +5,7 @@ import NextLink from 'next/link';
 import { User } from '@nextui-org/user';
 import { Link } from '@nextui-org/react';
 import { Image } from '@nextui-org/image';
+import { calculateReadingTime } from '@/lib/helpers';
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -69,12 +70,12 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
         )}
-        <time
-          className='flex justify-end text-small mb-2 text-default-500'
-          dateTime={post.date}
-        >
-          {format(parseISO(post.date), 'LLLL d, yyyy')}
-        </time>
+        <div className='flex justify-between text-small mb-2 text-default-500 w-full'>
+          <p>{calculateReadingTime(post.body.raw)} min read</p>
+          <time dateTime={post.date}>
+            {format(parseISO(post.date), 'LLLL d, yyyy')}
+          </time>
+        </div>
         <div
           className='[&>*]:mb-3 [&>*:last-child]:mb-0 articlePage'
           dangerouslySetInnerHTML={{ __html: post.body.html }}

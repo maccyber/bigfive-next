@@ -22,7 +22,7 @@ export const Translated = () => {
   return (
     <section className='border-t border-b border-divider px-8 mt-10 text-center'>
       <div className='my-8'>
-        <h3 className={title()}>Translated in multiple language</h3>
+        <h3 className={title()}>Translated in multiple languages</h3>
         <div
           x-data='{}'
           x-init="$nextTick(() => {

@@ -46,3 +46,25 @@ export const base64url = {
     );
   }
 };
+
+export function calculateReadingTime(content: string) {
+  // Define the average reading speed (words per minute)
+  const wordsPerMinute = 200;
+
+  // Strip MDX/HTML tags and count the words
+  const markdownRegex =
+    /(\[.*?\]\(.*?\)|#+\s|```.*?```|`.*?`|\*\*.*?\*\*|\*\*|__.*?__|_.*?_|!\[.*?\]\(.*?\))/gs;
+  const text = content
+    .replace(markdownRegex, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+
+  const wordCount = text
+    .split(/\s+/)
+    .filter((word: any) => word.length > 0).length;
+
+  // Calculate reading time
+  const readingTime = Math.ceil(wordCount / wordsPerMinute);
+
+  return readingTime;
+}

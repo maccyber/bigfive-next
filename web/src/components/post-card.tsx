@@ -4,6 +4,7 @@ import { Image } from '@nextui-org/image';
 import { format, parseISO } from 'date-fns';
 import { Post } from 'contentlayer/generated';
 import { Link } from '@/navigation';
+import { calculateReadingTime } from '@/lib/helpers';
 
 export function PostCard(post: Post) {
   return (
@@ -28,13 +29,16 @@ export function PostCard(post: Post) {
           </p>
         </CardBody>
         <CardFooter className='flex justify-between items-center'>
-          <time
-            className='block text-small text-default-500'
-            dateTime={post.date}
-            suppressHydrationWarning
-          >
-            {format(parseISO(post.date), 'LLLL d, yyyy')}
-          </time>
+          <div className='flex text-small text-default-500'>
+            <time
+              className='block mr-2'
+              dateTime={post.date}
+              suppressHydrationWarning
+            >
+              {format(parseISO(post.date), 'LLLL d, yyyy')}
+            </time>
+            <p>| {calculateReadingTime(post.body.raw)} min read</p>
+          </div>
           <Avatar size='sm' src={post.author?.avatar} />
         </CardFooter>
       </Card>
