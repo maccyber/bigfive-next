@@ -41,4 +41,4 @@ This groundbreaking study not only adds a new dimension to our understanding of 
 
 #### **Sources**
 
-- [Science Direct](https://www.sciencedirect.com/science/article/abs/pii/S0092656616300496)
+- [Rebekka Weidmann and others: «Big Five traits and relationship satisfaction: The mediating role of self-esteem»](https://www.sciencedirect.com/science/article/abs/pii/S0092656616300496)

@@ -6,8 +6,11 @@ h3 {
   @apply text-xl;
 }
 
-blockquote {
-  @apply text-xl italic font-semibold text-gray-900 dark:text-white;
+.articlePage blockquote {
+  @apply p-4 my-4 border-s-4 border-secondary bg-gray-100 dark:bg-gray-800;
+  p {
+    @apply text-xl italic leading-relaxed;
+  }
 }
 
 .articlePage a {
