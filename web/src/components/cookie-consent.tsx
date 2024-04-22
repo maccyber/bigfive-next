@@ -36,8 +36,8 @@ export default function CookieBanner() {
       isOpen={showBanner}
       placement='bottom'
       onOpenChange={setShowBanner}
-      isDismissable={false}
-      isKeyboardDismissDisabled
+      // isDismissable={false}
+      // isKeyboardDismissDisabled
       hideCloseButton
       // backdrop='transparent'
     >
