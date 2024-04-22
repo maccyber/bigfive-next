@@ -4,16 +4,16 @@ import { useEffect, useMemo, useState } from 'react';
 import { Button } from '@nextui-org/button';
 import { RadioGroup, Radio } from '@nextui-org/radio';
 import { Progress } from '@nextui-org/progress';
-import { Code } from '@nextui-org/code';
 import confetti from 'canvas-confetti';
 import { useRouter } from '@/navigation';
 
-import { InfoIcon } from '@/components/icons';
+import { CloseIcon, InfoIcon } from '@/components/icons';
 import { type Question } from '@bigfive-org/questions';
 import { sleep, formatTimer, isDev } from '@/lib/helpers';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
 import { type Answer } from '@/types';
+import { Card, CardHeader } from '@nextui-org/card';
 
 interface SurveyProps {
   questions: Question[];
@@ -200,20 +200,32 @@ export const Survey = ({
         color='secondary'
       />
       {restored && (
-        <Code
-          color='warning'
-          className='mt-5 flex items-center flex-wrap text-wrap'
-        >
-          <InfoIcon className='mr-3' />
-          Your answers has been restored. Click here to&nbsp;
-          <a
-            className='underline cursor-pointer'
-            onClick={clearDataInLocalStorage}
-          >
-            start a new test
-          </a>
-          .
-        </Code>
+        <Card className='mt-4 bg-warning/20 text-warning-600 dark:text-warning'>
+          <CardHeader className='justify-between'>
+            <Button isIconOnly variant='light' color='warning'>
+              <InfoIcon />
+            </Button>
+            <p>
+              Your answers has been restored. Click here to&nbsp;
+              <a
+                className='underline cursor-pointer'
+                onClick={clearDataInLocalStorage}
+                aria-label='Clear data'
+              >
+                start a new test
+              </a>
+              .
+            </p>
+            <Button
+              isIconOnly
+              variant='light'
+              color='warning'
+              onClick={() => setRestored(false)}
+            >
+              <CloseIcon />
+            </Button>
+          </CardHeader>
+        </Card>
       )}
       {currentQuestions.map((question) => (
         <div key={'q' + question.num}>
