@@ -11,7 +11,8 @@ const articles = [
   'conscientiousness_longevity',
   'bigfive_relationships',
   'personality_diseases',
-  'the_dark_of_personality'
+  'the_dark_of_personality',
+  'link_between_personality_trais_psychological_needs'
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 
