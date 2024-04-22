@@ -82,6 +82,10 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
+      label: 'home',
+      href: '/'
+    },
+    {
       label: 'see_results',
       href: '/result'
     },

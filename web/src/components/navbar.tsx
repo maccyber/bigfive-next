@@ -23,6 +23,7 @@ import { TwitterIcon, GithubIcon, Logo } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useLocale } from 'next-intl';
 
 interface NavbarProps {
   navItems: { label: string; href: string }[];
@@ -32,9 +33,16 @@ interface NavbarProps {
 export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
 
-  const pathIncludes = (link: string) =>
-    link !== '/' && pathname.includes(link);
+  const isCurrentPath = (link: string): boolean => {
+    if (link === '/') {
+      return pathname === '/' || pathname === `/${locale}`;
+    } else {
+      return pathname.includes(link);
+    }
+  };
+
   return (
     <NextUINavbar
       maxWidth='xl'
@@ -60,7 +68,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
                   linkStyles({ color: 'foreground' }),
                   'data-[active=true]:text-danger data-[active=true]:font-medium'
                 )}
-                data-active={pathIncludes(item.href)}
+                data-active={isCurrentPath(item.href)}
                 color='foreground'
                 href={item.href}
               >
@@ -115,7 +123,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
               <NextLink
                 onClick={() => setIsMenuOpen(false)}
                 href={item.href}
-                data-active={pathIncludes(item.href)}
+                data-active={isCurrentPath(item.href)}
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
                   'data-[active=true]:text-danger data-[active=true]:font-medium !text-3xl py-2'
