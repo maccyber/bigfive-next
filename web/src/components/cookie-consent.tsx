@@ -38,6 +38,7 @@ export default function CookieBanner() {
       onOpenChange={setShowBanner}
       isDismissable={false}
       isKeyboardDismissDisabled
+      hideCloseButton
       // backdrop='transparent'
     >
       <ModalContent>
