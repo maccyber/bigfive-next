@@ -10,15 +10,8 @@ import { Link } from '@/navigation';
 import { ReportLanguageSwitch } from './report-language-switch';
 import { Alert } from '@/components/alert';
 import { supportEmail } from '@/config/site';
-import { Button, Tooltip } from '@nextui-org/react';
-import {
-  CopyIcon,
-  FacebookIcon,
-  PDFIcon,
-  TwitterIcon
-} from '@/components/icons';
-import { Link as NextUiLink } from '@nextui-org/link';
 import ShareBar from '@/components/share-bar';
+import { DomainTabs } from './domain-tabs';
 
 export async function generateMetadata({
   params: { locale }
@@ -69,6 +62,7 @@ interface ResultsProps {
 
 const Results = ({ report, showExpanded }: ResultsProps) => {
   const t = useTranslations('results');
+
   return (
     <>
       <div className='flex'>
@@ -101,21 +95,18 @@ const Results = ({ report, showExpanded }: ResultsProps) => {
           {report.id}
         </Snippet>
       </div>
-      <div className='flex mt-5 justify-end w-full gap-x-1'>
+      <div className='flex mt-5 justify-end w-full gap-x-1 print:hidden'>
         <ShareBar report={report} />
       </div>
       <div className='flex mt-10'>
         <h1 className={title()}>{t('theBigFive')}</h1>
       </div>
       <BarChart max={120} results={report.results} />
-      {report.results.map((result: Domain, index: number) => (
-        <DomainPage
-          key={index}
-          domain={result}
-          scoreText={t('score')}
-          showExpanded={showExpanded}
-        />
-      ))}
+      <DomainTabs
+        results={report.results}
+        showExpanded={!!showExpanded}
+        scoreText={t('score')}
+      />
     </>
   );
 };
