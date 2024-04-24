@@ -107,6 +107,7 @@ returns an [array with questions and choices](examples/items-en.json)
 | hy   | Armenian  | Mikayel Harutyunyan
 | ss   | Siswati   | Thembinkosi Dube
 | cs   | Czech     | Vít Budina
+| bg   | Bulgarian | Lybomir Man
 
 ## Help wanted
 
