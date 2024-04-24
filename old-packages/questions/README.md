@@ -105,6 +105,8 @@ returns an [array with questions and choices](examples/items-en.json)
 | sl   | Slovenian | Prof. Dr. Janek Musek
 | sr   | Serbian   | Snezana Smederevac and Petar Colovic
 | hy   | Armenian  | Mikayel Harutyunyan
+| ss   | Siswati   | Thembinkosi Dube
+| cs   | Czech     | Vít Budina
 
 ## Help wanted
 

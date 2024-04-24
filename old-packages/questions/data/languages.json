@@ -142,5 +142,13 @@
   {
     "id": "ca",
     "text":"Catalan"
+  },
+  {
+    "id": "ss",
+    "text": "Siswati"
+  },
+  {
+    "id": "cs",
+    "text:": "Czech"
   }
 ]
