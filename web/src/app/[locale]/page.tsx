@@ -148,7 +148,7 @@ export default function Home({ params: { locale } }: Props) {
         </div>
       </div>
 
-      <div className='text-center h-64 mt-44'>
+      <div className='text-center h-64 md:h-80 mt-44 md:mt-56'>
         <SonarPulse
           color='#7928CA'
           icon={
