@@ -14,7 +14,6 @@ import { Analytics } from '@vercel/analytics/react';
 import useTextDirection from '@/hooks/use-text-direction';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
-import { CookieConsentSettings } from '@/components/cookie-consent-settings';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -113,7 +112,6 @@ export default async function RootLayout({
             <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
               {children}
               <CookieBanner />
-              <CookieConsentSettings />
             </main>
             <Footer footerLinks={footerLinks} />
           </div>
