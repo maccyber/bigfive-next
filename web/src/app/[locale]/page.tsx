@@ -75,7 +75,7 @@ export default function Home({ params: { locale } }: Props) {
   });
 
   return (
-    <section className='overflow-hidden relative'>
+    <section className='relative'>
       <div>
         <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
           <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
@@ -148,7 +148,7 @@ export default function Home({ params: { locale } }: Props) {
         </div>
       </div>
 
-      <div className='text-center h-96 mt-56'>
+      <div className='text-center h-64 mt-44'>
         <SonarPulse
           color='#7928CA'
           icon={
