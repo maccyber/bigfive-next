@@ -2,7 +2,7 @@
 
 import { FC, ReactNode, useMemo } from 'react';
 import { parseToRgba } from 'color2k';
-import { clsx } from '@nextui-org/shared-utils';
+import clsx from 'clsx';
 import { useIsSSR } from '@react-aria/ssr';
 
 export interface SonarPulseProps {
