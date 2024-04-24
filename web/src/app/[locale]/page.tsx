@@ -176,7 +176,7 @@ export default function Home({ params: { locale } }: Props) {
           }
         >
           <div
-            className='absolute rounded-full bg-transparent'
+            className='absolute rounded-full'
             style={{
               width: '130px',
               top: 130 / 6,
@@ -219,8 +219,12 @@ export default function Home({ params: { locale } }: Props) {
                 <Chip
                   size='sm'
                   color='secondary'
+                  variant='shadow'
                   aria-label={e.name}
-                  className='absolute md:hidden rounded-full left-24'
+                  classNames={{
+                    base: 'absolute md:hidden rounded-full left-[85px]',
+                    content: 'drop-shadow shadow-black text-white w-full w-36'
+                  }}
                   style={e.smallStyle}
                   as={Link}
                   href={e.href}
