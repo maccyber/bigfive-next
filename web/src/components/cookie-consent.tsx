@@ -10,9 +10,13 @@ import {
 } from '@nextui-org/modal';
 import { Link } from '@nextui-org/link';
 import { useEffect, useState } from 'react';
+import { SettingsIcon } from './icons';
+import { CookieConsentSettings } from './cookie-consent-settings';
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
+  const [showCookieConsentSettings, setShowCookieConsentSettings] =
+    useState(false);
 
   useEffect(() => {
     const storedCookieConsent = localStorage.getItem('cookie_consent');
@@ -31,18 +35,23 @@ export default function CookieBanner() {
     setShowBanner(false);
   };
 
+  const handleSettings = () => {
+    setShowBanner(false);
+    setShowCookieConsentSettings(true);
+  };
+
   return (
-    <Modal
-      isOpen={showBanner}
-      placement='bottom'
-      onOpenChange={setShowBanner}
-      // isDismissable={false}
-      // isKeyboardDismissDisabled
-      hideCloseButton
-      // backdrop='transparent'
-    >
-      <ModalContent>
-        <>
+    <>
+      <Modal
+        isOpen={showBanner}
+        placement='bottom'
+        onOpenChange={setShowBanner}
+        // isDismissable={false}
+        // isKeyboardDismissDisabled
+        hideCloseButton
+        // backdrop='transparent'
+      >
+        <ModalContent>
           <ModalHeader className='flex flex-col gap-1'>
             Cookie consent
           </ModalHeader>
@@ -52,7 +61,16 @@ export default function CookieBanner() {
               Read more in our <Link href='/privacy'>privacy policy</Link>.
             </p>
           </ModalBody>
-          <ModalFooter>
+          <ModalFooter className='justify-start'>
+            <div className='grow'>
+              <Button
+                variant='flat'
+                startContent={<SettingsIcon />}
+                onPress={handleSettings}
+              >
+                Preferences
+              </Button>
+            </div>
             <Button
               color='danger'
               variant='light'
@@ -61,11 +79,15 @@ export default function CookieBanner() {
               Decline
             </Button>
             <Button color='primary' onPress={handleAllowCookies}>
-              Allow cookies
+              Accept all
             </Button>
           </ModalFooter>
-        </>
-      </ModalContent>
-    </Modal>
+        </ModalContent>
+      </Modal>
+      <CookieConsentSettings
+        showCookieConsentSettings={showCookieConsentSettings}
+        setShowCookieConsentSettings={setShowCookieConsentSettings}
+      />
+    </>
   );
 }

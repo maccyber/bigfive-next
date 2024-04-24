@@ -59,7 +59,8 @@
     "react-dom": "18.2.0",
     "rtl-detect": "1.1.2",
     "tailwind-variants": "0.2.1",
-    "tailwindcss": "3.4.3"
+    "tailwindcss": "3.4.3",
+    "zod": "3.23.4"
   },
   "devDependencies": {
     "@types/canvas-confetti": "1.6.4",

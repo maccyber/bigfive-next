@@ -12,6 +12,7 @@ import { Alert } from '@/components/alert';
 import { supportEmail } from '@/config/site';
 import ShareBar from '@/components/share-bar';
 import { DomainTabs } from './domain-tabs';
+import { Chip } from '@nextui-org/react';
 
 export async function generateMetadata({
   params: { locale }
@@ -72,9 +73,7 @@ const Results = ({ report, showExpanded }: ResultsProps) => {
             availableLanguages={report.availableLanguages}
           />
         </div>
-        <div className='text-gray-500 dark:text-gray-400'>
-          {new Date(report.timestamp).toLocaleDateString()}
-        </div>
+        <Chip>{new Date(report.timestamp).toLocaleDateString()}</Chip>
       </div>
       <div className='text-center mt-4'>
         <span className='font-bold'>{t('important')}</span> &nbsp;
