@@ -12,7 +12,7 @@ export default function ResultPage({ params: { locale } }: Props) {
   const t = useTranslations('getResult');
 
   return (
-    <div>
+    <div className='h-[calc(60vh)]'>
       <h1 className={title()}>{t('result')}</h1>
       <div className='mt-10'>{t('explanation')}</div>
       <GetResultPage
