@@ -1,14 +1,11 @@
-[![Coverage Status](https://coveralls.io/repos/Alheimsins/bigfive-calculate-score/badge.svg?branch=master&service=github)](https://coveralls.io/github/Alheimsins/bigfive-calculate-score?branch=master)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-
-# bigfive-calculate-score
+# @bigfive-org/score
 
 Calculate score for big five tests
 
 ## Installation
 
 ```
-$ npm i @alheimsins/bigfive-calculate-score
+$ npm i @bigfive-org/score
 ```
 
 ## Usage
@@ -17,7 +14,7 @@ Pass an object with property **answers**.
 Answers have to be an Array with domain and score. Facet is optional.
 
 ```JavaScript
-const calculateScore = require('@alheimsins/bigfive-calculate-score')
+const calculateScore = require('@bigfive-org/score')
 const result = {
   "timeElapsed": -51,
   "ip": "127.0.0.1",
@@ -187,17 +184,6 @@ Returns
 }
 ```
 
-## Related
-
-- [bigfive-web](https://github.com/rubynor/bigfive-web) Website for five factor model of personality
-- [b5-web](https://github.com/zrrrzzt/b5-web) Static website for big five tests
-
 ## License
 
 [MIT](LICENSE)
-
-## About
-
-Created by with ❤ for [Alheimsins](https://alheimsins.net)
-
-<img src="https://image.ibb.co/dPH08G/logo_black.png" alt="Alhemsins logo" height="150px" width="150px" />

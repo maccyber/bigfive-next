@@ -69,9 +69,16 @@ export interface Facet {
     scoreText: Score;
 }
 
+export type Translator = {
+  name: string;
+  language: string;
+  githubUser: string;
+}
+
 export function getTemplate(lang: string): any;
 export function generateResult(answers: Answers, template: TemplateDomain[]): Domain[];
 export function getDomain(options: Options): Domain;
 export function getFacet(options: Options): Facet;
 export function getInfo(): { languages: Language[] };
+export function getTranslators(): Translator[];
 export default function getResults(options: ResultsOptions): Domain[];

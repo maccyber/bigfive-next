@@ -1,6 +1,7 @@
 const getTemplate = require('./lib/get-template')
 const generateResult = require('./lib/generate-result')
 const languages = require('./lib/data/languages.json')
+const translators = require('./translators.json')
 
 function languageSort (a, b) {
   if (a.text < b.text) {
@@ -33,6 +34,8 @@ module.exports = data => {
 }
 
 module.exports.getInfo = () => ({ languages })
+
+module.exports.getTranslators = () => translators
 
 module.exports.getTemplate = (language = 'en') => getTemplate(language)
 

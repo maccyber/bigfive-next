@@ -1,21 +1,17 @@
 {
   "name": "@bigfive-org/questions",
   "description": "Module for returning Big Five Johnson 120 IPIP-NEO-PI-R items",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "author": {
-    "name": "Jonas ",
-    "email": "jonas.enge@gmail.com",
-    "url": "https://github.com/maccyber"
   },
   "main": "index.js",
   "files": [
     "data/",
     "index.js",
-    "index.d.ts"
+    "index.d.ts",
+    "translators.json"
   ],
   "scripts": {
     "test": "standard && ava",
@@ -27,14 +23,6 @@
     "items",
     "johnson-120-ipip-neo-pi-r"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alheimsins/b5-johnson-120-ipip-neo-pi-r.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Alheimsins/b5-johnson-120-ipip-neo-pi-r/issues"
-  },
-  "homepage": "https://github.com/Alheimsins/b5-johnson-120-ipip-neo-pi-r#readme",
   "devDependencies": {
     "ava": "6.1.2",
     "nyc": "15.1.0",

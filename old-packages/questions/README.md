@@ -1,20 +1,20 @@
 [![Coverage Status](https://coveralls.io/repos/Alheimsins/b5-johnson-120-ipip-neo-pi-r/badge.svg?branch=main&service=github)](https://coveralls.io/github/Alheimsins/b5-johnson-120-ipip-neo-pi-r?branch=main)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-# b5-johnson-120-ipip-neo-pi-r
+# @bigfive-org/questions
 
 Module for returning Big Five [Johnson 120 IPIP-NEO-PI-R](https://ipip.ori.org/30facetneo-pi-ritems.htm) items
 
 ## Installation
 
 ```
-$ npm i @alheimsins/b5-johnson-120-ipip-neo-pi-r
+$ npm i @bigfive-org/questions
 ```
 
 ## Usage
 
 ```JavaScript
-const { getItems, getInfo, getChoices, getQuestions } = require('@alheimsins/b5-johnson-120-ipip-neo-pi-r')
+const { getItems, getInfo, getChoices, getQuestions } = require('@bigfive-org/questions')
 
 console.log(getInfo()) // returns test info
 

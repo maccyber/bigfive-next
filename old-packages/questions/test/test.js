@@ -1,6 +1,6 @@
 const test = require('ava')
 const { dependencies, devDependencies } = require('../package.json')
-const { getInfo, getItems } = require('../')
+const { getInfo, getItems, getTranslators } = require('../')
 const dropModules = ['husky']
 const isDropped = module => !dropModules.includes(module)
 
@@ -59,4 +59,12 @@ test('it returns sorted inventory items', t =>
 test('test all languages', t => {
   const { languages } = getInfo()
   languages.map(({ id }) => t.truthy(getItems(id, false), `${id} items ok`))
+})
+
+test('translators are credited', t => {
+  const translators = getTranslators()
+  translators.forEach(translator => {
+    t.truthy(translator.name !== undefined)
+    t.truthy(translator.language !== undefined)
+  })
 })

@@ -1,7 +1,7 @@
 {
   "name": "@bigfive-org/score",
   "description": "Calculate score for big five tests",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -11,18 +11,6 @@
     "index.js",
     "index.d.ts"
   ],
-  "author": {
-    "name": "Geir Gåsodden",
-    "email": "geir.gasodden@pythonia.no",
-    "url": "https://github.com/zrrrzzt"
-  },
-  "contributors": [
-    {
-      "name": "Jonas Enge",
-      "email": "jonas.enge@gmail.com",
-      "url": "https://github.com/maccyber"
-    }
-  ],
   "main": "index.js",
   "scripts": {
     "test": "standard && ava",
@@ -31,17 +19,8 @@
   "keywords": [
     "bigfive",
     "personality",
-    "calculate score",
-    "alheimsins"
+    "calculate score"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alheimsins/bigfive-calculate-score.git"
-  },
-  "bugs": {
-    "url": "https://github.com/alheimsins/bigfive-calculate-score/issues"
-  },
-  "homepage": "https://github.com/alheimsins/bigfive-calculate-score#readme",
   "devDependencies": {
     "ava": "4.3.3",
     "nyc": "15.1.0",
