@@ -1,4 +1,4 @@
-# b5-johnson-120-ipip-neo-pi-r
+# @bigfive-org/questions
 
 Module for returning Big Five [Johnson 120 IPIP-NEO-PI-R](https://ipip.ori.org/30facetneo-pi-ritems.htm) items
 
@@ -11,7 +11,7 @@ $ npm i @bigfive-org/questions
 ## Usage
 
 ```JavaScript
-import { getItems, getInfo, getChoices, getQuestions } from '@alheimsins/b5-johnson-120-ipip-neo-pi-r'
+import { getItems, getInfo, getChoices, getQuestions } from '@bigfive-org/questions'
 
 console.log(getInfo()) // returns test info
 
